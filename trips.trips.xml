@@ -1,0 +1,1744 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- generated on 2025-08-24 08:42:07.355793 by $Id: ptlines2flows.py v1_3_1+0313-ccb31df3eb jakob.erdmann@dlr.de 2019-09-02 13:26:32 +0200 $ v1_24_0+0000-b72eb3fabc8
+<configuration>
+    <net-file value="C:\Users\marce\Sumo\2025-08-24-08-41-09\osm.net.xml.gz"/>
+    <ptlines-file value="C:\Users\marce\Sumo\2025-08-24-08-41-09\osm_ptlines.xml"/>
+    <ptstops-file value="C:\Users\marce\Sumo\2025-08-24-08-41-09\osm_stops.add.xml"/>
+    <output-file value="C:\Users\marce\Sumo\2025-08-24-08-41-09\osm_pt.rou.xml"/>
+    <stopinfos-file value="C:\Users\marce\Sumo\2025-08-24-08-41-09\stopinfos.xml"/>
+    <routes-file value="C:\Users\marce\Sumo\2025-08-24-08-41-09\vehroutes.xml"/>
+    <trips-file value="C:\Users\marce\Sumo\2025-08-24-08-41-09\trips.trips.xml"/>
+    <min-stops value="0"/>
+    <extend-to-fringe value="True"/>
+    <random-begin value="True"/>
+    <seed value="42"/>
+    <ignore-errors value="True"/>
+    <vtype-prefix value="pt_"/>
+    <verbose value="True"/>
+</configuration>
+-->
+
+<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/routes_file.xsd">
+    <vType id="pt_bus" vClass="bus" speedFactor="0.95"/>
+    <vType id="pt_tram" vClass="tram" speedFactor="1.0"/>
+    <vType id="pt_train" vClass="rail"/>
+    <vType id="pt_subway" vClass="subway"/>
+    <vType id="pt_light_rail" vClass="rail_urban"/>
+    <vType id="pt_monorail" vClass="rail_urban"/>
+    <vType id="pt_trolleybus" vClass="bus" speedFactor="0.95"/>
+    <vType id="pt_minibus" vClass="bus" speedFactor="0.95"/>
+    <vType id="pt_share_taxi" vClass="taxi" speedFactor="0.95"/>
+    <vType id="pt_aerialway" vClass="cable_car" length="2.5" width="2" personCapacity="4"/>
+    <vType id="pt_ferry" vClass="ship"/>
+    <trip id="0_bus_L64:0" type="pt_bus" depart="0.0" departLane="best" from="170079056#0" to="1409636114#0">
+        <stop busStop="1426089985" duration="30"/>  <!-- Av. Diagonal - Gran Via Carles III -->
+        <stop busStop="5343770279" duration="30"/>  <!-- Diagonal - Entença -->
+        <stop busStop="8394412764" duration="30"/>  <!-- Comte d'Urgell - Londres -->
+    </trip>
+    <trip id="1_bus_N61:0" type="pt_bus" depart="3.0" departLane="best" from="519375847#0" to="45521735">
+        <stop busStop="5726021529" duration="30"/>  <!-- Rda. Sant Pere - Pl. de Catalunya -->
+        <stop busStop="-8214234942" duration="30"/>  <!-- Pg de Gràcia - Mallorca -->
+        <stop busStop="5247945809" duration="30"/>  <!-- Pl Gal·la Placídia -->
+        <stop busStop="2989750378" duration="30"/>  <!-- Via Augusta - Pau Alcover -->
+    </trip>
+    <trip id="3_bus_X95:0" type="pt_bus" depart="11.0" departLane="best" from="545715326" to="20475367">
+        <stop busStop="5760480288" duration="30"/>  <!-- Gran Via - Entença -->
+        <stop busStop="5760480287" duration="30"/>  <!-- Gran Via - Viladomat -->
+        <stop busStop="4893836322" duration="30"/>  <!-- Gran Via - Comte Borrell -->
+        <stop busStop="8372242000" duration="30"/>  <!-- Gran Via - Comt Borrell -->
+        <stop busStop="5760480286" duration="30"/>  <!-- Gran Via - Muntaner -->
+        <stop busStop="1474608404" duration="30"/>  <!-- Pl Universitat -->
+        <stop busStop="8634928230" duration="30"/>  <!-- Rda Universitat - Plaça Catalunya -->
+    </trip>
+    <trip id="5_bus_100:0" type="pt_bus" depart="15.0" departLane="best" from="126304603#0" to="542836620">
+        <stop busStop="823781719" duration="30"/>  <!-- Plaça Catalunya -->
+        <stop busStop="-12694287056" duration="30"/>  <!-- Casa Batlló - Museu Tàpies -->
+        <stop busStop="12694287057" duration="30"/>  <!-- Eixample -->
+        <stop busStop="12110026076" duration="30"/>  <!-- Estació de Sants -->
+    </trip>
+    <trip id="6_bus_101:0" type="pt_bus" depart="17.0" departLane="best" from="20045755#0" to="1370823684">
+        <stop busStop="12701996671" duration="30"/>  <!-- Plaça de Catalunya -->
+        <stop busStop="-12694287056" duration="30"/>  <!-- Casa Batlló - Museu Tàpies -->
+        <stop busStop="-5375631705" duration="30"/>  <!-- Passeig de Gràcia - La Pedrera -->
+    </trip>
+    <trip id="7_bus_X30:0" type="pt_bus" depart="19.0" departLane="best" from="254329359" to="-396947540#1">
+        <stop busStop="8033328937" duration="30"/>  <!-- Pau Romeva - Av. Diagonal -->
+        <stop busStop="-5341631257" duration="30"/>  <!-- Diagonal - Doctor Fleming -->
+        <stop busStop="-5341631256" duration="30"/>  <!-- Diagonal - Numància -->
+        <stop busStop="-5341631255" duration="30"/>  <!-- Diagonal - Pl Reina Maria Cristina -->
+        <stop busStop="-5572252923" duration="30"/>  <!-- Diagonal - Pl Pius XII -->
+    </trip>
+    <trip id="8_bus_X43:0" type="pt_bus" depart="27.0" departLane="best" from="862748475" to="-396947540#1">
+        <stop busStop="8037346270" duration="30"/>  <!-- Flos i Calcat - Martí i Julià -->
+        <stop busStop="8037498822" duration="30"/>  <!-- Numància - Flos i Calcat -->
+        <stop busStop="-5341631256" duration="30"/>  <!-- Diagonal - Numància -->
+        <stop busStop="-5341631255" duration="30"/>  <!-- Diagonal - Pl Reina Maria Cristina -->
+        <stop busStop="-5572252923" duration="30"/>  <!-- Diagonal - Pl Pius XII -->
+    </trip>
+    <trip id="9_bus_X43:1" type="pt_bus" depart="28.0" departLane="best" from="396947540#0" to="862748475">
+        <stop busStop="5253057127" duration="30"/>  <!-- Pl. Pius XII -->
+        <stop busStop="5465541600" duration="30"/>  <!-- Pl Reina Maria Cristina -->
+        <stop busStop="8037346270" duration="30"/>  <!-- Flos i Calcat - Martí i Julià -->
+        <stop busStop="8037498822@11783610" duration="30"/>  <!-- Numància - Flos i Calcat -->
+    </trip>
+    <trip id="10_bus_X79:0" type="pt_bus" depart="30.0" departLane="best" from="254329359" to="-396947540#1">
+        <stop busStop="8039245592" duration="30"/>  <!-- Pau Romeva - Av. Diagonal -->
+        <stop busStop="-5341631257" duration="30"/>  <!-- Diagonal - Doctor Fleming -->
+        <stop busStop="-5341631256" duration="30"/>  <!-- Diagonal - Numància -->
+        <stop busStop="-5341631255" duration="30"/>  <!-- Diagonal - Pl Reina Maria Cristina -->
+        <stop busStop="-5572252923" duration="30"/>  <!-- Diagonal - Pl Pius XII -->
+    </trip>
+    <trip id="11_bus_X95:1" type="pt_bus" depart="34.0" departLane="best" from="20475367" to="237923125#0">
+        <stop busStop="8634928230" duration="30"/>  <!-- Rda Universitat - Plaça Catalunya -->
+        <stop busStop="5609793223" duration="30"/>  <!-- Ronda Universitat - Pl. Universitat -->
+        <stop busStop="5609793222" duration="30"/>  <!-- Sepúlveda - Muntaner -->
+        <stop busStop="4040253780" duration="30"/>  <!-- Sepúlveda-Comte d'Urgell -->
+        <stop busStop="8045155333" duration="30"/>  <!-- Sepúlveda - Viladomat -->
+        <stop busStop="4040253782" duration="30"/>  <!-- Sepúlveda-Viladomat -->
+        <stop busStop="8045155332" duration="30"/>  <!-- None -->
+        <stop busStop="4040253781" duration="30"/>  <!-- Sepúlveda - Rocafort -->
+        <stop busStop="2510578431" duration="30"/>  <!-- Sepúlveda - Av. Mistral -->
+    </trip>
+    <trip id="12_bus_X97:0" type="pt_bus" depart="34.0" departLane="best" from="238762327#2" to="-396947540#1">
+        <stop busStop="8047001098" duration="30"/>  <!-- Gran Via Carles III - Av. Diagonal -->
+        <stop busStop="-5341631256" duration="30"/>  <!-- Diagonal - Numància -->
+        <stop busStop="-5341631255" duration="30"/>  <!-- Diagonal - Pl Reina Maria Cristina -->
+        <stop busStop="-5256357715" duration="30"/>  <!-- Pl Pius XII -->
+    </trip>
+    <trip id="13_bus_X97:1" type="pt_bus" depart="35.0" departLane="best" from="396947540#0" to="-910513645">
+        <stop busStop="5253057127" duration="30"/>  <!-- Pl. Pius XII -->
+        <stop busStop="5465541600" duration="30"/>  <!-- Pl Reina Maria Cristina -->
+        <stop busStop="-8047001098" duration="30"/>  <!-- Gran Via Carles III - Av. Diagonal -->
+    </trip>
+    <trip id="14_bus_M12:0" type="pt_bus" depart="38.0" departLane="best" from="237695645" to="178129414">
+        <stop busStop="1856466663" duration="30"/>  <!-- Av. Diagonal - Pl. Reina Maria Cristina -->
+        <stop busStop="5403752122" duration="30"/>  <!-- Av Diagonal - Pl Reina Maria Cristina -->
+        <stop busStop="8048728590" duration="30"/>  <!-- Carles III - Maria Cristina -->
+        <stop busStop="8048728589" duration="30"/>  <!-- Carles III - Mejía Lequerica -->
+        <stop busStop="5264616256" duration="30"/>  <!-- Les Corts - Mejía Lequerica -->
+        <stop busStop="8048728588" duration="30"/>  <!-- Estadi del Futbol Club Barcelona -->
+        <stop busStop="5259830246" duration="30"/>  <!-- Riera Blanca - Les Corts -->
+    </trip>
+    <trip id="15_bus_175:0" type="pt_bus" depart="41.0" departLane="best" from="1225001919#0" to="-396947540#1">
+        <stop busStop="687897179" duration="30"/>  <!-- Riera Blanca - Onze de Setembre -->
+        <stop busStop="5259829879" duration="30"/>  <!-- Av Madrid - Arizala -->
+        <stop busStop="2509846199" duration="30"/>  <!-- Gran Via Carles III - Av Madrid -->
+        <stop busStop="8084922537" duration="30"/>  <!-- Carles III - Les Corts -->
+        <stop busStop="1377816289" duration="30"/>  <!-- Carles III - Mejía Lequerica -->
+        <stop busStop="-5341631255" duration="30"/>  <!-- Diagonal - Pl Reina Maria Cristina -->
+        <stop busStop="-5572252923" duration="30"/>  <!-- Diagonal - Pl Pius XII -->
+    </trip>
+    <trip id="16_bus_175:1" type="pt_bus" depart="42.0" departLane="best" from="170079056#0" to="1225001919#0">
+        <stop busStop="1478113760" duration="30"/>  <!-- Diagonal - Av Joan XXIII -->
+        <stop busStop="8048728590" duration="30"/>  <!-- Carles III - Maria Cristina -->
+        <stop busStop="8048728589" duration="30"/>  <!-- Carles III - Mejía Lequerica -->
+        <stop busStop="5264616256" duration="30"/>  <!-- Les Corts - Mejía Lequerica -->
+        <stop busStop="8048728588" duration="30"/>  <!-- Estadi del Futbol Club Barcelona -->
+        <stop busStop="687897179" duration="30"/>  <!-- Riera Blanca - Onze de Setembre -->
+    </trip>
+    <trip id="17_bus_141:0" type="pt_bus" depart="42.0" departLane="best" from="450145189" to="868707435#0">
+        <stop busStop="12625340222" duration="30"/>  <!-- Av. Sarrià - Buenos Aires -->
+        <stop busStop="8097436675" duration="30"/>  <!-- Villarroel - Buenos Aires -->
+        <stop busStop="8097436674" duration="30"/>  <!-- Villarroel - Hospital Clínic -->
+        <stop busStop="2510905955" duration="30"/>  <!-- Villarroel - Mercat del Ninot -->
+        <stop busStop="8097436672" duration="30"/>  <!-- Villarroel - Aragó -->
+        <stop busStop="8097436671" duration="30"/>  <!-- Villarroel - Gran Via -->
+        <stop busStop="8097436670" duration="30"/>  <!-- Villarroel - Sepúlveda -->
+        <stop busStop="12351408134" duration="30"/>  <!-- Ronda Sant Antoni - Compte d'Urgell -->
+        <stop busStop="8097353538" duration="30"/>  <!-- Calàbria - Manso -->
+    </trip>
+    <trip id="18_bus_141:1" type="pt_bus" depart="43.0" departLane="best" from="868707435#0" to="450145189">
+        <stop busStop="8097353538" duration="30"/>  <!-- Calàbria - Manso -->
+        <stop busStop="8097436669" duration="30"/>  <!-- Calàbria - Floridablanca -->
+        <stop busStop="8097436668" duration="30"/>  <!-- Calàbria - Gran Via -->
+        <stop busStop="2412575676" duration="30"/>  <!-- Calàbria- Aragó -->
+        <stop busStop="8097436667" duration="30"/>  <!-- Calàbria - Aragó -->
+        <stop busStop="8097436666" duration="30"/>  <!-- Calàbria - Provença -->
+        <stop busStop="2508645427" duration="30"/>  <!-- Calàbria- Provença -->
+        <stop busStop="8097436664" duration="30"/>  <!-- París - Viladomat -->
+        <stop busStop="12625340222" duration="30"/>  <!-- Av. Sarrià - Buenos Aires -->
+    </trip>
+    <trip id="19_bus_X84:0" type="pt_bus" depart="43.0" departLane="best" from="238762327#2" to="-396947540#1">
+        <stop busStop="8047001098" duration="30"/>  <!-- Gran Via Carles III - Av. Diagonal -->
+        <stop busStop="-5341631256" duration="30"/>  <!-- Diagonal - Numància -->
+        <stop busStop="-5341631255" duration="30"/>  <!-- Diagonal - Pl Reina Maria Cristina -->
+        <stop busStop="-5256357715" duration="30"/>  <!-- Pl Pius XII -->
+    </trip>
+    <trip id="20_bus_X84:1" type="pt_bus" depart="47.0" departLane="best" from="396947540#0" to="-910513645">
+        <stop busStop="5253057127" duration="30"/>  <!-- Pl. Pius XII -->
+        <stop busStop="5465541600" duration="30"/>  <!-- Pl Reina Maria Cristina -->
+        <stop busStop="-8047001098" duration="30"/>  <!-- Gran Via Carles III - Av. Diagonal -->
+    </trip>
+    <trip id="21_bus_X79:1" type="pt_bus" depart="48.0" departLane="best" from="396947540#0" to="254329359">
+        <stop busStop="5253057127" duration="30"/>  <!-- Pl. Pius XII -->
+        <stop busStop="5465541600" duration="30"/>  <!-- Pl Reina Maria Cristina -->
+        <stop busStop="5343770280" duration="30"/>  <!-- Diagonal - L'Illa Diagonal -->
+        <stop busStop="5343770279" duration="30"/>  <!-- Diagonal - Entença -->
+        <stop busStop="8039245592" duration="30"/>  <!-- Pau Romeva - Av. Diagonal -->
+    </trip>
+    <trip id="22_bus_X1:0" type="pt_bus" depart="51.0" departLane="best" from="238179151#0" to="1391893480">
+        <stop busStop="9103861283" duration="30"/>  <!-- Aragó - Passeig de Sant Joan -->
+        <stop busStop="9103861281" duration="30"/>  <!-- Aragó - Passeig de Gràcia -->
+        <stop busStop="9103861280" duration="30"/>  <!-- Aragó - Muntaner -->
+        <stop busStop="8264714837" duration="30"/>  <!-- Còrsega - Hospital Clínc -->
+        <stop busStop="9103861288" duration="30"/>  <!-- Diagonal - Pl Francesc Macià -->
+    </trip>
+    <trip id="23_bus_Bus:_Barcelona_=_Guimerà:0" type="pt_bus" depart="52.0" departLane="best" from="352482186" to="-396947540#1">
+        <stop busStop="539147490" duration="30"/>  <!-- Sants Estació d'Autobús -->
+        <stop busStop="-12884682177" duration="30"/>  <!-- Av. Diagonal (Maria Cristina) -->
+    </trip>
+    <trip id="24_bus_808:0" type="pt_bus" depart="54.0" departLane="best" from="272639447#0" to="511211614#0">
+        <stop busStop="12523087147" duration="30"/>  <!-- Gran Via Corts Catalanes - Roger de Flor -->
+        <stop busStop="12013170557" duration="30"/>  <!-- Rda. St. Pere 21-23 -->
+    </trip>
+    <trip id="25_bus_e24:0" type="pt_bus" depart="55.0" departLane="best" from="170079056#0" to="34054311#3">
+        <stop busStop="1426089985" duration="30"/>  <!-- Av. Diagonal - Gran Via Carles III -->
+    </trip>
+    <trip id="26_bus_X83:0" type="pt_bus" depart="58.0" departLane="best" from="238762327#2" to="-396947540#1">
+        <stop busStop="8047001098" duration="30"/>  <!-- Gran Via Carles III - Av. Diagonal -->
+        <stop busStop="-5341631256" duration="30"/>  <!-- Diagonal - Numància -->
+        <stop busStop="-5341631255" duration="30"/>  <!-- Diagonal - Pl Reina Maria Cristina -->
+        <stop busStop="-5256357715" duration="30"/>  <!-- Pl Pius XII -->
+    </trip>
+    <trip id="27_bus_X83:1" type="pt_bus" depart="58.0" departLane="best" from="396947540#0" to="-910513645">
+        <stop busStop="5253057127" duration="30"/>  <!-- Pl. Pius XII -->
+        <stop busStop="5465541600" duration="30"/>  <!-- Pl Reina Maria Cristina -->
+        <stop busStop="-8047001098" duration="30"/>  <!-- Gran Via Carles III - Av. Diagonal -->
+    </trip>
+    <trip id="31_bus_LN_102_Olot_-_Amer_-_Barcelona:0" type="pt_bus" depart="66.0" departLane="best" from="238179151#0" to="-1245668409#1">
+        <stop busStop="11158611551" duration="30"/>  <!-- Barcelona - c. Aragó -->
+        <stop busStop="-11573383354" duration="30"/>  <!-- Barcelona - c. Tarragona -->
+    </trip>
+    <trip id="32_bus_LN_102_Barcelona_-_Amer_-_Olot:0" type="pt_bus" depart="71.0" departLane="best" from="-1245668409#1" to="237521115#0">
+        <stop busStop="-11573383354@17179588" duration="30"/>  <!-- Barcelona - c. Tarragona -->
+        <stop busStop="11581804355" duration="30"/>  <!-- Barcelona - av. Gran Via -->
+    </trip>
+    <trip id="33_bus_Bus:_Guimerà_=_Barcelona:0" type="pt_bus" depart="72.0" departLane="best" from="170079056#0" to="352482186">
+        <stop busStop="1426089985" duration="30"/>  <!-- Av. Diagonal - Gran Via Carles III -->
+        <stop busStop="539147490@1744556" duration="30"/>  <!-- Sants Estació d'Autobús -->
+    </trip>
+    <trip id="34_bus_L1561:0" type="pt_bus" depart="77.0" departLane="best" from="330913954#0" to="237923125#0">
+        <stop busStop="12013170557" duration="30"/>  <!-- Rda. St. Pere 21-23 -->
+    </trip>
+    <trip id="35_bus_L1561:1" type="pt_bus" depart="79.0" departLane="best" from="330913954#0" to="237521115#0">
+        <stop busStop="12013170557" duration="30"/>  <!-- Rda. St. Pere 21-23 -->
+        <stop busStop="5274072650" duration="30"/>  <!-- Gran Via - Roger de Flor -->
+    </trip>
+    <trip id="36_bus_e22:0" type="pt_bus" depart="91.0" departLane="best" from="170079056#0" to="483469233#0">
+        <stop busStop="1426089985" duration="30"/>  <!-- Av. Diagonal - Gran Via Carles III -->
+        <stop busStop="5343770281" duration="30"/>  <!-- Diagonal - Gandesa -->
+        <stop busStop="8097436676" duration="30"/>  <!-- Comte d'Urgell - Buenos Aires -->
+        <stop busStop="8210119845" duration="30"/>  <!-- Muntaner - Roselló -->
+        <stop busStop="12075128991" duration="30"/>  <!-- Gran Via - Balmes -->
+    </trip>
+    <trip id="37_bus_e22:1" type="pt_bus" depart="92.0" departLane="best" from="483469233#0" to="-396947540#1">
+        <stop busStop="12075128991" duration="30"/>  <!-- Gran Via - Balmes -->
+        <stop busStop="8264714837" duration="30"/>  <!-- Còrsega - Hospital Clínc -->
+        <stop busStop="-12075420266" duration="30"/>  <!-- Av. Diagonal - Dr. Ferran -->
+    </trip>
+    <trip id="38_bus_N82:0" type="pt_bus" depart="93.0" departLane="best" from="295263589#0" to="237521115#0">
+        <stop busStop="9788442646" duration="30"/>  <!-- Pg de Gràcia - Casp -->
+        <stop busStop="3092785220" duration="30"/>  <!-- Plaça Tetuan - Gran Via -->
+    </trip>
+    <trip id="39_bus_N82:1" type="pt_bus" depart="94.0" departLane="best" from="272639447#0" to="511211614#0">
+        <stop busStop="5760544026" duration="30"/>  <!-- Metro Tetuan -->
+        <stop busStop="3706371090" duration="30"/>  <!-- Ronda Sant Pere - Plaça Urquinaona -->
+    </trip>
+    <trip id="40_bus_618:0" type="pt_bus" depart="94.0" departLane="best" from="330913954#0" to="237521115#0">
+        <stop busStop="12013170557" duration="30"/>  <!-- Rda. St. Pere 21-23 -->
+        <stop busStop="12286198838" duration="30"/>  <!-- Gran Via de les Corts Catalanes - Nàpols -->
+    </trip>
+    <trip id="41_bus_618:1" type="pt_bus" depart="98.0" departLane="best" from="330913952#0" to="549749258#0">
+        <stop busStop="12013170557" duration="30"/>  <!-- Rda. St. Pere 21-23 -->
+    </trip>
+    <trip id="42_bus_805:0" type="pt_bus" depart="99.0" departLane="best" from="18522669#0" to="237521115#0">
+        <stop busStop="10832069131" duration="30"/>  <!-- Gran Via de les Corts Catalanes - Pg. de Gràcia -->
+        <stop busStop="3092785220" duration="30"/>  <!-- Plaça Tetuan - Gran Via -->
+    </trip>
+    <trip id="43_bus_804:0" type="pt_bus" depart="102.0" departLane="best" from="272639447#0" to="18522669#0">
+        <stop busStop="12523087147" duration="30"/>  <!-- Gran Via Corts Catalanes - Roger de Flor -->
+        <stop busStop="10832069131" duration="30"/>  <!-- Gran Via de les Corts Catalanes - Pg. de Gràcia -->
+    </trip>
+    <trip id="49_bus_X3:0" type="pt_bus" depart="120.0" departLane="best" from="237649292#0" to="120328525#0">
+        <stop busStop="12864216348" duration="30"/>  <!-- Ronda Sant Pau - Aldana -->
+    </trip>
+    <trip id="50_bus_X3:1" type="pt_bus" depart="122.0" departLane="best" from="237649291#0" to="237649292#0">
+        <stop busStop="12864216348" duration="30"/>  <!-- Ronda Sant Pau - Aldana -->
+    </trip>
+    <trip id="51_bus_808:1" type="pt_bus" depart="125.0" departLane="best" from="511211614#0" to="237521115#0">
+        <stop busStop="12013170557" duration="30"/>  <!-- Rda. St. Pere 21-23 -->
+        <stop busStop="12286198838" duration="30"/>  <!-- Gran Via de les Corts Catalanes - Nàpols -->
+    </trip>
+    <trip id="52_bus_806:0" type="pt_bus" depart="126.0" departLane="best" from="18522669#0" to="237521115#0">
+        <stop busStop="10832069131" duration="30"/>  <!-- Gran Via de les Corts Catalanes - Pg. de Gràcia -->
+        <stop busStop="3092785220" duration="30"/>  <!-- Plaça Tetuan - Gran Via -->
+    </trip>
+    <trip id="53_bus_806:1" type="pt_bus" depart="127.0" departLane="best" from="272639447#0" to="18522669#0">
+        <stop busStop="12523087147" duration="30"/>  <!-- Gran Via Corts Catalanes - Roger de Flor -->
+        <stop busStop="10832069131" duration="30"/>  <!-- Gran Via de les Corts Catalanes - Pg. de Gràcia -->
+    </trip>
+    <trip id="54_bus_B20:0" type="pt_bus" depart="127.0" departLane="best" from="1408672893#0" to="511211614#0">
+        <stop busStop="3706371090" duration="30"/>  <!-- Ronda Sant Pere - Plaça Urquinaona -->
+    </trip>
+    <trip id="55_bus_L62:0" type="pt_bus" depart="128.0" departLane="best" from="1210868746#0" to="1258709160">
+        <stop busStop="2454435907" duration="30"/>  <!-- Trav. de les Corts - Riera Blanca -->
+        <stop busStop="5264616329" duration="30"/>  <!-- Les Corts - Aurora Bertrana -->
+    </trip>
+    <trip id="56_bus_V7:0" type="pt_bus" depart="128.0" departLane="best" from="853255412#6" to="238862120#8">
+        <stop busStop="7959328712" duration="30"/>  <!-- Diputació - Tarragona -->
+        <stop busStop="2189785050" duration="30"/>  <!-- Metro Tarragona -->
+        <stop busStop="1479334948" duration="30"/>  <!-- Av Roma - Tarragona -->
+        <stop busStop="8194688622" duration="30"/>  <!-- Nicaragua - Josep Tarradellas -->
+        <stop busStop="8194688621" duration="30"/>  <!-- Nicaragua - Parc Les Corts -->
+        <stop busStop="-8194688620" duration="30"/>  <!-- Constança -->
+        <stop busStop="-8194688619" duration="30"/>  <!-- Av Sarrià -->
+        <stop busStop="8194688618" duration="30"/>  <!-- Av Sarrià - Prat de la Riba -->
+        <stop busStop="8194688617" duration="30"/>  <!-- Pg. Sant Joan Bosco -->
+        <stop busStop="-8194685216" duration="30"/>  <!-- Els Vergós -->
+        <stop busStop="2989750378" duration="30"/>  <!-- Via Augusta - Pau Alcover -->
+        <stop busStop="8194685215" duration="30"/>  <!-- Pg Bonanova -->
+        <stop busStop="8194685214" duration="30"/>  <!-- CAP Sarrià -->
+    </trip>
+    <trip id="57_bus_V7:1" type="pt_bus" depart="131.0" departLane="best" from="871757026#0" to="853255412#6">
+        <stop busStop="818710823" duration="30"/>  <!-- Via Augusta - Margenat -->
+        <stop busStop="8194685213" duration="30"/>  <!-- Pg. Bonanova -->
+        <stop busStop="2989750379" duration="30"/>  <!-- Via Augusta - Els Vergós -->
+        <stop busStop="8194685212" duration="30"/>  <!-- Els Vergós -->
+        <stop busStop="-8194685211" duration="30"/>  <!-- Pg Sant Joan Bosco -->
+        <stop busStop="8194685210" duration="30"/>  <!-- Pg Sant Joan Bosco - Prat de la Riba -->
+        <stop busStop="8194685209" duration="30"/>  <!-- Numància - Diagonal -->
+        <stop busStop="5260292361" duration="30"/>  <!-- Numància - Parc Les Corts -->
+        <stop busStop="8194685208" duration="30"/>  <!-- Numància - Berlín -->
+        <stop busStop="2198032016" duration="30"/>  <!-- Numància - Av. Roma -->
+        <stop busStop="7757144475" duration="30"/>  <!-- Numància - Av Roma -->
+        <stop busStop="7959265886" duration="30"/>  <!-- València - Tarragona -->
+        <stop busStop="7959328712" duration="30"/>  <!-- Diputació - Tarragona -->
+    </trip>
+    <trip id="58_bus_L1050a:0" type="pt_bus" depart="131.0" departLane="best" from="34054320#0" to="-543400542#2">
+        <stop busStop="-364731358" duration="30"/>  <!-- Av. Diagonal - Dr. Ferran -->
+        <stop busStop="-12884682177" duration="30"/>  <!-- Av. Diagonal (Maria Cristina) -->
+    </trip>
+    <trip id="59_bus_7:0" type="pt_bus" depart="132.0" departLane="best" from="170079056#0" to="237521115#0">
+        <stop busStop="1478113760" duration="30"/>  <!-- Diagonal - Av Joan XXIII -->
+        <stop busStop="8220177025" duration="30"/>  <!-- Diagonal - Gran Via Carles III -->
+        <stop busStop="5343770281" duration="30"/>  <!-- Diagonal - Gandesa -->
+        <stop busStop="5343770280" duration="30"/>  <!-- Diagonal - L'Illa Diagonal -->
+        <stop busStop="5343770279" duration="30"/>  <!-- Diagonal - Entença -->
+        <stop busStop="8199176440" duration="30"/>  <!-- Diagonal - Av de Sarrià -->
+        <stop busStop="-5260292357" duration="30"/>  <!-- Diagonal - Francesc Macià -->
+        <stop busStop="5260292356" duration="30"/>  <!-- Diagonal - Muntaner -->
+        <stop busStop="8214234928" duration="30"/>  <!-- Balmes - Roselló -->
+        <stop busStop="8214234927" duration="30"/>  <!-- Balmes - València -->
+        <stop busStop="8214234926" duration="30"/>  <!-- Balmes - Aragó -->
+        <stop busStop="5274072653" duration="30"/>  <!-- Gran Via - Balmes -->
+        <stop busStop="5274072652" duration="30"/>  <!-- Gran Via - Pau Claris -->
+        <stop busStop="5711282952" duration="30"/>  <!-- Gran Via - Llúria -->
+        <stop busStop="5274072651" duration="30"/>  <!-- Metro Tetuan -->
+        <stop busStop="5274072650" duration="30"/>  <!-- Gran Via - Roger de Flor -->
+    </trip>
+    <trip id="60_bus_27:0" type="pt_bus" depart="132.0" departLane="best" from="1307265857" to="296827092#0">
+        <stop busStop="12105890505" duration="30"/>  <!-- Estació de Sants - Pl Joan Peiró -->
+        <stop busStop="12106325521" duration="30"/>  <!-- Pg Sant Antoni - Parc de l'Espanya Industrial -->
+        <stop busStop="1479334948" duration="30"/>  <!-- Av Roma - Tarragona -->
+        <stop busStop="5247914070" duration="30"/>  <!-- Josep Tarradellas - Rosselló -->
+        <stop busStop="5247914552" duration="30"/>  <!-- Josep Tarradellas - París -->
+        <stop busStop="5247922096" duration="30"/>  <!-- Josep Tarradellas - Viladomat -->
+        <stop busStop="5247922095" duration="30"/>  <!-- Buenos Aires - Comte d'Urgell -->
+        <stop busStop="5247930117" duration="30"/>  <!-- Travessera de Gràcia - Muntaner -->
+        <stop busStop="8171323754" duration="30"/>  <!-- Trav de Gràcia - Muntaner -->
+        <stop busStop="8171323753" duration="30"/>  <!-- Trav de Gràcia - Balmes -->
+        <stop busStop="5247945809" duration="30"/>  <!-- Pl Gal·la Placídia -->
+        <stop busStop="7684461611" duration="30"/>  <!-- Riera de Cassoles - Rambla de Prat -->
+    </trip>
+    <trip id="61_bus_39:0" type="pt_bus" depart="133.0" departLane="best" from="1205958254" to="226319971">
+        <stop busStop="6123166499" duration="30"/>  <!-- Pl Urquinaona -->
+        <stop busStop="6123166500" duration="30"/>  <!-- PL Urquinaona - Pau Claris -->
+        <stop busStop="5609793288" duration="30"/>  <!-- Llúria - Urquinaona -->
+        <stop busStop="6321098316" duration="30"/>  <!-- Llúria - Gran Via -->
+        <stop busStop="6321098315" duration="30"/>  <!-- Llúria - Aragó -->
+        <stop busStop="5603006485" duration="30"/>  <!-- Llúria - Mallorca -->
+        <stop busStop="5603006508" duration="30"/>  <!-- Rosselló - Bruc -->
+        <stop busStop="5261112621" duration="30"/>  <!-- Rosselló - Bailèn -->
+        <stop busStop="5603006483" duration="30"/>  <!-- Pg de Sant Joan - Còrsega -->
+    </trip>
+    <trip id="62_bus_115:0" type="pt_bus" depart="134.0" departLane="best" from="831157580#0" to="30761362">
+        <stop busStop="7760665318" duration="30"/>  <!-- Pl. Sants -->
+        <stop busStop="12106325521" duration="30"/>  <!-- Pg Sant Antoni - Parc de l'Espanya Industrial -->
+        <stop busStop="1479334948" duration="30"/>  <!-- Av Roma - Tarragona -->
+        <stop busStop="2508645431" duration="30"/>  <!-- Enric Bargés - Numància -->
+    </trip>
+    <trip id="63_bus_157:0" type="pt_bus" depart="136.0" departLane="best" from="899931799#1" to="1258709160">
+        <stop busStop="8361317682" duration="30"/>  <!-- Riera Blanca - Trav de Les Corts -->
+        <stop busStop="5264616329" duration="30"/>  <!-- Les Corts - Aurora Bertrana -->
+    </trip>
+    <trip id="64_bus_H8:0" type="pt_bus" depart="137.0" departLane="best" from="1409296676#0" to="1258709160">
+        <stop busStop="13061353133" duration="30"/>  <!-- Pg de Sant Joan - Còrsega -->
+        <stop busStop="5264363332" duration="30"/>  <!-- Còrsega - Bailèn -->
+        <stop busStop="5264394428" duration="30"/>  <!-- Còrsega - Llúria -->
+        <stop busStop="-5260601899" duration="30"/>  <!-- Diagonal - Passeig de Gràcia -->
+        <stop busStop="-8191099732" duration="30"/>  <!-- Diagonal - Balmes -->
+        <stop busStop="-8191099731" duration="30"/>  <!-- Diagonal - Muntaner -->
+        <stop busStop="5264394013" duration="30"/>  <!-- Diagonal - Francesc Macià -->
+        <stop busStop="8173979185" duration="30"/>  <!-- Josep Tarradellas - Francesc Macià -->
+        <stop busStop="5264616257" duration="30"/>  <!-- Les Corts - Pl Dr Ignasi Barraquer -->
+        <stop busStop="5264616332" duration="30"/>  <!-- Les Corts - Numància -->
+        <stop busStop="8191099730" duration="30"/>  <!-- Les Corts - Vallespir -->
+        <stop busStop="8191099729" duration="30"/>  <!-- Mercat de Les Corts -->
+        <stop busStop="5264616256" duration="30"/>  <!-- Les Corts - Mejía Lequerica -->
+        <stop busStop="8191099728" duration="30"/>  <!-- Les Corts - Arizala -->
+        <stop busStop="5264616329" duration="30"/>  <!-- Les Corts - Aurora Bertrana -->
+    </trip>
+    <trip id="65_bus_H16:0" type="pt_bus" depart="137.0" departLane="best" from="1408672893#0" to="340350446#0">
+        <stop busStop="8180116870" duration="30"/>  <!-- Ronda Sant Pere - Girona -->
+        <stop busStop="8180116869" duration="30"/>  <!-- Metro Urquinaona -->
+        <stop busStop="2989714854" duration="30"/>  <!-- Pl. Catalunya - Pg. de Gràcia -->
+        <stop busStop="5609793223" duration="30"/>  <!-- Ronda Universitat - Pl. Universitat -->
+        <stop busStop="5609793222" duration="30"/>  <!-- Sepúlveda - Muntaner -->
+        <stop busStop="8097436670" duration="30"/>  <!-- Villarroel - Sepúlveda -->
+        <stop busStop="12351408134" duration="30"/>  <!-- Ronda Sant Antoni - Compte d'Urgell -->
+        <stop busStop="2536484171" duration="30"/>  <!-- Manso - Comte Borrell -->
+        <stop busStop="8205986396" duration="30"/>  <!-- Manso - Rocafort -->
+    </trip>
+    <trip id="66_bus_H12:0" type="pt_bus" depart="138.0" departLane="best" from="272639447#0" to="545747636">
+        <stop busStop="5274384317" duration="30"/>  <!-- Gran Via - Roger de Flor -->
+        <stop busStop="5760544026" duration="30"/>  <!-- Metro Tetuan -->
+        <stop busStop="5760544025" duration="30"/>  <!-- Gran Via - Llúria -->
+        <stop busStop="5274384316" duration="30"/>  <!-- Gran Via - Pau Claris -->
+        <stop busStop="5274384898" duration="30"/>  <!-- Gran Via - Balmes -->
+        <stop busStop="5760544024" duration="30"/>  <!-- Pl Universitat -->
+        <stop busStop="5760544023" duration="30"/>  <!-- Gran Via - Casanova -->
+        <stop busStop="5274384897" duration="30"/>  <!-- Gran Via - Villarroel -->
+        <stop busStop="5760544022" duration="30"/>  <!-- Gran Via - Calàbria -->
+        <stop busStop="5760544021" duration="30"/>  <!-- Gran Via - Vilamarí -->
+        <stop busStop="5274384314" duration="30"/>  <!-- Gran Via - Pl Espanya -->
+    </trip>
+    <trip id="67_bus_7:1" type="pt_bus" depart="139.0" departLane="best" from="272639447#0" to="-396947540#1">
+        <stop busStop="5274384317" duration="30"/>  <!-- Gran Via - Roger de Flor -->
+        <stop busStop="5760544026" duration="30"/>  <!-- Metro Tetuan -->
+        <stop busStop="5760544025" duration="30"/>  <!-- Gran Via - Llúria -->
+        <stop busStop="5274384316" duration="30"/>  <!-- Gran Via - Pau Claris -->
+        <stop busStop="-5603006498" duration="30"/>  <!-- Pg de Gràcia - Gran Via -->
+        <stop busStop="-5603009321" duration="30"/>  <!-- Pg de Gràcia - Aragó -->
+        <stop busStop="-8214234942" duration="30"/>  <!-- Pg de Gràcia - Mallorca -->
+        <stop busStop="-8214234941" duration="30"/>  <!-- Pg de Gràcia - Diagonal -->
+        <stop busStop="-8191099732" duration="30"/>  <!-- Diagonal - Balmes -->
+        <stop busStop="-8191099731" duration="30"/>  <!-- Diagonal - Muntaner -->
+        <stop busStop="5264394013" duration="30"/>  <!-- Diagonal - Francesc Macià -->
+        <stop busStop="-5341631258" duration="30"/>  <!-- Diagonal - Ganduxer -->
+        <stop busStop="-5341631257" duration="30"/>  <!-- Diagonal - Doctor Fleming -->
+        <stop busStop="-5341631256" duration="30"/>  <!-- Diagonal - Numància -->
+        <stop busStop="-5341631255" duration="30"/>  <!-- Diagonal - Pl Reina Maria Cristina -->
+        <stop busStop="-5256357715" duration="30"/>  <!-- Pl Pius XII -->
+    </trip>
+    <trip id="68_bus_D20:0" type="pt_bus" depart="141.0" departLane="best" from="1228418637" to="1258709160">
+    </trip>
+    <trip id="69_bus_H8:1" type="pt_bus" depart="142.0" departLane="best" from="251749488#0" to="226319971">
+        <stop busStop="-8190463696" duration="30"/>  <!-- Travessera de les Corts - Comte de Güell -->
+        <stop busStop="-8190463694" duration="30"/>  <!-- Les Corts - Benavent -->
+        <stop busStop="-8190463693" duration="30"/>  <!-- Les Corts - Maternitat -->
+        <stop busStop="-8190463692" duration="30"/>  <!-- Les Corts - Carles III -->
+        <stop busStop="-5259830245" duration="30"/>  <!-- Les Corts - Vallespir -->
+        <stop busStop="5260292361" duration="30"/>  <!-- Numància - Parc Les Corts -->
+        <stop busStop="5260292359" duration="30"/>  <!-- Numància - Marquès de Sentmenat -->
+        <stop busStop="8190463690" duration="30"/>  <!-- Berlín - Nicaragua -->
+        <stop busStop="5247914552" duration="30"/>  <!-- Josep Tarradellas - París -->
+        <stop busStop="5247922096" duration="30"/>  <!-- Josep Tarradellas - Viladomat -->
+        <stop busStop="8190463689" duration="30"/>  <!-- Josep Tarradellas - Comte Borrell -->
+        <stop busStop="-5260292357" duration="30"/>  <!-- Diagonal - Francesc Macià -->
+        <stop busStop="5260292356" duration="30"/>  <!-- Diagonal - Muntaner -->
+        <stop busStop="5264394016" duration="30"/>  <!-- Diagonal - Balmes -->
+        <stop busStop="8190463686" duration="30"/>  <!-- Diagonal - Pau Claris -->
+        <stop busStop="5603006508" duration="30"/>  <!-- Rosselló - Bruc -->
+        <stop busStop="5261112621" duration="30"/>  <!-- Rosselló - Bailèn -->
+        <stop busStop="5603006483" duration="30"/>  <!-- Pg de Sant Joan - Còrsega -->
+    </trip>
+    <trip id="70_bus_H6:0" type="pt_bus" depart="143.0" departLane="best" from="396947540#0" to="308379361#0">
+        <stop busStop="5253057127" duration="30"/>  <!-- Pl. Pius XII -->
+        <stop busStop="5465541600" duration="30"/>  <!-- Pl Reina Maria Cristina -->
+        <stop busStop="8176650821" duration="30"/>  <!-- Maria Cristina - Carles III -->
+        <stop busStop="5253055691" duration="30"/>  <!-- Carles III - Numància -->
+        <stop busStop="5253058039" duration="30"/>  <!-- Mitre - Avinguda Sarrià -->
+        <stop busStop="5253057924" duration="30"/>  <!-- Mitre - Av. Sarrià -->
+        <stop busStop="8176650820" duration="30"/>  <!-- Mitre - Doctor Fleming -->
+        <stop busStop="5253077088" duration="30"/>  <!-- Mitre - Ganduxer -->
+        <stop busStop="5253098236" duration="30"/>  <!-- Mitre - Mandri -->
+    </trip>
+    <trip id="71_bus_33:0" type="pt_bus" depart="147.0" departLane="best" from="170079056#0" to="732998299">
+        <stop busStop="1478113760" duration="30"/>  <!-- Diagonal - Av Joan XXIII -->
+        <stop busStop="8220177025" duration="30"/>  <!-- Diagonal - Gran Via Carles III -->
+        <stop busStop="5343770281" duration="30"/>  <!-- Diagonal - Gandesa -->
+        <stop busStop="5343770280" duration="30"/>  <!-- Diagonal - L'Illa Diagonal -->
+        <stop busStop="5343770279" duration="30"/>  <!-- Diagonal - Entença -->
+        <stop busStop="8199176440" duration="30"/>  <!-- Diagonal - Av de Sarrià -->
+        <stop busStop="-5260292357" duration="30"/>  <!-- Diagonal - Francesc Macià -->
+        <stop busStop="5260292356" duration="30"/>  <!-- Diagonal - Muntaner -->
+        <stop busStop="5264394016" duration="30"/>  <!-- Diagonal - Balmes -->
+        <stop busStop="8190463686" duration="30"/>  <!-- Diagonal - Pau Claris -->
+        <stop busStop="12650684969" duration="30"/>  <!-- Diagonal-Bruc -->
+        <stop busStop="2573351880" duration="30"/>  <!-- València - Pg de Sant Joan -->
+        <stop busStop="3477282395" duration="30"/>  <!-- València - Pg. Sant Joan -->
+        <stop busStop="2573351872" duration="30"/>  <!-- València - Diagonal -->
+    </trip>
+    <trip id="72_bus_67:0" type="pt_bus" depart="147.0" departLane="best" from="170079056#0" to="126304603#0">
+        <stop busStop="1478113760" duration="30"/>  <!-- Diagonal - Av Joan XXIII -->
+        <stop busStop="8220177025" duration="30"/>  <!-- Diagonal - Gran Via Carles III -->
+        <stop busStop="5343770281" duration="30"/>  <!-- Diagonal - Gandesa -->
+        <stop busStop="5343770280" duration="30"/>  <!-- Diagonal - L'Illa Diagonal -->
+        <stop busStop="5343770279" duration="30"/>  <!-- Diagonal - Entença -->
+        <stop busStop="8199176440" duration="30"/>  <!-- Diagonal - Av de Sarrià -->
+        <stop busStop="8097436675" duration="30"/>  <!-- Villarroel - Buenos Aires -->
+        <stop busStop="8264714821" duration="30"/>  <!-- París - Casanova -->
+        <stop busStop="5372739584" duration="30"/>  <!-- París - Enric Granados -->
+        <stop busStop="8214234928" duration="30"/>  <!-- Balmes - Roselló -->
+        <stop busStop="8214234927" duration="30"/>  <!-- Balmes - València -->
+        <stop busStop="8214234926" duration="30"/>  <!-- Balmes - Aragó -->
+        <stop busStop="8214234925" duration="30"/>  <!-- Balmes - Gran Via -->
+        <stop busStop="5711282950" duration="30"/>  <!-- Pl. de Catalunya - Bergara -->
+    </trip>
+    <trip id="73_bus_39:1" type="pt_bus" depart="149.0" departLane="best" from="296827086" to="1205958254">
+        <stop busStop="8259972652" duration="30"/>  <!-- Torrent de l'Olla - Penedès -->
+        <stop busStop="8259972651" duration="30"/>  <!-- Torrent de l'Olla - Còrsega -->
+        <stop busStop="8259972650" duration="30"/>  <!-- Pau Claris - Rosselló -->
+        <stop busStop="6324223822" duration="30"/>  <!-- Pau Claris - Mallorca -->
+        <stop busStop="6324223821" duration="30"/>  <!-- Pau Claris - Aragó -->
+        <stop busStop="6324223820" duration="30"/>  <!-- Pau Claris - Gran Via -->
+        <stop busStop="6131466345" duration="30"/>  <!-- Pl Urquinaona -->
+    </trip>
+    <trip id="74_bus_H6:1" type="pt_bus" depart="149.0" departLane="best" from="86330626#0" to="-396947540#1">
+        <stop busStop="5254863488" duration="30"/>  <!-- Mitre - Mandri -->
+        <stop busStop="5256357720" duration="30"/>  <!-- Mitre - Ganduxer -->
+        <stop busStop="5256357719" duration="30"/>  <!-- Mitre - Doctor Fleming -->
+        <stop busStop="5256357718" duration="30"/>  <!-- Mitre - Prat de la Riba -->
+        <stop busStop="5256357717" duration="30"/>  <!-- Manuel Girona - Carles III -->
+        <stop busStop="5256357716" duration="30"/>  <!-- Capità Arenas - Maria Cristina -->
+        <stop busStop="-5256357715" duration="30"/>  <!-- Pl Pius XII -->
+    </trip>
+    <trip id="75_bus_70:0" type="pt_bus" depart="157.0" departLane="best" from="308379365" to="158922103#5">
+        <stop busStop="5254863488" duration="30"/>  <!-- Mitre - Mandri -->
+        <stop busStop="5256357720" duration="30"/>  <!-- Mitre - Ganduxer -->
+        <stop busStop="5256357719" duration="30"/>  <!-- Mitre - Doctor Fleming -->
+        <stop busStop="5256357718" duration="30"/>  <!-- Mitre - Prat de la Riba -->
+        <stop busStop="5256357717" duration="30"/>  <!-- Manuel Girona - Carles III -->
+        <stop busStop="8286917378" duration="30"/>  <!-- Capità Arenas - Pg Manuel Girona -->
+        <stop busStop="8048728590" duration="30"/>  <!-- Carles III - Maria Cristina -->
+        <stop busStop="8048728589" duration="30"/>  <!-- Carles III - Mejía Lequerica -->
+        <stop busStop="8180054859" duration="30"/>  <!-- Carles III - Les Corts -->
+        <stop busStop="2509846214" duration="30"/>  <!-- Rambla del Brasil - Violant d'Hongria -->
+        <stop busStop="2509846213" duration="30"/>  <!-- Rambla del Brasil - Roger -->
+    </trip>
+    <trip id="76_bus_34:0" type="pt_bus" depart="158.0" departLane="best" from="1409641091#0" to="554907245#0">
+        <stop busStop="2573351864" duration="30"/>  <!-- Mallorca, 367 -->
+        <stop busStop="2573351868" duration="30"/>  <!-- Mallorca - Pg Sant Joan -->
+        <stop busStop="12323293314" duration="30"/>  <!-- Diagonal - Estació Verdaguer -->
+        <stop busStop="-5260601899" duration="30"/>  <!-- Diagonal - Passeig de Gràcia -->
+        <stop busStop="-5264394016" duration="30"/>  <!-- Diagonal - Balmes -->
+        <stop busStop="-5260292356" duration="30"/>  <!-- Diagonal - Muntaner -->
+        <stop busStop="5264394013" duration="30"/>  <!-- Diagonal - Francesc Macià -->
+        <stop busStop="-5341631258" duration="30"/>  <!-- Diagonal - Ganduxer -->
+        <stop busStop="8210321666" duration="30"/>  <!-- Av de Sarrià - Diagonal -->
+        <stop busStop="5333258149" duration="30"/>  <!-- Av de Sarrià - Mestre Villa -->
+        <stop busStop="5256357717" duration="30"/>  <!-- Manuel Girona - Carles III -->
+        <stop busStop="8180054870" duration="30"/>  <!-- Benet Mateu - Manuel de Falla -->
+        <stop busStop="8387140713" duration="30"/>  <!-- Capità Arenas - Manuel de Falla -->
+        <stop busStop="13052284751" duration="30"/>  <!-- Capità Arenas - Francesc Carbonell -->
+    </trip>
+    <trip id="77_bus_X1:1" type="pt_bus" depart="158.0" departLane="best" from="1391893480" to="237521115#0">
+        <stop busStop="9103861288" duration="30"/>  <!-- Diagonal - Pl Francesc Macià -->
+        <stop busStop="8097436674" duration="30"/>  <!-- Villarroel - Hospital Clínic -->
+        <stop busStop="1474608404" duration="30"/>  <!-- Pl Universitat -->
+        <stop busStop="5274072652" duration="30"/>  <!-- Gran Via - Pau Claris -->
+        <stop busStop="5274072651" duration="30"/>  <!-- Metro Tetuan -->
+    </trip>
+    <trip id="78_bus_N40:0" type="pt_bus" depart="159.0" departLane="best" from="20475367" to="20475367">
+        <stop busStop="1966472090" duration="30"/>  <!-- Ronda Universitat - Plaça Catalunya -->
+    </trip>
+    <trip id="79_bus_L50:0" type="pt_bus" depart="159.0" departLane="best" from="1210868746#0" to="1258709160">
+        <stop busStop="2454435907" duration="30"/>  <!-- Trav. de les Corts - Riera Blanca -->
+        <stop busStop="5264616329" duration="30"/>  <!-- Les Corts - Aurora Bertrana -->
+    </trip>
+    <trip id="80_bus_567:0" type="pt_bus" depart="159.0" departLane="best" from="-294056749#2" to="-396947540#1">
+        <stop busStop="-5341631255" duration="30"/>  <!-- Diagonal - Pl Reina Maria Cristina -->
+    </trip>
+    <trip id="81_bus_L68:0" type="pt_bus" depart="160.0" departLane="best" from="251749485#0" to="-396947540#1">
+        <stop busStop="8173979185" duration="30"/>  <!-- Josep Tarradellas - Francesc Macià -->
+        <stop busStop="-12815640391" duration="30"/>  <!-- Av. Diagonal - Dr. Fleming (C.C. L'illa) -->
+        <stop busStop="-5341631255" duration="30"/>  <!-- Diagonal - Pl Reina Maria Cristina -->
+    </trip>
+    <trip id="82_bus_N81:0" type="pt_bus" depart="160.0" departLane="best" from="295263589#0" to="237521115#0">
+        <stop busStop="5107212910" duration="30"/>  <!-- Pg de Gràcia - Casp -->
+        <stop busStop="3092785220" duration="30"/>  <!-- Plaça Tetuan - Gran Via -->
+    </trip>
+    <trip id="83_bus_68:0" type="pt_bus" depart="160.0" departLane="best" from="238324877#0" to="-554907247">
+        <stop busStop="2510905949" duration="30"/>  <!-- Provença - Casanova -->
+        <stop busStop="8274427611" duration="30"/>  <!-- Casanova - París -->
+        <stop busStop="8203768661" duration="30"/>  <!-- Casanova - Diagonal -->
+        <stop busStop="8203768660" duration="30"/>  <!-- Santaló - Trav de Gràcia -->
+        <stop busStop="8203768659" duration="30"/>  <!-- Santaló - Mercat Galvany -->
+        <stop busStop="4736087617" duration="30"/>  <!-- Via Augusta - Amigó -->
+        <stop busStop="8203768658" duration="30"/>  <!-- Via Augusta - Modolell -->
+        <stop busStop="2033098461" duration="30"/>  <!-- Via Augusta - Ronda General Mitre -->
+        <stop busStop="8286796475" duration="30"/>  <!-- Via Augusta - Doctor Roux -->
+        <stop busStop="2195921305" duration="30"/>  <!-- Via Augusta - Pau Alcover -->
+        <stop busStop="2195921306" duration="30"/>  <!-- Pg Bonanova -->
+        <stop busStop="-5127179247" duration="30"/>  <!-- Pg. Reina Elisenda - Major de Sarrià -->
+    </trip>
+    <trip id="84_bus_68:1" type="pt_bus" depart="165.0" departLane="best" from="554907247" to="238324877#0">
+        <stop busStop="8168365852" duration="30"/>  <!-- Pl de Sarrià -->
+        <stop busStop="8194685213" duration="30"/>  <!-- Pg. Bonanova -->
+        <stop busStop="2989750379" duration="30"/>  <!-- Via Augusta - Els Vergós -->
+        <stop busStop="-8286796473" duration="30"/>  <!-- Via Augusta - Pl Orient -->
+        <stop busStop="-8199176443" duration="30"/>  <!-- Via Augusta - Ronda General Mitre -->
+        <stop busStop="-8286796472" duration="30"/>  <!-- Via Augusta - Alt Gironella -->
+        <stop busStop="-8203768653" duration="30"/>  <!-- Via Augusta - Ganduxer -->
+        <stop busStop="-323191079" duration="30"/>  <!-- Via Augusta - Calvet -->
+        <stop busStop="8203768652" duration="30"/>  <!-- Calvet - Tenor Viñas -->
+        <stop busStop="8203768651" duration="30"/>  <!-- Calvet - Diagonal -->
+        <stop busStop="8097436675" duration="30"/>  <!-- Villarroel - Buenos Aires -->
+        <stop busStop="8264714821" duration="30"/>  <!-- París - Casanova -->
+        <stop busStop="8210119845" duration="30"/>  <!-- Muntaner - Roselló -->
+        <stop busStop="2510905949" duration="30"/>  <!-- Provença - Casanova -->
+    </trip>
+    <trip id="85_bus_e11.1:0" type="pt_bus" depart="166.0" departLane="best" from="272639447#0" to="20475367">
+        <stop busStop="3092785221" duration="30"/>  <!-- Gran Via - Roger de Flor -->
+        <stop busStop="1966472090" duration="30"/>  <!-- Ronda Universitat - Plaça Catalunya -->
+    </trip>
+    <trip id="86_bus_e11.1:1" type="pt_bus" depart="167.0" departLane="best" from="20475367" to="237521115#0">
+        <stop busStop="1966472090" duration="30"/>  <!-- Ronda Universitat - Plaça Catalunya -->
+        <stop busStop="3092785220" duration="30"/>  <!-- Plaça Tetuan - Gran Via -->
+        <stop busStop="12301193263" duration="30"/>  <!-- None -->
+        <stop busStop="3092785223" duration="30"/>  <!-- None -->
+    </trip>
+    <trip id="87_bus_e11.2:0" type="pt_bus" depart="173.0" departLane="best" from="272639447#0" to="20475367">
+        <stop busStop="3092785221" duration="30"/>  <!-- Gran Via - Roger de Flor -->
+        <stop busStop="1966472090" duration="30"/>  <!-- Ronda Universitat - Plaça Catalunya -->
+    </trip>
+    <trip id="88_bus_e11.2:1" type="pt_bus" depart="178.0" departLane="best" from="20475367" to="237521115#0">
+        <stop busStop="1966472090" duration="30"/>  <!-- Ronda Universitat - Plaça Catalunya -->
+        <stop busStop="3092785220" duration="30"/>  <!-- Plaça Tetuan - Gran Via -->
+    </trip>
+    <trip id="89_subway_L4:0" type="pt_subway" depart="179.0" departLane="best" from="454749367" to="454749367">
+        <stop busStop="462256421" duration="30"/>  <!-- Verdaguer -->
+        <stop busStop="462256419" duration="30"/>  <!-- Girona -->
+        <stop busStop="462256418" duration="30"/>  <!-- Passeig de Gràcia -->
+        <stop busStop="462256414" duration="30"/>  <!-- Urquinaona -->
+    </trip>
+    <trip id="90_bus_H12:1" type="pt_bus" depart="179.0" departLane="best" from="545715326" to="237521115#0">
+        <stop busStop="5760480288" duration="30"/>  <!-- Gran Via - Entença -->
+        <stop busStop="5760480287" duration="30"/>  <!-- Gran Via - Viladomat -->
+        <stop busStop="3460290375" duration="30"/>  <!-- Gran Via - Urgell -->
+        <stop busStop="5760480286" duration="30"/>  <!-- Gran Via - Muntaner -->
+        <stop busStop="1474608404" duration="30"/>  <!-- Pl Universitat -->
+        <stop busStop="5274072653" duration="30"/>  <!-- Gran Via - Balmes -->
+        <stop busStop="5274072652" duration="30"/>  <!-- Gran Via - Pau Claris -->
+        <stop busStop="5711282952" duration="30"/>  <!-- Gran Via - Llúria -->
+        <stop busStop="5274072651" duration="30"/>  <!-- Metro Tetuan -->
+        <stop busStop="5274072650" duration="30"/>  <!-- Gran Via - Roger de Flor -->
+    </trip>
+    <trip id="91_bus_H10:0" type="pt_bus" depart="184.0" departLane="best" from="831157580#0" to="732998299">
+        <stop busStop="12106325521" duration="30"/>  <!-- Pg Sant Antoni - Parc de l'Espanya Industrial -->
+        <stop busStop="1479334948" duration="30"/>  <!-- Av Roma - Tarragona -->
+        <stop busStop="2510905952" duration="30"/>  <!-- València - Entença -->
+        <stop busStop="8193682977" duration="30"/>  <!-- València - Viladomat -->
+        <stop busStop="30243320" duration="30"/>  <!-- València - Comte d'Urgell -->
+        <stop busStop="8193682976" duration="30"/>  <!-- València - Muntaner -->
+        <stop busStop="8193682975" duration="30"/>  <!-- València - Balmes -->
+        <stop busStop="1662624587" duration="30"/>  <!-- Valencia - Pg de Gràcia -->
+        <stop busStop="3477282394" duration="30"/>  <!-- València - Pg de Gràcia -->
+        <stop busStop="2573294264" duration="30"/>  <!-- València - Roger de Llúria -->
+        <stop busStop="6321098314" duration="30"/>  <!-- Mercat de la Concepció -->
+        <stop busStop="2573351880" duration="30"/>  <!-- València - Pg de Sant Joan -->
+        <stop busStop="3477282395" duration="30"/>  <!-- València - Pg. Sant Joan -->
+        <stop busStop="2573351872" duration="30"/>  <!-- València - Diagonal -->
+    </trip>
+    <trip id="92_bus_H10:1" type="pt_bus" depart="187.0" departLane="best" from="1409641091#0" to="652024041">
+        <stop busStop="2573351864" duration="30"/>  <!-- Mallorca, 367 -->
+        <stop busStop="2573351868" duration="30"/>  <!-- Mallorca - Pg Sant Joan -->
+        <stop busStop="1962300126" duration="30"/>  <!-- Mallorca - Girona -->
+        <stop busStop="6324223823" duration="30"/>  <!-- Mallorca - Girona -->
+        <stop busStop="5609793228" duration="30"/>  <!-- Mallorca - Pau Claris -->
+        <stop busStop="2573294266" duration="30"/>  <!-- Mallorca - Pg de Gràcia -->
+        <stop busStop="1662624568" duration="30"/>  <!-- Mallorca - Balmes -->
+        <stop busStop="8193762124" duration="30"/>  <!-- Mallorca - Muntaner -->
+        <stop busStop="2510905936" duration="30"/>  <!-- Mallorca - Comte d'Urgell -->
+        <stop busStop="8193791324" duration="30"/>  <!-- Mallorca - Viladomat -->
+        <stop busStop="-12106307036" duration="30"/>  <!-- Pg Sant Antoni, 53-55 -->
+    </trip>
+    <trip id="93_bus_C6:0" type="pt_bus" depart="188.0" departLane="best" from="20475367" to="237521115#0">
+        <stop busStop="1966472090" duration="30"/>  <!-- Ronda Universitat - Plaça Catalunya -->
+        <stop busStop="3092785220" duration="30"/>  <!-- Plaça Tetuan - Gran Via -->
+    </trip>
+    <trip id="94_bus_H16:1" type="pt_bus" depart="189.0" departLane="best" from="545715326" to="546184105#3">
+        <stop busStop="5275881874" duration="30"/>  <!-- Floridablanca - Av Mistral -->
+        <stop busStop="8205826548" duration="30"/>  <!-- Floridablanca - Viladomat -->
+        <stop busStop="5603006495" duration="30"/>  <!-- Floridablanca - Comte d'Urgell -->
+        <stop busStop="7803556121" duration="30"/>  <!-- Ronda Sant Antoni - Pl Goya -->
+        <stop busStop="-4040253773" duration="30"/>  <!-- Plaça Universitat - Pelai -->
+        <stop busStop="216349848" duration="30"/>  <!-- Pl. Catalunya - Portal de l'Àngel -->
+        <stop busStop="6325900918" duration="30"/>  <!-- Pl Urquinaona -->
+        <stop busStop="6325900917" duration="30"/>  <!-- Trafalgar - Bruc -->
+    </trip>
+    <trip id="95_bus_L64:1" type="pt_bus" depart="189.0" departLane="best" from="-1409620054#3" to="-396947540#1">
+        <stop busStop="-12815640391" duration="30"/>  <!-- Av. Diagonal - Dr. Fleming (C.C. L'illa) -->
+        <stop busStop="-5341631255" duration="30"/>  <!-- Diagonal - Pl Reina Maria Cristina -->
+    </trip>
+    <trip id="96_bus_VAC-099:0" type="pt_bus" depart="194.0" departLane="best" from="396947540#0" to="129216262#3">
+        <stop busStop="539147490@1744556" duration="30"/>  <!-- Sants Estació d'Autobús -->
+        <stop busStop="8399487640" duration="30"/>  <!-- None -->
+    </trip>
+    <trip id="97_bus_D20:1" type="pt_bus" depart="201.0" departLane="best" from="54060104#0" to="45185735#5">
+        <stop busStop="5760480297" duration="30"/>  <!-- Sants - Munné -->
+    </trip>
+    <trip id="124_bus_D40:0" type="pt_bus" depart="269.0" departLane="best" from="542836620" to="296827092#0">
+        <stop busStop="5247885758" duration="30"/>  <!-- Tarragona - Pl Espanya -->
+        <stop busStop="10836696130" duration="30"/>  <!-- Tarragona - Pl. Espanya -->
+        <stop busStop="2189785050" duration="30"/>  <!-- Metro Tarragona -->
+        <stop busStop="1479334948" duration="30"/>  <!-- Av Roma - Tarragona -->
+        <stop busStop="5247914070" duration="30"/>  <!-- Josep Tarradellas - Rosselló -->
+        <stop busStop="5247914552" duration="30"/>  <!-- Josep Tarradellas - París -->
+        <stop busStop="5247922096" duration="30"/>  <!-- Josep Tarradellas - Viladomat -->
+        <stop busStop="5247919458" duration="30"/>  <!-- Josep Tarradellas - Av de Sarrià -->
+        <stop busStop="5247922095" duration="30"/>  <!-- Buenos Aires - Comte d'Urgell -->
+        <stop busStop="5247930117" duration="30"/>  <!-- Travessera de Gràcia - Muntaner -->
+        <stop busStop="8171323754" duration="30"/>  <!-- Trav de Gràcia - Muntaner -->
+        <stop busStop="8171323753" duration="30"/>  <!-- Trav de Gràcia - Balmes -->
+        <stop busStop="5247945809" duration="30"/>  <!-- Pl Gal·la Placídia -->
+        <stop busStop="7684461611" duration="30"/>  <!-- Riera de Cassoles - Rambla de Prat -->
+    </trip>
+    <trip id="135_bus_D40:1" type="pt_bus" depart="301.0" departLane="best" from="790634174#0" to="542836620">
+        <stop busStop="8173979189" duration="30"/>  <!-- Balmes - Via Augusta -->
+        <stop busStop="8173979188" duration="30"/>  <!-- Balmes - Trav de Gràcia -->
+        <stop busStop="-8173979187" duration="30"/>  <!-- Travessera de Gràcia - Muntaner -->
+        <stop busStop="-8173979186" duration="30"/>  <!-- Travessera de Gràcia - Calvet -->
+        <stop busStop="8173979185" duration="30"/>  <!-- Josep Tarradellas - Francesc Macià -->
+        <stop busStop="5249410994" duration="30"/>  <!-- Josep Tarradellas - Av.Sarrià -->
+        <stop busStop="5249410995" duration="30"/>  <!-- Josep Tarradellas - Av Sarrià -->
+        <stop busStop="2508645436" duration="30"/>  <!-- Josep Tarradellas - Entença -->
+        <stop busStop="8173979184" duration="30"/>  <!-- Josep Tarradellas - Numància -->
+        <stop busStop="-12106306191" duration="30"/>  <!-- Tarragona - Mallorca -->
+        <stop busStop="-7757144476" duration="30"/>  <!-- Metro Tarragona -->
+        <stop busStop="12109091226" duration="30"/>  <!-- Tarragona - Pl Espanya -->
+    </trip>
+    <trip id="136_bus_H4:0" type="pt_bus" depart="303.0" departLane="best" from="554907247" to="872347729">
+        <stop busStop="8168365852" duration="30"/>  <!-- Pl de Sarrià -->
+        <stop busStop="2408256845" duration="30"/>  <!-- Pg. Bonanova - Anglí -->
+        <stop busStop="8168365851" duration="30"/>  <!-- Pg Bonanova - Anglí -->
+    </trip>
+    <trip id="137_bus_H4:1" type="pt_bus" depart="305.0" departLane="best" from="-872347729" to="-554907247">
+        <stop busStop="-8168365823" duration="30"/>  <!-- Pg Bonanova - Carrasco i Formiguera -->
+        <stop busStop="-5127179247" duration="30"/>  <!-- Pg. Reina Elisenda - Major de Sarrià -->
+        <stop busStop="-8168365822" duration="30"/>  <!-- Pg Reina Elisenda - Major de Sarrià -->
+    </trip>
+    <trip id="138_bus_H14:0" type="pt_bus" depart="310.0" departLane="best" from="237649291#0" to="120328525#0">
+        <stop busStop="5243064484" duration="30"/>  <!-- Ronda Sant Pau - Carrer de les Flors -->
+    </trip>
+    <trip id="139_bus_H14:1" type="pt_bus" depart="313.0" departLane="best" from="237649291#0" to="237649291#0">
+        <stop busStop="5243064484" duration="30"/>  <!-- Ronda Sant Pau - Carrer de les Flors -->
+    </trip>
+    <trip id="140_bus_V3:0" type="pt_bus" depart="317.0" departLane="best" from="34054320#0" to="237695634#1">
+        <stop busStop="8084922537" duration="30"/>  <!-- Carles III - Les Corts -->
+        <stop busStop="1377816289" duration="30"/>  <!-- Carles III - Mejía Lequerica -->
+        <stop busStop="8180054871" duration="30"/>  <!-- Diagonal - Joan Güell -->
+        <stop busStop="8176650821" duration="30"/>  <!-- Maria Cristina - Carles III -->
+        <stop busStop="5253055691" duration="30"/>  <!-- Carles III - Numància -->
+        <stop busStop="5256357717" duration="30"/>  <!-- Manuel Girona - Carles III -->
+        <stop busStop="8180054870" duration="30"/>  <!-- Benet Mateu - Manuel de Falla -->
+        <stop busStop="8180054869" duration="30"/>  <!-- Santa Amèlia - Capità Arenas -->
+        <stop busStop="8180054868" duration="30"/>  <!-- Santa Amèlia -->
+        <stop busStop="8180054867" duration="30"/>  <!-- Av J V Foix - Pedró de la Creu -->
+    </trip>
+    <trip id="141_bus_V3:1" type="pt_bus" depart="318.0" departLane="best" from="-237695634#4" to="54847776">
+        <stop busStop="-8180054861" duration="30"/>  <!-- Av. J. V. Foix - Pedró de la Creu -->
+        <stop busStop="4760001535" duration="30"/>  <!-- Eduardo Conde - Santa Amèlia -->
+        <stop busStop="8387140713" duration="30"/>  <!-- Capità Arenas - Manuel de Falla -->
+        <stop busStop="5256357716" duration="30"/>  <!-- Capità Arenas - Maria Cristina -->
+        <stop busStop="8048728590" duration="30"/>  <!-- Carles III - Maria Cristina -->
+        <stop busStop="8048728589" duration="30"/>  <!-- Carles III - Mejía Lequerica -->
+        <stop busStop="8180054859" duration="30"/>  <!-- Carles III - Les Corts -->
+        <stop busStop="8180054858" duration="30"/>  <!-- Carles III - Av. Madrid -->
+    </trip>
+    <trip id="142_bus_V5:0" type="pt_bus" depart="321.0" departLane="best" from="831157580#0" to="871723190#3">
+        <stop busStop="7760665318" duration="30"/>  <!-- Pl. Sants -->
+        <stop busStop="7760665319" duration="30"/>  <!-- Pl de Joan Peiró -->
+        <stop busStop="8193559515" duration="30"/>  <!-- Comtes de Bell-lloc - Viriat -->
+        <stop busStop="8193559514" duration="30"/>  <!-- Comtes de Bell-lloc - Berlín -->
+        <stop busStop="8193559513" duration="30"/>  <!-- Can Bruixa - Comtes de Bell-lloc -->
+        <stop busStop="8191099729" duration="30"/>  <!-- Mercat de Les Corts -->
+        <stop busStop="1377816289" duration="30"/>  <!-- Carles III - Mejía Lequerica -->
+        <stop busStop="-5341631255" duration="30"/>  <!-- Diagonal - Pl Reina Maria Cristina -->
+        <stop busStop="-1374308501" duration="30"/>  <!-- Pl. Pius XII -->
+        <stop busStop="-8193559512" duration="30"/>  <!-- Pl Pius XII -->
+    </trip>
+    <trip id="143_bus_V5:1" type="pt_bus" depart="322.0" departLane="best" from="871723176" to="1408564502#10">
+        <stop busStop="1478113760" duration="30"/>  <!-- Diagonal - Av Joan XXIII -->
+        <stop busStop="8048728590" duration="30"/>  <!-- Carles III - Maria Cristina -->
+        <stop busStop="8048728589" duration="30"/>  <!-- Carles III - Mejía Lequerica -->
+        <stop busStop="-8190463692" duration="30"/>  <!-- Les Corts - Carles III -->
+        <stop busStop="8193559507" duration="30"/>  <!-- Joan Güell - Travessera de les Corts -->
+        <stop busStop="8193559506" duration="30"/>  <!-- Joan Güell - Av. Madrid -->
+        <stop busStop="8193559505" duration="30"/>  <!-- Joan Güell - Cerdanyola -->
+    </trip>
+    <trip id="144_bus_V11:0" type="pt_bus" depart="323.0" departLane="best" from="237649291#0" to="198597865#14">
+        <stop busStop="12864210815" duration="30"/>  <!-- Pl. Josep Maria Folch -->
+        <stop busStop="8180094957" duration="30"/>  <!-- Ronda Sant Pau - Parlament -->
+        <stop busStop="8203768666" duration="30"/>  <!-- Comte d'Urgell - Floridablanca -->
+        <stop busStop="8203768665" duration="30"/>  <!-- Comte d'Urgell - Gran Via -->
+        <stop busStop="8203768664" duration="30"/>  <!-- Comte d'Urgell - Aragó -->
+        <stop busStop="30243320" duration="30"/>  <!-- València - Comte d'Urgell -->
+        <stop busStop="30237864" duration="30"/>  <!-- Casanova - Hospital Clínic -->
+        <stop busStop="8203768661" duration="30"/>  <!-- Casanova - Diagonal -->
+        <stop busStop="8203768660" duration="30"/>  <!-- Santaló - Trav de Gràcia -->
+        <stop busStop="8203768659" duration="30"/>  <!-- Santaló - Mercat Galvany -->
+        <stop busStop="4736087617" duration="30"/>  <!-- Via Augusta - Amigó -->
+        <stop busStop="8203768658" duration="30"/>  <!-- Via Augusta - Modolell -->
+        <stop busStop="8203768657" duration="30"/>  <!-- Ganduxer - Alacant -->
+    </trip>
+    <trip id="145_bus_V11:1" type="pt_bus" depart="323.0" departLane="best" from="308379365" to="246638751">
+        <stop busStop="10278228679" duration="30"/>  <!-- Vico - Ronda General Mitre -->
+        <stop busStop="10278243426" duration="30"/>  <!-- Freixa - Vallmajor -->
+        <stop busStop="-323191079" duration="30"/>  <!-- Via Augusta - Calvet -->
+        <stop busStop="8203768652" duration="30"/>  <!-- Calvet - Tenor Viñas -->
+        <stop busStop="8203768651" duration="30"/>  <!-- Calvet - Diagonal -->
+        <stop busStop="8097436675" duration="30"/>  <!-- Villarroel - Buenos Aires -->
+        <stop busStop="8097436674" duration="30"/>  <!-- Villarroel - Hospital Clínic -->
+        <stop busStop="2510905955" duration="30"/>  <!-- Villarroel - Mercat del Ninot -->
+        <stop busStop="8097436672" duration="30"/>  <!-- Villarroel - Aragó -->
+        <stop busStop="8097436671" duration="30"/>  <!-- Villarroel - Gran Via -->
+        <stop busStop="8097436670" duration="30"/>  <!-- Villarroel - Sepúlveda -->
+        <stop busStop="12351408134" duration="30"/>  <!-- Ronda Sant Antoni - Compte d'Urgell -->
+        <stop busStop="5609791820" duration="30"/>  <!-- Viladomat - Manso -->
+    </trip>
+    <trip id="146_bus_V13:0" type="pt_bus" depart="325.0" departLane="best" from="126304603#0" to="198597865#14">
+        <stop busStop="5711282950" duration="30"/>  <!-- Pl. de Catalunya - Bergara -->
+        <stop busStop="5609793223" duration="30"/>  <!-- Ronda Universitat - Pl. Universitat -->
+        <stop busStop="8210106344" duration="30"/>  <!-- Aribau - Gran Via -->
+        <stop busStop="8210106343" duration="30"/>  <!-- Aribau - Aragó -->
+        <stop busStop="8210106342" duration="30"/>  <!-- Aribau - Mallorca -->
+        <stop busStop="8210106341" duration="30"/>  <!-- Aribau - Còrsega -->
+        <stop busStop="8210106340" duration="30"/>  <!-- Aribau - Diagonal -->
+        <stop busStop="8210192685" duration="30"/>  <!-- Aribau - Laforja -->
+        <stop busStop="8210192684" duration="30"/>  <!-- Via Augusta - Muntaner -->
+        <stop busStop="8210192683" duration="30"/>  <!-- Santaló - Plató -->
+        <stop busStop="8210192682" duration="30"/>  <!-- Pl d'Adrià -->
+        <stop busStop="5254863488" duration="30"/>  <!-- Mitre - Mandri -->
+        <stop busStop="8203768657" duration="30"/>  <!-- Ganduxer - Alacant -->
+    </trip>
+    <trip id="147_bus_V13:1" type="pt_bus" depart="326.0" departLane="best" from="308379493#2" to="126304603#0">
+        <stop busStop="8210192671" duration="30"/>  <!-- Muntaner - Parc de Monterols -->
+        <stop busStop="8210192670" duration="30"/>  <!-- Muntaner - Plató -->
+        <stop busStop="8210192669" duration="30"/>  <!-- Muntaner - Via Augusta -->
+        <stop busStop="13069136932" duration="30"/>  <!-- Madrazo 104 -->
+        <stop busStop="8210192668" duration="30"/>  <!-- Muntaner - Laforja -->
+        <stop busStop="8210119846" duration="30"/>  <!-- Muntaner - Diagonal -->
+        <stop busStop="8210119845" duration="30"/>  <!-- Muntaner - Roselló -->
+        <stop busStop="8210119844" duration="30"/>  <!-- Muntaner - València -->
+        <stop busStop="8210119843" duration="30"/>  <!-- Muntaner - Diputació -->
+        <stop busStop="1474608404" duration="30"/>  <!-- Pl Universitat -->
+        <stop busStop="5711282950" duration="30"/>  <!-- Pl. de Catalunya - Bergara -->
+    </trip>
+    <trip id="148_bus_V15:0" type="pt_bus" depart="329.0" departLane="best" from="1408672893#0" to="-287683998#0">
+        <stop busStop="8180116870" duration="30"/>  <!-- Ronda Sant Pere - Girona -->
+        <stop busStop="8180116869" duration="30"/>  <!-- Metro Urquinaona -->
+        <stop busStop="9788442646" duration="30"/>  <!-- Pg de Gràcia - Casp -->
+        <stop busStop="-5603006498" duration="30"/>  <!-- Pg de Gràcia - Gran Via -->
+        <stop busStop="-5603009321" duration="30"/>  <!-- Pg de Gràcia - Aragó -->
+        <stop busStop="-8214234942" duration="30"/>  <!-- Pg de Gràcia - Mallorca -->
+        <stop busStop="-8214234941" duration="30"/>  <!-- Pg de Gràcia - Diagonal -->
+        <stop busStop="8214234940" duration="30"/>  <!-- Via Augusta - Diagonal -->
+        <stop busStop="5247945809" duration="30"/>  <!-- Pl Gal·la Placídia -->
+        <stop busStop="-8214234939" duration="30"/>  <!-- Pl Molina -->
+    </trip>
+    <trip id="149_bus_V15:1" type="pt_bus" depart="330.0" departLane="best" from="287683998#0" to="1206387470">
+        <stop busStop="8173979189" duration="30"/>  <!-- Balmes - Via Augusta -->
+        <stop busStop="8173979188" duration="30"/>  <!-- Balmes - Trav de Gràcia -->
+        <stop busStop="8214234929" duration="30"/>  <!-- Balmes - Diagonal -->
+        <stop busStop="8214234928" duration="30"/>  <!-- Balmes - Roselló -->
+        <stop busStop="8214234927" duration="30"/>  <!-- Balmes - València -->
+        <stop busStop="8214234926" duration="30"/>  <!-- Balmes - Aragó -->
+        <stop busStop="8214234925" duration="30"/>  <!-- Balmes - Gran Via -->
+        <stop busStop="216349848" duration="30"/>  <!-- Pl. Catalunya - Portal de l'Àngel -->
+        <stop busStop="8214234924" duration="30"/>  <!-- Via Laietana - Comtal -->
+        <stop busStop="8214234923" duration="30"/>  <!-- Via Laietana - Pl. Ramon Berenguer -->
+    </trip>
+    <trip id="150_bus_B20:1" type="pt_bus" depart="331.0" departLane="best" from="511211614#0" to="330913949#0">
+        <stop busStop="3706371090" duration="30"/>  <!-- Ronda Sant Pere - Plaça Urquinaona -->
+        <stop busStop="5609793288" duration="30"/>  <!-- Llúria - Urquinaona -->
+        <stop busStop="5609793287" duration="30"/>  <!-- Casp - Girona -->
+    </trip>
+    <trip id="151_bus_V17:0" type="pt_bus" depart="333.0" departLane="best" from="1408672893#0" to="831255362">
+        <stop busStop="8180116870" duration="30"/>  <!-- Ronda Sant Pere - Girona -->
+        <stop busStop="5609793288" duration="30"/>  <!-- Llúria - Urquinaona -->
+        <stop busStop="6321098316" duration="30"/>  <!-- Llúria - Gran Via -->
+        <stop busStop="6321098315" duration="30"/>  <!-- Llúria - Aragó -->
+        <stop busStop="5603006485" duration="30"/>  <!-- Llúria - Mallorca -->
+        <stop busStop="8220384290" duration="30"/>  <!-- Còrsega - Pg de Gràcia -->
+        <stop busStop="8220384289" duration="30"/>  <!-- Gran de Gràcia - Jesús -->
+        <stop busStop="8220384288" duration="30"/>  <!-- Gran de Gràcia - Trav de Gràcia -->
+        <stop busStop="7761529493" duration="30"/>  <!-- Gran de Gràcia - Metro Fontana -->
+    </trip>
+    <trip id="152_bus_V17:1" type="pt_bus" depart="334.0" departLane="best" from="-296827092#1" to="1206387470">
+        <stop busStop="-1457780061" duration="30"/>  <!-- Riera de Cassoles - Via Augusta -->
+        <stop busStop="-8220384275" duration="30"/>  <!-- Gal·la Placídia -->
+        <stop busStop="8220384274" duration="30"/>  <!-- Via Augusta - Diagonal -->
+        <stop busStop="8190463686" duration="30"/>  <!-- Diagonal - Pau Claris -->
+        <stop busStop="6324223822" duration="30"/>  <!-- Pau Claris - Mallorca -->
+        <stop busStop="6324223821" duration="30"/>  <!-- Pau Claris - Aragó -->
+        <stop busStop="6324223820" duration="30"/>  <!-- Pau Claris - Gran Via -->
+        <stop busStop="8220384273" duration="30"/>  <!-- Urquinaona -->
+        <stop busStop="8214234924" duration="30"/>  <!-- Via Laietana - Comtal -->
+        <stop busStop="8214234923" duration="30"/>  <!-- Via Laietana - Pl. Ramon Berenguer -->
+    </trip>
+    <trip id="153_bus_13:0" type="pt_bus" depart="336.0" departLane="best" from="238326399#0" to="237923125#0">
+        <stop busStop="3107615730" duration="30"/>  <!-- Manso - Viladomat -->
+        <stop busStop="8228181025" duration="30"/>  <!-- Calàbria - Av Mistral -->
+        <stop busStop="4040253781" duration="30"/>  <!-- Sepúlveda - Rocafort -->
+        <stop busStop="8045155332" duration="30"/>  <!-- None -->
+        <stop busStop="2510578431" duration="30"/>  <!-- Sepúlveda - Av. Mistral -->
+    </trip>
+    <trip id="154_bus_13:1" type="pt_bus" depart="342.0" departLane="best" from="545715326" to="238326399#0">
+        <stop busStop="5275881874" duration="30"/>  <!-- Floridablanca - Av Mistral -->
+        <stop busStop="8205826548" duration="30"/>  <!-- Floridablanca - Viladomat -->
+        <stop busStop="3107615730" duration="30"/>  <!-- Manso - Viladomat -->
+    </trip>
+    <trip id="155_bus_19:0" type="pt_bus" depart="346.0" departLane="best" from="-549518619" to="546184105#3">
+        <stop busStop="-5760480311" duration="30"/>  <!-- Pg. de Gràcia - Ronda de Sant Pere -->
+        <stop busStop="6325900918" duration="30"/>  <!-- Pl Urquinaona -->
+        <stop busStop="6325900917" duration="30"/>  <!-- Trafalgar - Bruc -->
+    </trip>
+    <trip id="156_bus_19:1" type="pt_bus" depart="347.0" departLane="best" from="1409641091#0" to="330913949#0">
+        <stop busStop="2573351864" duration="30"/>  <!-- Mallorca, 367 -->
+        <stop busStop="8143303455" duration="30"/>  <!-- Pg de Sant Joan - Pl Mossèn Jacint Verdaguer -->
+        <stop busStop="8143303454" duration="30"/>  <!-- Pg Sant Joan - Consell de Cent -->
+        <stop busStop="8143303453" duration="30"/>  <!-- Pg de Sant Joan - Diputació -->
+    </trip>
+    <trip id="157_bus_22:0" type="pt_bus" depart="350.0" departLane="best" from="519375847#0" to="831255362">
+        <stop busStop="8248379225" duration="30"/>  <!-- Ronda Sant Pere - Pg de Gràcia -->
+        <stop busStop="9788442646" duration="30"/>  <!-- Pg de Gràcia - Casp -->
+        <stop busStop="-5603006498" duration="30"/>  <!-- Pg de Gràcia - Gran Via -->
+        <stop busStop="-5603009321" duration="30"/>  <!-- Pg de Gràcia - Aragó -->
+        <stop busStop="-8214234942" duration="30"/>  <!-- Pg de Gràcia - Mallorca -->
+        <stop busStop="-8214234941" duration="30"/>  <!-- Pg de Gràcia - Diagonal -->
+        <stop busStop="8220384289" duration="30"/>  <!-- Gran de Gràcia - Jesús -->
+        <stop busStop="8220384288" duration="30"/>  <!-- Gran de Gràcia - Trav de Gràcia -->
+        <stop busStop="7761529493" duration="30"/>  <!-- Gran de Gràcia - Metro Fontana -->
+    </trip>
+    <trip id="158_bus_22:1" type="pt_bus" depart="350.0" departLane="best" from="-296827092#1" to="519375847#0">
+        <stop busStop="-1457780061" duration="30"/>  <!-- Riera de Cassoles - Via Augusta -->
+        <stop busStop="-8220384275" duration="30"/>  <!-- Gal·la Placídia -->
+        <stop busStop="8220384274" duration="30"/>  <!-- Via Augusta - Diagonal -->
+        <stop busStop="8248379224" duration="30"/>  <!-- Pg de Gràcia - Rosselló -->
+        <stop busStop="5609793227" duration="30"/>  <!-- Pg. de Gràcia - València -->
+        <stop busStop="2528513653" duration="30"/>  <!-- Pg. de Gràcia - Consell de Cent -->
+        <stop busStop="5609793225" duration="30"/>  <!-- Metro Pg. de Gràcia -->
+        <stop busStop="8248379225" duration="30"/>  <!-- Ronda Sant Pere - Pg de Gràcia -->
+    </trip>
+    <trip id="159_bus_24:0" type="pt_bus" depart="350.0" departLane="best" from="909658964" to="831255362">
+        <stop busStop="2989714853" duration="30"/>  <!-- Pl.de Catalunya - Rambla Catalunya -->
+        <stop busStop="-5603006498" duration="30"/>  <!-- Pg de Gràcia - Gran Via -->
+        <stop busStop="-5603009321" duration="30"/>  <!-- Pg de Gràcia - Aragó -->
+        <stop busStop="-8214234942" duration="30"/>  <!-- Pg de Gràcia - Mallorca -->
+        <stop busStop="-8214234941" duration="30"/>  <!-- Pg de Gràcia - Diagonal -->
+        <stop busStop="8220384289" duration="30"/>  <!-- Gran de Gràcia - Jesús -->
+        <stop busStop="8220384288" duration="30"/>  <!-- Gran de Gràcia - Trav de Gràcia -->
+        <stop busStop="7761529493" duration="30"/>  <!-- Gran de Gràcia - Metro Fontana -->
+    </trip>
+    <trip id="160_bus_24:1" type="pt_bus" depart="352.0" departLane="best" from="-296827092#1" to="909658964">
+        <stop busStop="-1457780061" duration="30"/>  <!-- Riera de Cassoles - Via Augusta -->
+        <stop busStop="-8220384275" duration="30"/>  <!-- Gal·la Placídia -->
+        <stop busStop="8220384274" duration="30"/>  <!-- Via Augusta - Diagonal -->
+        <stop busStop="8248379224" duration="30"/>  <!-- Pg de Gràcia - Rosselló -->
+        <stop busStop="5609793227" duration="30"/>  <!-- Pg. de Gràcia - València -->
+        <stop busStop="5609793226" duration="30"/>  <!-- Pg. de Gràcia - Consell de Cent -->
+        <stop busStop="5609793225" duration="30"/>  <!-- Metro Pg. de Gràcia -->
+        <stop busStop="2989714853" duration="30"/>  <!-- Pl.de Catalunya - Rambla Catalunya -->
+    </trip>
+    <trip id="161_bus_47:0" type="pt_bus" depart="353.0" departLane="best" from="1413338062#0" to="226319971">
+        <stop busStop="12988019848" duration="30"/>  <!-- Via Laietana - Pl. Ramon Berenguer -->
+        <stop busStop="12966750072" duration="30"/>  <!-- Via Laietana - Comtal -->
+        <stop busStop="5609793288" duration="30"/>  <!-- Llúria - Urquinaona -->
+        <stop busStop="6321098316" duration="30"/>  <!-- Llúria - Gran Via -->
+        <stop busStop="6321098315" duration="30"/>  <!-- Llúria - Aragó -->
+        <stop busStop="5603006485" duration="30"/>  <!-- Llúria - Mallorca -->
+        <stop busStop="5603006508" duration="30"/>  <!-- Rosselló - Bruc -->
+        <stop busStop="5261112621" duration="30"/>  <!-- Rosselló - Bailèn -->
+        <stop busStop="5603006483" duration="30"/>  <!-- Pg de Sant Joan - Còrsega -->
+    </trip>
+    <trip id="162_bus_47:1" type="pt_bus" depart="356.0" departLane="best" from="1409296676#0" to="1206387470">
+        <stop busStop="13061353133" duration="30"/>  <!-- Pg de Sant Joan - Còrsega -->
+        <stop busStop="5609793231" duration="30"/>  <!-- Còrsega-Bailén -->
+        <stop busStop="5609793230" duration="30"/>  <!-- Bruc-Còrsega -->
+        <stop busStop="5609793229" duration="30"/>  <!-- Bruc-Provença -->
+        <stop busStop="6324223822" duration="30"/>  <!-- Pau Claris - Mallorca -->
+        <stop busStop="6324223821" duration="30"/>  <!-- Pau Claris - Aragó -->
+        <stop busStop="6324223820" duration="30"/>  <!-- Pau Claris - Gran Via -->
+        <stop busStop="8220384273" duration="30"/>  <!-- Urquinaona -->
+        <stop busStop="8214234924" duration="30"/>  <!-- Via Laietana - Comtal -->
+        <stop busStop="8214234923" duration="30"/>  <!-- Via Laietana - Pl. Ramon Berenguer -->
+    </trip>
+    <trip id="163_bus_54:0" type="pt_bus" depart="357.0" departLane="best" from="251749488#0" to="549749258#0">
+        <stop busStop="5259830246" duration="30"/>  <!-- Riera Blanca - Les Corts -->
+        <stop busStop="8264714829" duration="30"/>  <!-- Av Madrid - Comte de Güell -->
+        <stop busStop="5259829879" duration="30"/>  <!-- Av Madrid - Arizala -->
+        <stop busStop="2509846193" duration="30"/>  <!-- Av Madrid - Carles III -->
+        <stop busStop="8264714828" duration="30"/>  <!-- Av Madrid - Joan Güell -->
+        <stop busStop="8264714827" duration="30"/>  <!-- Pl del Centre -->
+        <stop busStop="30251199" duration="30"/>  <!-- Berlín - Numància -->
+        <stop busStop="8190463690" duration="30"/>  <!-- Berlín - Nicaragua -->
+        <stop busStop="8264714825" duration="30"/>  <!-- París - Josep Tarradellas -->
+        <stop busStop="8097436664" duration="30"/>  <!-- París - Viladomat -->
+        <stop busStop="8264714822" duration="30"/>  <!-- París - Compte d'Urgell -->
+        <stop busStop="8264714821" duration="30"/>  <!-- París - Casanova -->
+        <stop busStop="8210119845" duration="30"/>  <!-- Muntaner - Roselló -->
+        <stop busStop="8210119844" duration="30"/>  <!-- Muntaner - València -->
+        <stop busStop="8210119843" duration="30"/>  <!-- Muntaner - Diputació -->
+        <stop busStop="1474608404" duration="30"/>  <!-- Pl Universitat -->
+        <stop busStop="5274072653" duration="30"/>  <!-- Gran Via - Balmes -->
+        <stop busStop="9180635115" duration="30"/>  <!-- Casp - Pau Claris -->
+        <stop busStop="9180635113" duration="30"/>  <!-- Casp - Girona -->
+        <stop busStop="9180610189" duration="30"/>  <!-- Casp - Pg de Sant Joan -->
+    </trip>
+    <trip id="164_bus_54:1" type="pt_bus" depart="362.0" departLane="best" from="1327959237#0" to="1258709160">
+        <stop busStop="5760544026" duration="30"/>  <!-- Metro Tetuan -->
+        <stop busStop="5760544025" duration="30"/>  <!-- Gran Via - Llúria -->
+        <stop busStop="5274384316" duration="30"/>  <!-- Gran Via - Pau Claris -->
+        <stop busStop="5274384898" duration="30"/>  <!-- Gran Via - Balmes -->
+        <stop busStop="8210106344" duration="30"/>  <!-- Aribau - Gran Via -->
+        <stop busStop="8210106343" duration="30"/>  <!-- Aribau - Aragó -->
+        <stop busStop="8210106342" duration="30"/>  <!-- Aribau - Mallorca -->
+        <stop busStop="8264543923" duration="30"/>  <!-- Còrsega - Aribau -->
+        <stop busStop="8264714837" duration="30"/>  <!-- Còrsega - Hospital Clínc -->
+        <stop busStop="8199176439" duration="30"/>  <!-- Londres - Hospital del Sagrat Cor -->
+        <stop busStop="8264714836" duration="30"/>  <!-- Londres - Calàbria -->
+        <stop busStop="8264714835" duration="30"/>  <!-- Marquès de Sentmenat - Equador -->
+        <stop busStop="8264714834" duration="30"/>  <!-- Marquès de Sentmenat - Numància -->
+        <stop busStop="2509846221" duration="30"/>  <!-- Vallespir - Jardí de Margalí -->
+        <stop busStop="8264714832" duration="30"/>  <!-- Vallespir - Pl del Centre -->
+        <stop busStop="-8235367889" duration="30"/>  <!-- Av Madrid - Joan Güell -->
+        <stop busStop="-8264714831" duration="30"/>  <!-- Av Madrid - Carles III -->
+        <stop busStop="-8264714830" duration="30"/>  <!-- Av Madrid - Benavent -->
+        <stop busStop="8163708750" duration="30"/>  <!-- Arizala - Les Corts -->
+        <stop busStop="5264616329" duration="30"/>  <!-- Les Corts - Aurora Bertrana -->
+    </trip>
+    <trip id="165_bus_55:0" type="pt_bus" depart="365.0" departLane="best" from="1409614853#0" to="1205958254">
+        <stop busStop="2510578391" duration="30"/>  <!-- Entença - Floridablanca -->
+    </trip>
+    <trip id="166_bus_55:1" type="pt_bus" depart="365.0" departLane="best" from="1205958254" to="237923126#2">
+        <stop busStop="5204811545" duration="30"/>  <!-- Pl Urquinaona - Pau Claris -->
+        <stop busStop="6123166500" duration="30"/>  <!-- PL Urquinaona - Pau Claris -->
+        <stop busStop="2989714854" duration="30"/>  <!-- Pl. Catalunya - Pg. de Gràcia -->
+        <stop busStop="5609793223" duration="30"/>  <!-- Ronda Universitat - Pl. Universitat -->
+        <stop busStop="5609793222" duration="30"/>  <!-- Sepúlveda - Muntaner -->
+        <stop busStop="8097436670" duration="30"/>  <!-- Villarroel - Sepúlveda -->
+        <stop busStop="12351408134" duration="30"/>  <!-- Ronda Sant Antoni - Compte d'Urgell -->
+        <stop busStop="2536484171" duration="30"/>  <!-- Manso - Comte Borrell -->
+        <stop busStop="8228181025" duration="30"/>  <!-- Calàbria - Av Mistral -->
+        <stop busStop="4040253781" duration="30"/>  <!-- Sepúlveda - Rocafort -->
+        <stop busStop="8045155332" duration="30"/>  <!-- None -->
+        <stop busStop="8267264439" duration="30"/>  <!-- Vilamarí - Av Mistral -->
+    </trip>
+    <trip id="167_bus_59:0" type="pt_bus" depart="367.0" departLane="best" from="550280508" to="1206387470">
+        <stop busStop="5315069893" duration="30"/>  <!-- Gran Via Carles III - Pl Reina Maria Cristina -->
+        <stop busStop="8267496533" duration="30"/>  <!-- Gran Via Carles III - Pl Reina M Cristina -->
+        <stop busStop="8048728589" duration="30"/>  <!-- Carles III - Mejía Lequerica -->
+        <stop busStop="-8190463692" duration="30"/>  <!-- Les Corts - Carles III -->
+        <stop busStop="-5259830245" duration="30"/>  <!-- Les Corts - Vallespir -->
+        <stop busStop="5260292361" duration="30"/>  <!-- Numància - Parc Les Corts -->
+        <stop busStop="5260292359" duration="30"/>  <!-- Numància - Marquès de Sentmenat -->
+        <stop busStop="8190463690" duration="30"/>  <!-- Berlín - Nicaragua -->
+        <stop busStop="5247914552" duration="30"/>  <!-- Josep Tarradellas - París -->
+        <stop busStop="5247922096" duration="30"/>  <!-- Josep Tarradellas - Viladomat -->
+        <stop busStop="5247919458" duration="30"/>  <!-- Josep Tarradellas - Av de Sarrià -->
+        <stop busStop="8097436675" duration="30"/>  <!-- Villarroel - Buenos Aires -->
+        <stop busStop="8097436674" duration="30"/>  <!-- Villarroel - Hospital Clínic -->
+        <stop busStop="2510905955" duration="30"/>  <!-- Villarroel - Mercat del Ninot -->
+        <stop busStop="8097436672" duration="30"/>  <!-- Villarroel - Aragó -->
+        <stop busStop="8097436671" duration="30"/>  <!-- Villarroel - Gran Via -->
+        <stop busStop="5760480286" duration="30"/>  <!-- Gran Via - Muntaner -->
+        <stop busStop="1474608404" duration="30"/>  <!-- Pl Universitat -->
+        <stop busStop="5726021528" duration="30"/>  <!-- Balmes - Pelai -->
+        <stop busStop="216349848" duration="30"/>  <!-- Pl. Catalunya - Portal de l'Àngel -->
+        <stop busStop="8214234924" duration="30"/>  <!-- Via Laietana - Comtal -->
+        <stop busStop="8214234923" duration="30"/>  <!-- Via Laietana - Pl. Ramon Berenguer -->
+    </trip>
+    <trip id="168_bus_59:1" type="pt_bus" depart="371.0" departLane="best" from="1228418637" to="550280508">
+        <stop busStop="11987558721" duration="30"/>  <!-- La Rambla - Pl del Teatre -->
+        <stop busStop="11987558717" duration="30"/>  <!-- La Rambla - Pl Catalunya -->
+        <stop busStop="5711282950" duration="30"/>  <!-- Pl. de Catalunya - Bergara -->
+        <stop busStop="5609793223" duration="30"/>  <!-- Ronda Universitat - Pl. Universitat -->
+        <stop busStop="5760544023" duration="30"/>  <!-- Gran Via - Casanova -->
+        <stop busStop="8267496536" duration="30"/>  <!-- Casanova - Aragó -->
+        <stop busStop="2510905926" duration="30"/>  <!-- Casanova - Mercat del Ninot -->
+        <stop busStop="30237864" duration="30"/>  <!-- Casanova - Hospital Clínic -->
+        <stop busStop="8264714837" duration="30"/>  <!-- Còrsega - Hospital Clínc -->
+        <stop busStop="8097436663" duration="30"/>  <!-- Av. Sarrià - Josep Tarradellas -->
+        <stop busStop="5264616257" duration="30"/>  <!-- Les Corts - Pl Dr Ignasi Barraquer -->
+        <stop busStop="8267496534" duration="30"/>  <!-- Les Corts - Prat d'En Rull -->
+        <stop busStop="5264616332" duration="30"/>  <!-- Les Corts - Numància -->
+        <stop busStop="8191099730" duration="30"/>  <!-- Les Corts - Vallespir -->
+        <stop busStop="8191099729" duration="30"/>  <!-- Mercat de Les Corts -->
+        <stop busStop="1377816289" duration="30"/>  <!-- Carles III - Mejía Lequerica -->
+        <stop busStop="5315069893@7857240" duration="30"/>  <!-- Gran Via Carles III - Pl Reina Maria Cristina -->
+        <stop busStop="8267496533" duration="30"/>  <!-- Gran Via Carles III - Pl Reina M Cristina -->
+    </trip>
+    <trip id="169_bus_63:0" type="pt_bus" depart="371.0" departLane="best" from="237522641#0" to="871723190#3">
+        <stop busStop="8274427613" duration="30"/>  <!-- Balmes - Ronda Universitat -->
+        <stop busStop="8210106344" duration="30"/>  <!-- Aribau - Gran Via -->
+        <stop busStop="8210106343" duration="30"/>  <!-- Aribau - Aragó -->
+        <stop busStop="8274427612" duration="30"/>  <!-- Provença - Aribau -->
+        <stop busStop="30237864" duration="30"/>  <!-- Casanova - Hospital Clínic -->
+        <stop busStop="8274427611" duration="30"/>  <!-- Casanova - París -->
+        <stop busStop="5264394013" duration="30"/>  <!-- Diagonal - Francesc Macià -->
+        <stop busStop="-5341631258" duration="30"/>  <!-- Diagonal - Ganduxer -->
+        <stop busStop="-5341631257" duration="30"/>  <!-- Diagonal - Doctor Fleming -->
+        <stop busStop="-5341631256" duration="30"/>  <!-- Diagonal - Numància -->
+        <stop busStop="-5341631255" duration="30"/>  <!-- Diagonal - Pl Reina Maria Cristina -->
+        <stop busStop="-1374308501" duration="30"/>  <!-- Pl. Pius XII -->
+        <stop busStop="-8193559512" duration="30"/>  <!-- Pl Pius XII -->
+    </trip>
+    <trip id="170_bus_63:1" type="pt_bus" depart="376.0" departLane="best" from="871723176" to="237522641#0">
+        <stop busStop="1478113760" duration="30"/>  <!-- Diagonal - Av Joan XXIII -->
+        <stop busStop="8220177025" duration="30"/>  <!-- Diagonal - Gran Via Carles III -->
+        <stop busStop="5343770281" duration="30"/>  <!-- Diagonal - Gandesa -->
+        <stop busStop="5343770280" duration="30"/>  <!-- Diagonal - L'Illa Diagonal -->
+        <stop busStop="5343770279" duration="30"/>  <!-- Diagonal - Entença -->
+        <stop busStop="8199176440" duration="30"/>  <!-- Diagonal - Av de Sarrià -->
+        <stop busStop="8097436675" duration="30"/>  <!-- Villarroel - Buenos Aires -->
+        <stop busStop="8097436674" duration="30"/>  <!-- Villarroel - Hospital Clínic -->
+        <stop busStop="8274427610" duration="30"/>  <!-- València - Villarroel -->
+        <stop busStop="8193682976" duration="30"/>  <!-- València - Muntaner -->
+        <stop busStop="8193682975" duration="30"/>  <!-- València - Balmes -->
+        <stop busStop="8214234926" duration="30"/>  <!-- Balmes - Aragó -->
+        <stop busStop="8214234925" duration="30"/>  <!-- Balmes - Gran Via -->
+        <stop busStop="8274427613" duration="30"/>  <!-- Balmes - Ronda Universitat -->
+    </trip>
+    <trip id="171_bus_78:0" type="pt_bus" depart="378.0" departLane="best" from="1307265857" to="871723190#3">
+        <stop busStop="530964326" duration="30"/>  <!-- Pl de Joan Peiró - Estació de Sants -->
+        <stop busStop="12106325521" duration="30"/>  <!-- Pg Sant Antoni - Parc de l'Espanya Industrial -->
+        <stop busStop="1479334948" duration="30"/>  <!-- Av Roma - Tarragona -->
+        <stop busStop="8194688622" duration="30"/>  <!-- Nicaragua - Josep Tarradellas -->
+        <stop busStop="8194688621" duration="30"/>  <!-- Nicaragua - Parc Les Corts -->
+        <stop busStop="8199176456" duration="30"/>  <!-- Entença - Montnegre -->
+        <stop busStop="-5341631257" duration="30"/>  <!-- Diagonal - Doctor Fleming -->
+        <stop busStop="-5341631256" duration="30"/>  <!-- Diagonal - Numància -->
+        <stop busStop="-5341631255" duration="30"/>  <!-- Diagonal - Pl Reina Maria Cristina -->
+        <stop busStop="-1374308501" duration="30"/>  <!-- Pl. Pius XII -->
+        <stop busStop="-8193559512" duration="30"/>  <!-- Pl Pius XII -->
+    </trip>
+    <trip id="172_bus_78:1" type="pt_bus" depart="381.0" departLane="best" from="871723176" to="1307265857">
+        <stop busStop="1478113760" duration="30"/>  <!-- Diagonal - Av Joan XXIII -->
+        <stop busStop="8220177025" duration="30"/>  <!-- Diagonal - Gran Via Carles III -->
+        <stop busStop="5343770281" duration="30"/>  <!-- Diagonal - Gandesa -->
+        <stop busStop="8194685209" duration="30"/>  <!-- Numància - Diagonal -->
+        <stop busStop="5260292361" duration="30"/>  <!-- Numància - Parc Les Corts -->
+        <stop busStop="5260292359" duration="30"/>  <!-- Numància - Marquès de Sentmenat -->
+        <stop busStop="8194685208" duration="30"/>  <!-- Numància - Berlín -->
+        <stop busStop="7757144475" duration="30"/>  <!-- Numància - Av Roma -->
+        <stop busStop="2198032016" duration="30"/>  <!-- Numància - Av. Roma -->
+        <stop busStop="-12106307036" duration="30"/>  <!-- Pg Sant Antoni, 53-55 -->
+        <stop busStop="530964326" duration="30"/>  <!-- Pl de Joan Peiró - Estació de Sants -->
+    </trip>
+    <trip id="173_bus_L95:0" type="pt_bus" depart="383.0" departLane="best" from="20475367" to="237923125#0">
+        <stop busStop="8634928230" duration="30"/>  <!-- Rda Universitat - Plaça Catalunya -->
+        <stop busStop="5609793223" duration="30"/>  <!-- Ronda Universitat - Pl. Universitat -->
+        <stop busStop="5609793222" duration="30"/>  <!-- Sepúlveda - Muntaner -->
+        <stop busStop="4040253780" duration="30"/>  <!-- Sepúlveda-Comte d'Urgell -->
+        <stop busStop="4040253782" duration="30"/>  <!-- Sepúlveda-Viladomat -->
+        <stop busStop="8045155333" duration="30"/>  <!-- Sepúlveda - Viladomat -->
+        <stop busStop="4040253781" duration="30"/>  <!-- Sepúlveda - Rocafort -->
+        <stop busStop="8045155332" duration="30"/>  <!-- None -->
+        <stop busStop="2510578431" duration="30"/>  <!-- Sepúlveda - Av. Mistral -->
+    </trip>
+    <trip id="174_bus_L95:1" type="pt_bus" depart="383.0" departLane="best" from="545715326" to="20475367">
+        <stop busStop="5760480288" duration="30"/>  <!-- Gran Via - Entença -->
+        <stop busStop="5760480287" duration="30"/>  <!-- Gran Via - Viladomat -->
+        <stop busStop="4893836322" duration="30"/>  <!-- Gran Via - Comte Borrell -->
+        <stop busStop="8372242000" duration="30"/>  <!-- Gran Via - Comt Borrell -->
+        <stop busStop="5760480286" duration="30"/>  <!-- Gran Via - Muntaner -->
+        <stop busStop="1474608404" duration="30"/>  <!-- Pl Universitat -->
+        <stop busStop="8634928230" duration="30"/>  <!-- Rda Universitat - Plaça Catalunya -->
+    </trip>
+    <trip id="175_bus_91:0" type="pt_bus" depart="383.0" departLane="best" from="545715326" to="238326399#0">
+        <stop busStop="5275881874" duration="30"/>  <!-- Floridablanca - Av Mistral -->
+        <stop busStop="8205826548" duration="30"/>  <!-- Floridablanca - Viladomat -->
+        <stop busStop="9989923318" duration="30"/>  <!-- Manso - Calàbria -->
+    </trip>
+    <trip id="176_bus_91:1" type="pt_bus" depart="384.0" departLane="best" from="238326399#0" to="237923125#0">
+        <stop busStop="9989923318" duration="30"/>  <!-- Manso - Calàbria -->
+        <stop busStop="8228181025" duration="30"/>  <!-- Calàbria - Av Mistral -->
+        <stop busStop="4040253781" duration="30"/>  <!-- Sepúlveda - Rocafort -->
+        <stop busStop="8045155332" duration="30"/>  <!-- None -->
+        <stop busStop="2510578431" duration="30"/>  <!-- Sepúlveda - Av. Mistral -->
+    </trip>
+    <trip id="177_bus_6:0" type="pt_bus" depart="388.0" departLane="best" from="272639447#0" to="237695643#0">
+        <stop busStop="5274384317" duration="30"/>  <!-- Gran Via - Roger de Flor -->
+        <stop busStop="6325900915" duration="30"/>  <!-- Pl Tetuan - Pg de Sant Joan -->
+        <stop busStop="8143303488" duration="30"/>  <!-- Pg de Sant Joan - Aragó -->
+        <stop busStop="8143303487" duration="30"/>  <!-- Pg de Sant Joan - València -->
+        <stop busStop="12323293314" duration="30"/>  <!-- Diagonal - Estació Verdaguer -->
+        <stop busStop="-5260601899" duration="30"/>  <!-- Diagonal - Passeig de Gràcia -->
+        <stop busStop="-8191099732" duration="30"/>  <!-- Diagonal - Balmes -->
+        <stop busStop="-8191099731" duration="30"/>  <!-- Diagonal - Muntaner -->
+        <stop busStop="5264394013" duration="30"/>  <!-- Diagonal - Francesc Macià -->
+        <stop busStop="-5341631258" duration="30"/>  <!-- Diagonal - Ganduxer -->
+        <stop busStop="8210321666" duration="30"/>  <!-- Av de Sarrià - Diagonal -->
+        <stop busStop="8210321665" duration="30"/>  <!-- Av de Sarrià - Mestre Villa -->
+        <stop busStop="5256357717" duration="30"/>  <!-- Manuel Girona - Carles III -->
+        <stop busStop="13052222749" duration="30"/>  <!-- Pg. Manuel Girona - Benet Mateu -->
+    </trip>
+    <trip id="178_bus_6:1" type="pt_bus" depart="389.0" departLane="best" from="237695643#0" to="237521115#0">
+        <stop busStop="13052222749" duration="30"/>  <!-- Pg. Manuel Girona - Benet Mateu -->
+        <stop busStop="5343770281" duration="30"/>  <!-- Diagonal - Gandesa -->
+        <stop busStop="5343770280" duration="30"/>  <!-- Diagonal - L'Illa Diagonal -->
+        <stop busStop="5343770279" duration="30"/>  <!-- Diagonal - Entença -->
+        <stop busStop="8199176440" duration="30"/>  <!-- Diagonal - Av de Sarrià -->
+        <stop busStop="-5260292357" duration="30"/>  <!-- Diagonal - Francesc Macià -->
+        <stop busStop="5260292356" duration="30"/>  <!-- Diagonal - Muntaner -->
+        <stop busStop="5264394016" duration="30"/>  <!-- Diagonal - Balmes -->
+        <stop busStop="8190463686" duration="30"/>  <!-- Diagonal - Pau Claris -->
+        <stop busStop="12650684969" duration="30"/>  <!-- Diagonal-Bruc -->
+        <stop busStop="8143303455" duration="30"/>  <!-- Pg de Sant Joan - Pl Mossèn Jacint Verdaguer -->
+        <stop busStop="8143303454" duration="30"/>  <!-- Pg Sant Joan - Consell de Cent -->
+        <stop busStop="8143303453" duration="30"/>  <!-- Pg de Sant Joan - Diputació -->
+        <stop busStop="5274072650" duration="30"/>  <!-- Gran Via - Roger de Flor -->
+    </trip>
+    <trip id="179_bus_109:0" type="pt_bus" depart="389.0" departLane="best" from="552422735#1" to="542836620">
+        <stop busStop="8311005618" duration="30"/>  <!-- Provença - Villarroel -->
+        <stop busStop="2510905936" duration="30"/>  <!-- Mallorca - Comte d'Urgell -->
+        <stop busStop="8193791324" duration="30"/>  <!-- Mallorca - Viladomat -->
+        <stop busStop="-12106306191" duration="30"/>  <!-- Tarragona - Mallorca -->
+        <stop busStop="-7757144476" duration="30"/>  <!-- Metro Tarragona -->
+        <stop busStop="-5099400282" duration="30"/>  <!-- Tarragona-Parc de Joan Miró -->
+        <stop busStop="-8311005617" duration="30"/>  <!-- Tarragona - Parc de Joan Miró -->
+    </trip>
+    <trip id="180_bus_109:1" type="pt_bus" depart="393.0" departLane="best" from="208686370" to="552422735#1">
+        <stop busStop="10836696130" duration="30"/>  <!-- Tarragona - Pl. Espanya -->
+        <stop busStop="2189785050" duration="30"/>  <!-- Metro Tarragona -->
+        <stop busStop="1479334948" duration="30"/>  <!-- Av Roma - Tarragona -->
+        <stop busStop="2510905952" duration="30"/>  <!-- València - Entença -->
+        <stop busStop="8193682977" duration="30"/>  <!-- València - Viladomat -->
+        <stop busStop="30243320" duration="30"/>  <!-- València - Comte d'Urgell -->
+        <stop busStop="8311005618" duration="30"/>  <!-- Provença - Villarroel -->
+    </trip>
+    <trip id="181_bus_113:0" type="pt_bus" depart="401.0" departLane="best" from="33283925#0" to="542503076#4">
+        <stop busStop="-9293679784" duration="30"/>  <!-- Av Joan XXIII - Maternitat -->
+        <stop busStop="7757092555" duration="30"/>  <!-- Av Joan XXIII - Pl Pius XII -->
+        <stop busStop="7757019551" duration="30"/>  <!-- Pl. Pius XII - Av. Pedralbes -->
+    </trip>
+    <trip id="182_bus_113:1" type="pt_bus" depart="403.0" departLane="best" from="542503076#4" to="-396947540#1">
+        <stop busStop="7757019551" duration="30"/>  <!-- Pl. Pius XII - Av. Pedralbes -->
+    </trip>
+    <trip id="183_bus_114:0" type="pt_bus" depart="404.0" departLane="best" from="555536624" to="226319971">
+        <stop busStop="7760901425" duration="30"/>  <!-- Trav de Gràcia - Pl Gal·la Placídia -->
+        <stop busStop="7760901426" duration="30"/>  <!-- Trav de Gràcia - Mariana Pineda -->
+        <stop busStop="8259972652" duration="30"/>  <!-- Torrent de l'Olla - Penedès -->
+        <stop busStop="8259972651" duration="30"/>  <!-- Torrent de l'Olla - Còrsega -->
+        <stop busStop="5603006508" duration="30"/>  <!-- Rosselló - Bruc -->
+        <stop busStop="5261112621" duration="30"/>  <!-- Rosselló - Bailèn -->
+        <stop busStop="5603006483" duration="30"/>  <!-- Pg de Sant Joan - Còrsega -->
+    </trip>
+    <trip id="184_bus_114:1" type="pt_bus" depart="405.0" departLane="best" from="8590860" to="831255362">
+        <stop busStop="7761529491" duration="30"/>  <!-- Ros de Olano - Torrent de l'Olla -->
+        <stop busStop="7761529492" duration="30"/>  <!-- Ros de Olano - Gran de Gràcia -->
+        <stop busStop="7761529493" duration="30"/>  <!-- Gran de Gràcia - Metro Fontana -->
+    </trip>
+    <trip id="185_bus_120:0" type="pt_bus" depart="406.0" departLane="best" from="238326399#0" to="246638753">
+        <stop busStop="9909730844" duration="30"/>  <!-- Manso - Calàbria -->
+        <stop busStop="8228181025" duration="30"/>  <!-- Calàbria - Av Mistral -->
+        <stop busStop="8205826548" duration="30"/>  <!-- Floridablanca - Viladomat -->
+        <stop busStop="5603006495" duration="30"/>  <!-- Floridablanca - Comte d'Urgell -->
+        <stop busStop="8328305438" duration="30"/>  <!-- Riera Alta - Nou de Dulce -->
+        <stop busStop="8328305437" duration="30"/>  <!-- Riera Alta - Erasme de Janer -->
+        <stop busStop="8328305436" duration="30"/>  <!-- Rambla del Raval - Aurora -->
+        <stop busStop="8328305435" duration="30"/>  <!-- Rambla del Raval - Sant Pau -->
+        <stop busStop="8328305434" duration="30"/>  <!-- Av Drassanes - Arc del Teatre -->
+        <stop busStop="8328305433" duration="30"/>  <!-- Av Drassanes - Pl Portal de la Pau -->
+    </trip>
+    <trip id="186_bus_120:1" type="pt_bus" depart="409.0" departLane="best" from="1228418637" to="238326399#0">
+        <stop busStop="8328305423" duration="30"/>  <!-- Metro Drassanes -->
+        <stop busStop="8328305422" duration="30"/>  <!-- Av Drassanes - Nou de la Rambla -->
+        <stop busStop="8328305421" duration="30"/>  <!-- Rambla del Raval - Sant Josep Oriol -->
+        <stop busStop="8328305420" duration="30"/>  <!-- Rambla del Raval - Hospital -->
+        <stop busStop="8328305419" duration="30"/>  <!-- Pl Joan Amades -->
+        <stop busStop="8328305418" duration="30"/>  <!-- Pl dels Àngels -->
+        <stop busStop="8328305417" duration="30"/>  <!-- Montalegre - Valdonzella -->
+        <stop busStop="12988396197" duration="30"/>  <!-- Valldonzella - Joaquim Costa -->
+        <stop busStop="5609793222" duration="30"/>  <!-- Sepúlveda - Muntaner -->
+        <stop busStop="8097436670" duration="30"/>  <!-- Villarroel - Sepúlveda -->
+        <stop busStop="12351408134" duration="30"/>  <!-- Ronda Sant Antoni - Compte d'Urgell -->
+        <stop busStop="9909730844" duration="30"/>  <!-- Manso - Calàbria -->
+    </trip>
+    <trip id="187_bus_33:1" type="pt_bus" depart="410.0" departLane="best" from="1409641091#0" to="-396947540#1">
+        <stop busStop="2573351864" duration="30"/>  <!-- Mallorca, 367 -->
+        <stop busStop="2573351868" duration="30"/>  <!-- Mallorca - Pg Sant Joan -->
+        <stop busStop="12323293314" duration="30"/>  <!-- Diagonal - Estació Verdaguer -->
+        <stop busStop="-5260601899" duration="30"/>  <!-- Diagonal - Passeig de Gràcia -->
+        <stop busStop="-8191099732" duration="30"/>  <!-- Diagonal - Balmes -->
+        <stop busStop="-8191099731" duration="30"/>  <!-- Diagonal - Muntaner -->
+        <stop busStop="5264394013" duration="30"/>  <!-- Diagonal - Francesc Macià -->
+        <stop busStop="-5341631258" duration="30"/>  <!-- Diagonal - Ganduxer -->
+        <stop busStop="-5341631257" duration="30"/>  <!-- Diagonal - Doctor Fleming -->
+        <stop busStop="-5341631256" duration="30"/>  <!-- Diagonal - Numància -->
+        <stop busStop="-5341631255" duration="30"/>  <!-- Diagonal - Pl Reina Maria Cristina -->
+        <stop busStop="-5256357715" duration="30"/>  <!-- Pl Pius XII -->
+    </trip>
+    <trip id="188_bus_121:0" type="pt_bus" depart="418.0" departLane="best" from="237529472#0" to="340350446#0">
+        <stop busStop="2536484166" duration="30"/>  <!-- Mercat de Sant Antoni -->
+        <stop busStop="8205986396" duration="30"/>  <!-- Manso - Rocafort -->
+    </trip>
+    <trip id="189_bus_121:1" type="pt_bus" depart="422.0" departLane="best" from="237649291#0" to="237529472#0">
+        <stop busStop="12864210815" duration="30"/>  <!-- Pl. Josep Maria Folch -->
+        <stop busStop="2536484166" duration="30"/>  <!-- Mercat de Sant Antoni -->
+    </trip>
+    <trip id="190_bus_34:1" type="pt_bus" depart="422.0" departLane="best" from="554907245#0" to="732998299">
+        <stop busStop="13052284751" duration="30"/>  <!-- Capità Arenas - Francesc Carbonell -->
+        <stop busStop="5343770281" duration="30"/>  <!-- Diagonal - Gandesa -->
+        <stop busStop="5343770280" duration="30"/>  <!-- Diagonal - L'Illa Diagonal -->
+        <stop busStop="5343770279" duration="30"/>  <!-- Diagonal - Entença -->
+        <stop busStop="8199176440" duration="30"/>  <!-- Diagonal - Av de Sarrià -->
+        <stop busStop="-5260292357" duration="30"/>  <!-- Diagonal - Francesc Macià -->
+        <stop busStop="5260292356" duration="30"/>  <!-- Diagonal - Muntaner -->
+        <stop busStop="5264394016" duration="30"/>  <!-- Diagonal - Balmes -->
+        <stop busStop="8190463686" duration="30"/>  <!-- Diagonal - Pau Claris -->
+        <stop busStop="12650684969" duration="30"/>  <!-- Diagonal-Bruc -->
+        <stop busStop="3477282395" duration="30"/>  <!-- València - Pg. Sant Joan -->
+        <stop busStop="2573351880" duration="30"/>  <!-- València - Pg de Sant Joan -->
+        <stop busStop="2573351872" duration="30"/>  <!-- València - Diagonal -->
+    </trip>
+    <trip id="191_bus_27:1" type="pt_bus" depart="429.0" departLane="best" from="790634174#0" to="1307265857">
+        <stop busStop="8173979189" duration="30"/>  <!-- Balmes - Via Augusta -->
+        <stop busStop="8173979188" duration="30"/>  <!-- Balmes - Trav de Gràcia -->
+        <stop busStop="-8173979187" duration="30"/>  <!-- Travessera de Gràcia - Muntaner -->
+        <stop busStop="-8173979186" duration="30"/>  <!-- Travessera de Gràcia - Calvet -->
+        <stop busStop="8173979185" duration="30"/>  <!-- Josep Tarradellas - Francesc Macià -->
+        <stop busStop="5249410994" duration="30"/>  <!-- Josep Tarradellas - Av.Sarrià -->
+        <stop busStop="5249410995" duration="30"/>  <!-- Josep Tarradellas - Av Sarrià -->
+        <stop busStop="2508645436" duration="30"/>  <!-- Josep Tarradellas - Entença -->
+        <stop busStop="8173979184" duration="30"/>  <!-- Josep Tarradellas - Numància -->
+        <stop busStop="-12106307036" duration="30"/>  <!-- Pg Sant Antoni, 53-55 -->
+        <stop busStop="12105890505" duration="30"/>  <!-- Estació de Sants - Pl Joan Peiró -->
+    </trip>
+    <trip id="192_bus_70:1" type="pt_bus" depart="431.0" departLane="best" from="42836929#0" to="198597865#14">
+        <stop busStop="8286917381" duration="30"/>  <!-- Rambla de Brasil - Miquel Àngel -->
+        <stop busStop="2509846212" duration="30"/>  <!-- Rambla del Brasil - Miquel Àngel -->
+        <stop busStop="2509846199" duration="30"/>  <!-- Gran Via Carles III - Av Madrid -->
+        <stop busStop="8084922537" duration="30"/>  <!-- Carles III - Les Corts -->
+        <stop busStop="1377816289" duration="30"/>  <!-- Carles III - Mejía Lequerica -->
+        <stop busStop="8180054871" duration="30"/>  <!-- Diagonal - Joan Güell -->
+        <stop busStop="8176650821" duration="30"/>  <!-- Maria Cristina - Carles III -->
+        <stop busStop="5253055691" duration="30"/>  <!-- Carles III - Numància -->
+        <stop busStop="5253058039" duration="30"/>  <!-- Mitre - Avinguda Sarrià -->
+        <stop busStop="5253057924" duration="30"/>  <!-- Mitre - Av. Sarrià -->
+        <stop busStop="8176650820" duration="30"/>  <!-- Mitre - Doctor Fleming -->
+        <stop busStop="8286917380" duration="30"/>  <!-- Ganduxer - Via Augusta -->
+        <stop busStop="8203768657" duration="30"/>  <!-- Ganduxer - Alacant -->
+    </trip>
+    <trip id="193_bus_130:0" type="pt_bus" depart="432.0" departLane="best" from="141702427#0" to="237695634#1">
+        <stop busStop="8348774773" duration="30"/>  <!-- Pl Artós -->
+        <stop busStop="8348774772" duration="30"/>  <!-- Bonaplata -->
+        <stop busStop="8348774771" duration="30"/>  <!-- Fontcoberta - Pedró de la Creu -->
+        <stop busStop="841867104" duration="30"/>  <!-- Av J V Foix - Mendel -->
+    </trip>
+    <trip id="194_bus_130:1" type="pt_bus" depart="437.0" departLane="best" from="871757026#0" to="-554896192#1">
+        <stop busStop="2195909110" duration="30"/>  <!-- Via Augusta - Margenat -->
+        <stop busStop="8348872893" duration="30"/>  <!-- Clos de St Francesc - Pg Reina Elisenda de Montcada -->
+        <stop busStop="8348872892" duration="30"/>  <!-- Pedró de la Creu - Gresolet -->
+        <stop busStop="-8180054861" duration="30"/>  <!-- Av. J. V. Foix - Pedró de la Creu -->
+        <stop busStop="-8348872891" duration="30"/>  <!-- Sta Amèlia - Eduard Conde -->
+        <stop busStop="-2745572516" duration="30"/>  <!-- Santa Amèlia - Or -->
+        <stop busStop="-8348872890" duration="30"/>  <!-- Sta Amèlia - Or -->
+        <stop busStop="8180054870" duration="30"/>  <!-- Benet Mateu - Manuel de Falla -->
+        <stop busStop="-8348774773" duration="30"/>  <!-- Pl Artós -->
+    </trip>
+    <trip id="195_bus_115:1" type="pt_bus" depart="437.0" departLane="best" from="30761362" to="905524541#7">
+        <stop busStop="2508645431" duration="30"/>  <!-- Enric Bargés - Numància -->
+        <stop busStop="2198032016" duration="30"/>  <!-- Numància - Av. Roma -->
+        <stop busStop="7757144475" duration="30"/>  <!-- Numància - Av Roma -->
+        <stop busStop="-12106306191" duration="30"/>  <!-- Tarragona - Mallorca -->
+        <stop busStop="-7757144476" duration="30"/>  <!-- Metro Tarragona -->
+        <stop busStop="2509846198" duration="30"/>  <!-- Consell de Cent - Rector Triadó -->
+    </trip>
+    <trip id="196_bus_87:0" type="pt_bus" depart="437.0" departLane="best" from="-296827092#1" to="555536622#0">
+        <stop busStop="-1457780061" duration="30"/>  <!-- Riera de Cassoles - Via Augusta -->
+        <stop busStop="5485540840" duration="30"/>  <!-- Trav de Gràcia - Pl Gal·la Placídia -->
+    </trip>
+    <trip id="197_bus_87:1" type="pt_bus" depart="437.0" departLane="best" from="555536622#0" to="831255362">
+        <stop busStop="5485540840" duration="30"/>  <!-- Trav de Gràcia - Pl Gal·la Placídia -->
+        <stop busStop="8220384288" duration="30"/>  <!-- Gran de Gràcia - Trav de Gràcia -->
+        <stop busStop="7761529493" duration="30"/>  <!-- Gran de Gràcia - Metro Fontana -->
+    </trip>
+    <trip id="198_bus_67:1" type="pt_bus" depart="441.0" departLane="best" from="126304603#0" to="-396947540#1">
+        <stop busStop="5711282950" duration="30"/>  <!-- Pl. de Catalunya - Bergara -->
+        <stop busStop="5609793223" duration="30"/>  <!-- Ronda Universitat - Pl. Universitat -->
+        <stop busStop="8210106344" duration="30"/>  <!-- Aribau - Gran Via -->
+        <stop busStop="8210106343" duration="30"/>  <!-- Aribau - Aragó -->
+        <stop busStop="8210106342" duration="30"/>  <!-- Aribau - Mallorca -->
+        <stop busStop="8264543923" duration="30"/>  <!-- Còrsega - Aribau -->
+        <stop busStop="8274427611" duration="30"/>  <!-- Casanova - París -->
+        <stop busStop="5264394013" duration="30"/>  <!-- Diagonal - Francesc Macià -->
+        <stop busStop="-5341631258" duration="30"/>  <!-- Diagonal - Ganduxer -->
+        <stop busStop="-5341631257" duration="30"/>  <!-- Diagonal - Doctor Fleming -->
+        <stop busStop="-5341631256" duration="30"/>  <!-- Diagonal - Numància -->
+        <stop busStop="-5341631255" duration="30"/>  <!-- Diagonal - Pl Reina Maria Cristina -->
+        <stop busStop="-5572252923" duration="30"/>  <!-- Diagonal - Pl Pius XII -->
+    </trip>
+    <trip id="199_bus_CJ:0" type="pt_bus" depart="448.0" departLane="best" from="556602236" to="542836620">
+        <stop busStop="9700777801" duration="30"/>  <!-- Estació de Sants -->
+        <stop busStop="12106325521" duration="30"/>  <!-- Pg Sant Antoni - Parc de l'Espanya Industrial -->
+        <stop busStop="-12106306191" duration="30"/>  <!-- Tarragona - Mallorca -->
+        <stop busStop="-7757144476" duration="30"/>  <!-- Metro Tarragona -->
+    </trip>
+    <trip id="200_bus_CJ:1" type="pt_bus" depart="451.0" departLane="best" from="208686370" to="556602236">
+        <stop busStop="2189785050" duration="30"/>  <!-- Metro Tarragona -->
+        <stop busStop="1479334948" duration="30"/>  <!-- Av Roma - Tarragona -->
+        <stop busStop="9700777801" duration="30"/>  <!-- Estació de Sants -->
+    </trip>
+    <trip id="201_bus_157:1" type="pt_bus" depart="456.0" departLane="best" from="54060104#0" to="899931799#1">
+        <stop busStop="8361317682" duration="30"/>  <!-- Riera Blanca - Trav de Les Corts -->
+    </trip>
+    <trip id="202_bus_M12:1" type="pt_bus" depart="457.0" departLane="best" from="54060104#0" to="1162510290#0">
+        <stop busStop="8048719258" duration="30"/>  <!-- Riera Blanca - Regent Mendieta -->
+        <stop busStop="8048719257" duration="30"/>  <!-- Arístides Maillol - Trav. de les Corts -->
+        <stop busStop="6100294362" duration="30"/>  <!-- Arístides Maillol - Travessera de les Corts -->
+    </trip>
+    <trip id="203_bus_M14:0" type="pt_bus" depart="459.0" departLane="best" from="170079056#0" to="-864123947">
+        <stop busStop="1478113760" duration="30"/>  <!-- Diagonal - Av Joan XXIII -->
+        <stop busStop="1426089985" duration="30"/>  <!-- Av. Diagonal - Gran Via Carles III -->
+        <stop busStop="-8050203730" duration="30"/>  <!-- Flos i Calcat - l'Illa -->
+    </trip>
+    <trip id="204_bus_M14:1" type="pt_bus" depart="465.0" departLane="best" from="-864123947" to="-396947540#1">
+        <stop busStop="-8050203730" duration="30"/>  <!-- Flos i Calcat - l'Illa -->
+        <stop busStop="-5341631256" duration="30"/>  <!-- Diagonal - Numància -->
+        <stop busStop="-5341631255" duration="30"/>  <!-- Diagonal - Pl Reina Maria Cristina -->
+        <stop busStop="-5572252923" duration="30"/>  <!-- Diagonal - Pl Pius XII -->
+    </trip>
+    <trip id="205_bus_L94:0" type="pt_bus" depart="467.0" departLane="best" from="23425565" to="542836620">
+        <stop busStop="8560788704" duration="30"/>  <!-- Estació de Sants -->
+        <stop busStop="12106325521" duration="30"/>  <!-- Pg Sant Antoni - Parc de l'Espanya Industrial -->
+        <stop busStop="-12106306191" duration="30"/>  <!-- Tarragona - Mallorca -->
+        <stop busStop="-7757144476" duration="30"/>  <!-- Metro Tarragona -->
+        <stop busStop="8372092978" duration="30"/>  <!-- Tarragona - Pl Espanya -->
+    </trip>
+    <trip id="206_bus_L94:1" type="pt_bus" depart="470.0" departLane="best" from="208686370" to="23425565">
+        <stop busStop="10836696130" duration="30"/>  <!-- Tarragona - Pl. Espanya -->
+        <stop busStop="2189785050" duration="30"/>  <!-- Metro Tarragona -->
+        <stop busStop="12106306191" duration="30"/>  <!-- Tarragona - Mallorca -->
+        <stop busStop="-12106307036" duration="30"/>  <!-- Pg Sant Antoni, 53-55 -->
+        <stop busStop="7760665319" duration="30"/>  <!-- Pl de Joan Peiró -->
+        <stop busStop="8560788704" duration="30"/>  <!-- Estació de Sants -->
+    </trip>
+    <trip id="207_bus_L97:0" type="pt_bus" depart="470.0" departLane="best" from="396947540#0" to="543400541#1">
+        <stop busStop="5253057127" duration="30"/>  <!-- Pl. Pius XII -->
+        <stop busStop="5465541600" duration="30"/>  <!-- Pl Reina Maria Cristina -->
+        <stop busStop="8176650821" duration="30"/>  <!-- Maria Cristina - Carles III -->
+    </trip>
+    <trip id="208_bus_L97:1" type="pt_bus" depart="475.0" departLane="best" from="558302444" to="-396947540#1">
+        <stop busStop="269380607" duration="30"/>  <!-- Gran Via Carles III - Av. Diagonal -->
+        <stop busStop="-5341631256" duration="30"/>  <!-- Diagonal - Numància -->
+        <stop busStop="-5341631255" duration="30"/>  <!-- Diagonal - Pl Reina Maria Cristina -->
+        <stop busStop="-5256357715" duration="30"/>  <!-- Pl Pius XII -->
+    </trip>
+    <trip id="209_bus_A2:0" type="pt_bus" depart="483.0" departLane="best" from="545715326" to="560770197#0">
+        <stop busStop="4893836322" duration="30"/>  <!-- Gran Via - Comte Borrell -->
+        <stop busStop="1474608404" duration="30"/>  <!-- Pl Universitat -->
+        <stop busStop="1386880778" duration="30"/>  <!-- Pl Catalunya - Fontanella -->
+    </trip>
+    <trip id="210_bus_A2:1" type="pt_bus" depart="484.0" departLane="best" from="560770197#0" to="237923125#0">
+        <stop busStop="12296180058" duration="30"/>  <!-- Pl Catalunya - Fontanella -->
+        <stop busStop="12296180059" duration="30"/>  <!-- Sepúlveda-Comte d'Urgell, 123 -->
+    </trip>
+    <trip id="211_bus_A1:0" type="pt_bus" depart="484.0" departLane="best" from="545715326" to="560770197#0">
+        <stop busStop="4893836322" duration="30"/>  <!-- Gran Via - Comte Borrell -->
+        <stop busStop="1474608404" duration="30"/>  <!-- Pl Universitat -->
+        <stop busStop="10122785948" duration="30"/>  <!-- Pl Catalunya - Andana Central -->
+    </trip>
+    <trip id="212_bus_A1:1" type="pt_bus" depart="485.0" departLane="best" from="560770197#0" to="237923125#0">
+        <stop busStop="10122785948" duration="30"/>  <!-- Pl Catalunya - Andana Central -->
+        <stop busStop="12296180059" duration="30"/>  <!-- Sepúlveda-Comte d'Urgell, 123 -->
+    </trip>
+    <trip id="213_bus_X30:1" type="pt_bus" depart="497.0" departLane="best" from="396947540#0" to="254329359">
+        <stop busStop="5253057127" duration="30"/>  <!-- Pl. Pius XII -->
+        <stop busStop="5465541600" duration="30"/>  <!-- Pl Reina Maria Cristina -->
+        <stop busStop="5343770280" duration="30"/>  <!-- Diagonal - L'Illa Diagonal -->
+        <stop busStop="5343770279" duration="30"/>  <!-- Diagonal - Entença -->
+        <stop busStop="8033328937" duration="30"/>  <!-- Pau Romeva - Av. Diagonal -->
+    </trip>
+    <trip id="214_bus_N81:1" type="pt_bus" depart="498.0" departLane="best" from="272639447#0" to="519375847#0">
+        <stop busStop="3092785221" duration="30"/>  <!-- Gran Via - Roger de Flor -->
+        <stop busStop="5364626633" duration="30"/>  <!-- Ronda Sant Pere - Pl Urquinaona -->
+    </trip>
+    <trip id="215_bus_e2.2:0" type="pt_bus" depart="500.0" departLane="best" from="396947540#0" to="1391890990#0">
+        <stop busStop="5465541600" duration="30"/>  <!-- Pl Reina Maria Cristina -->
+    </trip>
+    <trip id="216_bus_e2.2:1" type="pt_bus" depart="501.0" departLane="best" from="-45521733" to="-396947540#1">
+        <stop busStop="-12075420266" duration="30"/>  <!-- Av. Diagonal - Dr. Ferran -->
+    </trip>
+    <trip id="217_bus_e5:0" type="pt_bus" depart="505.0" departLane="best" from="170079056#0" to="542503078#0">
+        <stop busStop="1426089985" duration="30"/>  <!-- Av. Diagonal - Gran Via Carles III -->
+    </trip>
+    <trip id="218_bus_e5:1" type="pt_bus" depart="508.0" departLane="best" from="309254652#0" to="-396947540#1">
+        <stop busStop="-12884682177" duration="30"/>  <!-- Av. Diagonal (Maria Cristina) -->
+    </trip>
+    <trip id="219_bus_e6:0" type="pt_bus" depart="509.0" departLane="best" from="170079056#0" to="352482186">
+        <stop busStop="1426089985" duration="30"/>  <!-- Av. Diagonal - Gran Via Carles III -->
+        <stop busStop="539147490@1744556" duration="30"/>  <!-- Sants Estació d'Autobús -->
+    </trip>
+    <trip id="220_bus_e6:1" type="pt_bus" depart="511.0" departLane="best" from="352482186" to="-396947540#1">
+        <stop busStop="539147490" duration="30"/>  <!-- Sants Estació d'Autobús -->
+        <stop busStop="-12884682177" duration="30"/>  <!-- Av. Diagonal (Maria Cristina) -->
+    </trip>
+    <trip id="221_bus_e8:0" type="pt_bus" depart="515.0" departLane="best" from="396947540#0" to="-1393135023">
+        <stop busStop="5465541600" duration="30"/>  <!-- Pl Reina Maria Cristina -->
+        <stop busStop="5343770280" duration="30"/>  <!-- Diagonal - L'Illa Diagonal -->
+        <stop busStop="-12895749915" duration="30"/>  <!-- Diagonal - Francesc Macià -->
+    </trip>
+    <trip id="222_bus_e8:1" type="pt_bus" depart="516.0" departLane="best" from="-1393135023" to="-396947540#1">
+        <stop busStop="-12895749915" duration="30"/>  <!-- Diagonal - Francesc Macià -->
+        <stop busStop="-12815640391" duration="30"/>  <!-- Av. Diagonal - Dr. Fleming (C.C. L'illa) -->
+        <stop busStop="-12075420266" duration="30"/>  <!-- Av. Diagonal - Dr. Ferran -->
+    </trip>
+    <trip id="223_bus_e9:0" type="pt_bus" depart="516.0" departLane="best" from="238179151#0" to="23191707#0">
+        <stop busStop="9785242333" duration="30"/>  <!-- Plaça de Tetuan 24 -->
+    </trip>
+    <trip id="224_bus_e9:1" type="pt_bus" depart="517.0" departLane="best" from="23191707#0" to="1298188812">
+        <stop busStop="9785242333" duration="30"/>  <!-- Plaça de Tetuan 24 -->
+    </trip>
+    <trip id="225_bus_L1050a:1" type="pt_bus" depart="517.0" departLane="best" from="34054311#3" to="54847776">
+        <stop busStop="1426089985" duration="30"/>  <!-- Av. Diagonal - Gran Via Carles III -->
+    </trip>
+    <trip id="226_bus_C6:1" type="pt_bus" depart="522.0" departLane="best" from="272639447#0" to="20475367">
+        <stop busStop="3092785221" duration="30"/>  <!-- Gran Via - Roger de Flor -->
+        <stop busStop="1966472090" duration="30"/>  <!-- Ronda Universitat - Plaça Catalunya -->
+    </trip>
+    <trip id="227_bus_e12:0" type="pt_bus" depart="523.0" departLane="best" from="238179151#0" to="549749258#0">
+        <stop busStop="5504997127" duration="30"/>  <!-- Carrer de Casp , 34 / Carrer de Pau Claris -->
+    </trip>
+    <trip id="228_bus_e12:1" type="pt_bus" depart="525.0" departLane="best" from="330913952#0" to="732998299">
+        <stop busStop="5504997127" duration="30"/>  <!-- Carrer de Casp , 34 / Carrer de Pau Claris -->
+    </trip>
+    <trip id="229_bus_e14:0" type="pt_bus" depart="525.0" departLane="best" from="20475367" to="237923125#0">
+        <stop busStop="5249075077" duration="30"/>  <!-- Ronda Universitat - Plaça Catalunya (express.cat) -->
+        <stop busStop="4040253780" duration="30"/>  <!-- Sepúlveda-Comte d'Urgell -->
+    </trip>
+    <trip id="230_bus_e14:1" type="pt_bus" depart="526.0" departLane="best" from="545715326" to="20475367">
+        <stop busStop="3460290375" duration="30"/>  <!-- Gran Via - Urgell -->
+        <stop busStop="1474608404" duration="30"/>  <!-- Pl Universitat -->
+        <stop busStop="5249075077" duration="30"/>  <!-- Ronda Universitat - Plaça Catalunya (express.cat) -->
+    </trip>
+    <trip id="231_bus_e15.1:0" type="pt_bus" depart="527.0" departLane="best" from="545715326" to="20475367">
+        <stop busStop="3460290375" duration="30"/>  <!-- Gran Via - Urgell -->
+        <stop busStop="1474608404" duration="30"/>  <!-- Pl Universitat -->
+        <stop busStop="5249075077" duration="30"/>  <!-- Ronda Universitat - Plaça Catalunya (express.cat) -->
+    </trip>
+    <trip id="232_bus_e15.1:1" type="pt_bus" depart="527.0" departLane="best" from="20475367" to="237923125#0">
+        <stop busStop="5249075077" duration="30"/>  <!-- Ronda Universitat - Plaça Catalunya (express.cat) -->
+        <stop busStop="4040253780" duration="30"/>  <!-- Sepúlveda-Comte d'Urgell -->
+    </trip>
+    <trip id="233_bus_e15.2:0" type="pt_bus" depart="528.0" departLane="best" from="396947540#0" to="538722959">
+        <stop busStop="1478113760" duration="30"/>  <!-- Diagonal - Av Joan XXIII -->
+        <stop busStop="5465541600" duration="30"/>  <!-- Pl Reina Maria Cristina -->
+        <stop busStop="5341631256" duration="30"/>  <!-- Diagonal - Numància -->
+        <stop busStop="823781710" duration="30"/>  <!-- Francesc Macià - Diagonal -->
+    </trip>
+    <trip id="234_bus_e15.2:1" type="pt_bus" depart="534.0" departLane="best" from="538722959" to="-396947540#1">
+        <stop busStop="823781710" duration="30"/>  <!-- Francesc Macià - Diagonal -->
+        <stop busStop="-5341631257" duration="30"/>  <!-- Diagonal - Doctor Fleming -->
+        <stop busStop="-12884682177" duration="30"/>  <!-- Av. Diagonal (Maria Cristina) -->
+        <stop busStop="-5214067405" duration="30"/>  <!-- Diagonal - Pl Pius XII -->
+    </trip>
+    <trip id="235_bus_e16:0" type="pt_bus" depart="535.0" departLane="best" from="545715326" to="20475367">
+        <stop busStop="3460290375" duration="30"/>  <!-- Gran Via - Urgell -->
+        <stop busStop="1474608404" duration="30"/>  <!-- Pl Universitat -->
+        <stop busStop="5249075077" duration="30"/>  <!-- Ronda Universitat - Plaça Catalunya (express.cat) -->
+    </trip>
+    <trip id="236_bus_e16:1" type="pt_bus" depart="538.0" departLane="best" from="20475367" to="237923125#0">
+        <stop busStop="5249075077" duration="30"/>  <!-- Ronda Universitat - Plaça Catalunya (express.cat) -->
+        <stop busStop="4040253780" duration="30"/>  <!-- Sepúlveda-Comte d'Urgell -->
+    </trip>
+    <trip id="237_bus_e17:0" type="pt_bus" depart="543.0" departLane="best" from="170079056#0" to="4746244">
+        <stop busStop="1426089985" duration="30"/>  <!-- Av. Diagonal - Gran Via Carles III -->
+        <stop busStop="5343770279" duration="30"/>  <!-- Diagonal - Entença -->
+        <stop busStop="5481419769" duration="30"/>  <!-- Carrer del Comte d'Urgell / Londres -->
+        <stop busStop="5584069358" duration="30"/>  <!-- Carrer de Buenos Aires / Avinguda de Sarrià -->
+    </trip>
+    <trip id="238_bus_e17:1" type="pt_bus" depart="547.0" departLane="best" from="4746244" to="-396947540#1">
+        <stop busStop="5584069358" duration="30"/>  <!-- Carrer de Buenos Aires / Avinguda de Sarrià -->
+        <stop busStop="-12815640391" duration="30"/>  <!-- Av. Diagonal - Dr. Fleming (C.C. L'illa) -->
+        <stop busStop="-5341631255" duration="30"/>  <!-- Diagonal - Pl Reina Maria Cristina -->
+    </trip>
+    <trip id="239_bus_e18:0" type="pt_bus" depart="548.0" departLane="best" from="396947540#0" to="570088936#0">
+        <stop busStop="5465541600" duration="30"/>  <!-- Pl Reina Maria Cristina -->
+        <stop busStop="5341631256" duration="30"/>  <!-- Diagonal - Numància -->
+        <stop busStop="5481419769" duration="30"/>  <!-- Carrer del Comte d'Urgell / Londres -->
+    </trip>
+    <trip id="240_bus_e18:1" type="pt_bus" depart="553.0" departLane="best" from="570088936#0" to="-396947540#1">
+        <stop busStop="5481419769" duration="30"/>  <!-- Carrer del Comte d'Urgell / Londres -->
+        <stop busStop="-5341631257" duration="30"/>  <!-- Diagonal - Doctor Fleming -->
+        <stop busStop="-12075420266" duration="30"/>  <!-- Av. Diagonal - Dr. Ferran -->
+    </trip>
+    <trip id="241_bus_e19:0" type="pt_bus" depart="555.0" departLane="best" from="272639447#0" to="584532229">
+        <stop busStop="5274384317" duration="30"/>  <!-- Gran Via - Roger de Flor -->
+        <stop busStop="5587042746" duration="30"/>  <!-- Ronda Sant Pere - Plaça Urquinaona -->
+    </trip>
+    <trip id="242_bus_e19:1" type="pt_bus" depart="557.0" departLane="best" from="584532229" to="237521115#0">
+        <stop busStop="5587042746" duration="30"/>  <!-- Ronda Sant Pere - Plaça Urquinaona -->
+        <stop busStop="5274072650" duration="30"/>  <!-- Gran Via - Roger de Flor -->
+    </trip>
+    <trip id="243_bus_e20:0" type="pt_bus" depart="559.0" departLane="best" from="170079056#0" to="4746244">
+        <stop busStop="1426089985" duration="30"/>  <!-- Av. Diagonal - Gran Via Carles III -->
+        <stop busStop="5343770279" duration="30"/>  <!-- Diagonal - Entença -->
+        <stop busStop="5481419769" duration="30"/>  <!-- Carrer del Comte d'Urgell / Londres -->
+        <stop busStop="5584069358" duration="30"/>  <!-- Carrer de Buenos Aires / Avinguda de Sarrià -->
+    </trip>
+    <trip id="244_bus_e20:1" type="pt_bus" depart="560.0" departLane="best" from="4746244" to="-396947540#1">
+        <stop busStop="5584069358" duration="30"/>  <!-- Carrer de Buenos Aires / Avinguda de Sarrià -->
+        <stop busStop="-12815640391" duration="30"/>  <!-- Av. Diagonal - Dr. Fleming (C.C. L'illa) -->
+        <stop busStop="-5341631255" duration="30"/>  <!-- Diagonal - Pl Reina Maria Cristina -->
+    </trip>
+    <trip id="245_bus_D50:0" type="pt_bus" depart="561.0" departLane="best" from="237649292#0" to="732998299">
+        <stop busStop="8180094958" duration="30"/>  <!-- Ronda Sant Pau - Folch i Torres -->
+        <stop busStop="8180094957" duration="30"/>  <!-- Ronda Sant Pau - Parlament -->
+        <stop busStop="5603006495" duration="30"/>  <!-- Floridablanca - Comte d'Urgell -->
+        <stop busStop="7803556121" duration="30"/>  <!-- Ronda Sant Antoni - Pl Goya -->
+        <stop busStop="-4040253773" duration="30"/>  <!-- Plaça Universitat - Pelai -->
+        <stop busStop="5603009322" duration="30"/>  <!-- Pl. de Catalunya - Ronda Sant Pere -->
+        <stop busStop="5274072652" duration="30"/>  <!-- Gran Via - Pau Claris -->
+        <stop busStop="5711282952" duration="30"/>  <!-- Gran Via - Llúria -->
+        <stop busStop="5274072651" duration="30"/>  <!-- Metro Tetuan -->
+        <stop busStop="6325900915" duration="30"/>  <!-- Pl Tetuan - Pg de Sant Joan -->
+        <stop busStop="8143303488" duration="30"/>  <!-- Pg de Sant Joan - Aragó -->
+        <stop busStop="3477282395" duration="30"/>  <!-- València - Pg. Sant Joan -->
+        <stop busStop="2573351880" duration="30"/>  <!-- València - Pg de Sant Joan -->
+        <stop busStop="2573351872" duration="30"/>  <!-- València - Diagonal -->
+    </trip>
+    <trip id="246_bus_D50:1" type="pt_bus" depart="561.0" departLane="best" from="1409641091#0" to="330913949#0">
+        <stop busStop="2573351864" duration="30"/>  <!-- Mallorca, 367 -->
+        <stop busStop="8143303455" duration="30"/>  <!-- Pg de Sant Joan - Pl Mossèn Jacint Verdaguer -->
+        <stop busStop="8143303454" duration="30"/>  <!-- Pg Sant Joan - Consell de Cent -->
+        <stop busStop="8143303453" duration="30"/>  <!-- Pg de Sant Joan - Diputació -->
+    </trip>
+    <trip id="247_bus_V9:0" type="pt_bus" depart="565.0" departLane="best" from="1409614853#0" to="44868697#5">
+        <stop busStop="8199176461" duration="30"/>  <!-- Entença - Av Mistral -->
+        <stop busStop="5098285335" duration="30"/>  <!-- Entença-Gran Via -->
+        <stop busStop="8199176460" duration="30"/>  <!-- Entença - Gran Via -->
+        <stop busStop="8199176459" duration="30"/>  <!-- Entença - Consell de Cent -->
+        <stop busStop="8199176458" duration="30"/>  <!-- Entença - València -->
+        <stop busStop="8199176457" duration="30"/>  <!-- Entença - Roselló -->
+        <stop busStop="6248889529" duration="30"/>  <!-- Entença - Av Josep Tarradellas -->
+        <stop busStop="8199176456" duration="30"/>  <!-- Entença - Montnegre -->
+        <stop busStop="8199176455" duration="30"/>  <!-- Entença - Déu i Mata -->
+        <stop busStop="8199176454" duration="30"/>  <!-- Doctor Fleming - Santa Fe de Nou Mèxic -->
+        <stop busStop="2033098461" duration="30"/>  <!-- Via Augusta - Ronda General Mitre -->
+        <stop busStop="8199176453" duration="30"/>  <!-- Calatrava - Vergós -->
+    </trip>
+    <trip id="248_bus_V9:1" type="pt_bus" depart="568.0" departLane="best" from="33474057" to="246638751">
+        <stop busStop="8199176446" duration="30"/>  <!-- Anglí - Pg Bonanova -->
+        <stop busStop="8199176444" duration="30"/>  <!-- Anglí - Via Augusta -->
+        <stop busStop="-8199176443" duration="30"/>  <!-- Via Augusta - Ronda General Mitre -->
+        <stop busStop="8199176442" duration="30"/>  <!-- Dr Fleming - Ronda General Mitre -->
+        <stop busStop="8199176441" duration="30"/>  <!-- Dr Fleming - Bori i Fontestà -->
+        <stop busStop="8199176440" duration="30"/>  <!-- Diagonal - Av de Sarrià -->
+        <stop busStop="8173979185" duration="30"/>  <!-- Josep Tarradellas - Francesc Macià -->
+        <stop busStop="5247922096" duration="30"/>  <!-- Josep Tarradellas - Viladomat -->
+        <stop busStop="8199176438" duration="30"/>  <!-- Viladomat - Còrsega -->
+        <stop busStop="8199176437" duration="30"/>  <!-- Viladomat - Av Roma -->
+        <stop busStop="8199176436" duration="30"/>  <!-- Viladomat - Aragó -->
+        <stop busStop="8199176435" duration="30"/>  <!-- Viladomat - Diputació -->
+        <stop busStop="8199176434" duration="30"/>  <!-- Viladomat - Sepúlveda -->
+        <stop busStop="5609791820" duration="30"/>  <!-- Viladomat - Manso -->
+    </trip>
+    <trip id="249_bus_52:0" type="pt_bus" depart="572.0" departLane="best" from="519375847#0" to="545747636">
+        <stop busStop="5364626633" duration="30"/>  <!-- Ronda Sant Pere - Pl Urquinaona -->
+        <stop busStop="5274384898" duration="30"/>  <!-- Gran Via - Balmes -->
+        <stop busStop="5760544024" duration="30"/>  <!-- Pl Universitat -->
+        <stop busStop="5760544023" duration="30"/>  <!-- Gran Via - Casanova -->
+        <stop busStop="5274384897" duration="30"/>  <!-- Gran Via - Villarroel -->
+        <stop busStop="5760544022" duration="30"/>  <!-- Gran Via - Calàbria -->
+        <stop busStop="5760544021" duration="30"/>  <!-- Gran Via - Vilamarí -->
+        <stop busStop="5274384314" duration="30"/>  <!-- Gran Via - Pl Espanya -->
+    </trip>
+    <trip id="250_bus_52:1" type="pt_bus" depart="574.0" departLane="best" from="1225001918" to="45185735#5">
+        <stop busStop="251543454" duration="30"/>  <!-- Riera Blanca - Trav de les Corts -->
+        <stop busStop="5760480297" duration="30"/>  <!-- Sants - Munné -->
+    </trip>
+    <trip id="251_bus_V1:0" type="pt_bus" depart="574.0" departLane="best" from="-901541482" to="1162510290#0">
+        <stop busStop="8048719258" duration="30"/>  <!-- Riera Blanca - Regent Mendieta -->
+        <stop busStop="6100294362" duration="30"/>  <!-- Arístides Maillol - Travessera de les Corts -->
+        <stop busStop="8048719257" duration="30"/>  <!-- Arístides Maillol - Trav. de les Corts -->
+    </trip>
+    <trip id="252_bus_V1:1" type="pt_bus" depart="576.0" departLane="best" from="251749488#0" to="901541482">
+        <stop busStop="5259830246" duration="30"/>  <!-- Riera Blanca - Les Corts -->
+    </trip>
+    <trip id="253_bus_V19:0" type="pt_bus" depart="581.0" departLane="best" from="1327959237#0" to="226319971">
+        <stop busStop="6325900915" duration="30"/>  <!-- Pl Tetuan - Pg de Sant Joan -->
+        <stop busStop="8143303488" duration="30"/>  <!-- Pg de Sant Joan - Aragó -->
+        <stop busStop="8143303487" duration="30"/>  <!-- Pg de Sant Joan - València -->
+        <stop busStop="5603006483" duration="30"/>  <!-- Pg de Sant Joan - Còrsega -->
+    </trip>
+    <trip id="254_bus_V19:1" type="pt_bus" depart="581.0" departLane="best" from="1409296676#0" to="330913949#0">
+        <stop busStop="8143303456" duration="30"/>  <!-- Pg de Sant Joan - Rosselló -->
+        <stop busStop="8143303455" duration="30"/>  <!-- Pg de Sant Joan - Pl Mossèn Jacint Verdaguer -->
+        <stop busStop="8143303454" duration="30"/>  <!-- Pg Sant Joan - Consell de Cent -->
+        <stop busStop="8143303453" duration="30"/>  <!-- Pg de Sant Joan - Diputació -->
+    </trip>
+    <trip id="255_bus_B24:0" type="pt_bus" depart="582.0" departLane="best" from="1017861008#0" to="732998299">
+        <stop busStop="6321098317" duration="30"/>  <!-- Bruc - Rda. Sant Pere -->
+        <stop busStop="5609793288" duration="30"/>  <!-- Llúria - Urquinaona -->
+        <stop busStop="6321098316" duration="30"/>  <!-- Llúria - Gran Via -->
+        <stop busStop="6321098315" duration="30"/>  <!-- Llúria - Aragó -->
+        <stop busStop="6321098314" duration="30"/>  <!-- Mercat de la Concepció -->
+        <stop busStop="3477282395" duration="30"/>  <!-- València - Pg. Sant Joan -->
+        <stop busStop="2573351880" duration="30"/>  <!-- València - Pg de Sant Joan -->
+        <stop busStop="2573351872" duration="30"/>  <!-- València - Diagonal -->
+    </trip>
+    <trip id="256_bus_B24:1" type="pt_bus" depart="583.0" departLane="best" from="1409641091#0" to="1017861008#0">
+        <stop busStop="2573351864" duration="30"/>  <!-- Mallorca, 367 -->
+        <stop busStop="2573351868" duration="30"/>  <!-- Mallorca - Pg Sant Joan -->
+        <stop busStop="1962300126" duration="30"/>  <!-- Mallorca - Girona -->
+        <stop busStop="6324223823" duration="30"/>  <!-- Mallorca - Girona -->
+        <stop busStop="6324223822" duration="30"/>  <!-- Pau Claris - Mallorca -->
+        <stop busStop="6324223821" duration="30"/>  <!-- Pau Claris - Aragó -->
+        <stop busStop="6324223820" duration="30"/>  <!-- Pau Claris - Gran Via -->
+        <stop busStop="6321098317" duration="30"/>  <!-- Bruc - Rda. Sant Pere -->
+    </trip>
+    <trip id="257_bus_B25:0" type="pt_bus" depart="590.0" departLane="best" from="1408672893#0" to="511211614#0">
+        <stop busStop="3706371090" duration="30"/>  <!-- Ronda Sant Pere - Plaça Urquinaona -->
+    </trip>
+    <trip id="258_bus_B25:1" type="pt_bus" depart="591.0" departLane="best" from="511211614#0" to="330913949#0">
+        <stop busStop="3706371090" duration="30"/>  <!-- Ronda Sant Pere - Plaça Urquinaona -->
+        <stop busStop="5609793288" duration="30"/>  <!-- Llúria - Urquinaona -->
+        <stop busStop="5609793287" duration="30"/>  <!-- Casp - Girona -->
+    </trip>
+    <trip id="259_bus_L62:1" type="pt_bus" depart="593.0" departLane="best" from="54060104#0" to="1210868746#0">
+        <stop busStop="2454435907" duration="30"/>  <!-- Trav. de les Corts - Riera Blanca -->
+    </trip>
+    <trip id="260_bus_L61:0" type="pt_bus" depart="597.0" departLane="best" from="4746244" to="-396947540#1">
+        <stop busStop="5584069358" duration="30"/>  <!-- Carrer de Buenos Aires / Avinguda de Sarrià -->
+        <stop busStop="-12815640391" duration="30"/>  <!-- Av. Diagonal - Dr. Fleming (C.C. L'illa) -->
+        <stop busStop="-5341631255" duration="30"/>  <!-- Diagonal - Pl Reina Maria Cristina -->
+    </trip>
+    <trip id="261_bus_L63:0" type="pt_bus" depart="597.0" departLane="best" from="34054311#3" to="1409636114#0">
+        <stop busStop="1426089985" duration="30"/>  <!-- Av. Diagonal - Gran Via Carles III -->
+        <stop busStop="5343770279" duration="30"/>  <!-- Diagonal - Entença -->
+        <stop busStop="8394412764" duration="30"/>  <!-- Comte d'Urgell - Londres -->
+    </trip>
+    <trip id="262_bus_L63:1" type="pt_bus" depart="597.0" departLane="best" from="251749485#0" to="-396947540#1">
+        <stop busStop="8173979185" duration="30"/>  <!-- Josep Tarradellas - Francesc Macià -->
+        <stop busStop="-12815640391" duration="30"/>  <!-- Av. Diagonal - Dr. Fleming (C.C. L'illa) -->
+        <stop busStop="-5341631255" duration="30"/>  <!-- Diagonal - Pl Reina Maria Cristina -->
+    </trip>
+    <trip id="263_bus_L68:1" type="pt_bus" depart="597.0" departLane="best" from="170079056#0" to="1409636114#0">
+        <stop busStop="1426089985" duration="30"/>  <!-- Av. Diagonal - Gran Via Carles III -->
+        <stop busStop="5343770279" duration="30"/>  <!-- Diagonal - Entença -->
+        <stop busStop="8394412764" duration="30"/>  <!-- Comte d'Urgell - Londres -->
+    </trip>
+    <trip id="264_bus_567:1" type="pt_bus" depart="598.0" departLane="best" from="170079056#0" to="34054311#3">
+        <stop busStop="1426089985" duration="30"/>  <!-- Av. Diagonal - Gran Via Carles III -->
+    </trip>
+    <trip id="265_bus_L67:0" type="pt_bus" depart="599.0" departLane="best" from="170079056#0" to="538722959">
+        <stop busStop="5343770279" duration="30"/>  <!-- Diagonal - Entença -->
+    </trip>
+    <trip id="266_bus_L67:1" type="pt_bus" depart="599.0" departLane="best" from="-1393135023" to="-396947540#1">
+        <stop busStop="-12895749915" duration="30"/>  <!-- Diagonal - Francesc Macià -->
+        <stop busStop="-12075420266" duration="30"/>  <!-- Av. Diagonal - Dr. Ferran -->
+    </trip>
+</routes>

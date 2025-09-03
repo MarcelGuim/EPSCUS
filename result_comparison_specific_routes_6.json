@@ -1,0 +1,1053 @@
+[
+    {},
+    {
+        "result (3, 0)": {
+            "distance": 1038.1206838885034,
+            "cars": 3,
+            "vehicles": [
+                0.36607142857142855,
+                0.4017857142857143,
+                0.23214285714285715
+            ],
+            "edges": [
+                "238324883#0",
+                "1382321715#0",
+                "1409649738#0",
+                "295124095#0",
+                "526213093#0",
+                "1409649739#0",
+                "31029328#0",
+                "238866887#0"
+            ],
+            "total_time_for_no_vehicles": 57.0,
+            "total_time_for_vehicles_and_no_device": 80.0,
+            "total_time_for_vehicles_and_device": 67.0,
+            "diference_from_ideal": 10.0,
+            "total_diference_from_real": 13.0,
+            "increase_in_ideal_percent": 17.543859649122805,
+            "decrease_in_real_percent": 16.25,
+            "edges_with_more_than_one_lane_and_tls": 87.5,
+            "edges_with_more_than_one_lane_and_no_tls": 12.5,
+            "edges_with_one_lane_and_tls": 0.0,
+            "edges_with_one_lane_and_no_tls": 0.0,
+            "average_density_v_n_d": 0.013666964335838088,
+            "average_density_v_d": 0.011408680967850079,
+            "max_density_v_n_d": 0.028196812883153288
+        }
+    },
+    {
+        "result (3, 1)": {
+            "distance": 1038.1206838885034,
+            "cars": 3,
+            "vehicles": [
+                0.29464285714285715,
+                0.5267857142857143,
+                0.17857142857142858
+            ],
+            "edges": [
+                "238324883#0",
+                "1382321715#0",
+                "1409649738#0",
+                "295124095#0",
+                "526213093#0",
+                "1409649739#0",
+                "31029328#0",
+                "238866887#0"
+            ],
+            "total_time_for_no_vehicles": 57.0,
+            "total_time_for_vehicles_and_no_device": 82.0,
+            "total_time_for_vehicles_and_device": 67.0,
+            "diference_from_ideal": 10.0,
+            "total_diference_from_real": 15.0,
+            "increase_in_ideal_percent": 17.543859649122805,
+            "decrease_in_real_percent": 18.29268292682927,
+            "edges_with_more_than_one_lane_and_tls": 87.5,
+            "edges_with_more_than_one_lane_and_no_tls": 12.5,
+            "edges_with_one_lane_and_tls": 0.0,
+            "edges_with_one_lane_and_no_tls": 0.0,
+            "average_density_v_n_d": 0.012213962680348823,
+            "average_density_v_d": 0.012361619779930834,
+            "max_density_v_n_d": 0.023179162157853168
+        }
+    },
+    {
+        "result (3, 2)": {
+            "distance": 1038.1206838885034,
+            "cars": 3,
+            "vehicles": [
+                0.3786407766990291,
+                0.49514563106796117,
+                0.1262135922330097
+            ],
+            "edges": [
+                "238324883#0",
+                "1382321715#0",
+                "1409649738#0",
+                "295124095#0",
+                "526213093#0",
+                "1409649739#0",
+                "31029328#0",
+                "238866887#0"
+            ],
+            "total_time_for_no_vehicles": 57.0,
+            "total_time_for_vehicles_and_no_device": 65.0,
+            "total_time_for_vehicles_and_device": 68.0,
+            "diference_from_ideal": 11.0,
+            "total_diference_from_real": -3.0,
+            "increase_in_ideal_percent": 19.298245614035086,
+            "decrease_in_real_percent": -4.615384615384616,
+            "edges_with_more_than_one_lane_and_tls": 87.5,
+            "edges_with_more_than_one_lane_and_no_tls": 12.5,
+            "edges_with_one_lane_and_tls": 0.0,
+            "edges_with_one_lane_and_no_tls": 0.0,
+            "average_density_v_n_d": 0.009150094671088887,
+            "average_density_v_d": 0.011707845841858086,
+            "max_density_v_n_d": 0.019111491076927733
+        }
+    },
+    {
+        "result (3, 3)": {
+            "distance": 1038.1206838885034,
+            "cars": 3,
+            "vehicles": [
+                0.3300970873786408,
+                0.47572815533980584,
+                0.1941747572815534
+            ],
+            "edges": [
+                "238324883#0",
+                "1382321715#0",
+                "1409649738#0",
+                "295124095#0",
+                "526213093#0",
+                "1409649739#0",
+                "31029328#0",
+                "238866887#0"
+            ],
+            "total_time_for_no_vehicles": 57.0,
+            "total_time_for_vehicles_and_no_device": 65.0,
+            "total_time_for_vehicles_and_device": 64.0,
+            "diference_from_ideal": 7.0,
+            "total_diference_from_real": 1.0,
+            "increase_in_ideal_percent": 12.280701754385964,
+            "decrease_in_real_percent": 1.5384615384615385,
+            "edges_with_more_than_one_lane_and_tls": 87.5,
+            "edges_with_more_than_one_lane_and_no_tls": 12.5,
+            "edges_with_one_lane_and_tls": 0.0,
+            "edges_with_one_lane_and_no_tls": 0.0,
+            "average_density_v_n_d": 0.007829414728018418,
+            "average_density_v_d": 0.01157377679173419,
+            "max_density_v_n_d": 0.011069436005220987
+        }
+    },
+    {
+        "result (3, 4)": {
+            "distance": 1038.1206838885034,
+            "cars": 3,
+            "vehicles": [
+                0.4107142857142857,
+                0.4732142857142857,
+                0.11607142857142858
+            ],
+            "edges": [
+                "238324883#0",
+                "1382321715#0",
+                "1409649738#0",
+                "295124095#0",
+                "526213093#0",
+                "1409649739#0",
+                "31029328#0",
+                "238866887#0"
+            ],
+            "total_time_for_no_vehicles": 57.0,
+            "total_time_for_vehicles_and_no_device": 88.0,
+            "total_time_for_vehicles_and_device": 65.0,
+            "diference_from_ideal": 8.0,
+            "total_diference_from_real": 23.0,
+            "increase_in_ideal_percent": 14.035087719298245,
+            "decrease_in_real_percent": 26.136363636363637,
+            "edges_with_more_than_one_lane_and_tls": 87.5,
+            "edges_with_more_than_one_lane_and_no_tls": 12.5,
+            "edges_with_one_lane_and_tls": 0.0,
+            "edges_with_one_lane_and_no_tls": 0.0,
+            "average_density_v_n_d": 0.010154350798189873,
+            "average_density_v_d": 0.010932589854242501,
+            "max_density_v_n_d": 0.015156859839112843
+        }
+    },
+    {
+        "result (4, 0)": {
+            "distance": 1038.1206838885034,
+            "cars": 4,
+            "vehicles": [
+                0.30656934306569344,
+                0.5985401459854015,
+                0.0948905109489051
+            ],
+            "edges": [
+                "238324883#0",
+                "1382321715#0",
+                "1409649738#0",
+                "295124095#0",
+                "526213093#0",
+                "1409649739#0",
+                "31029328#0",
+                "238866887#0"
+            ],
+            "total_time_for_no_vehicles": 57.0,
+            "total_time_for_vehicles_and_no_device": 74.0,
+            "total_time_for_vehicles_and_device": 68.0,
+            "diference_from_ideal": 11.0,
+            "total_diference_from_real": 6.0,
+            "increase_in_ideal_percent": 19.298245614035086,
+            "decrease_in_real_percent": 8.108108108108109,
+            "edges_with_more_than_one_lane_and_tls": 87.5,
+            "edges_with_more_than_one_lane_and_no_tls": 12.5,
+            "edges_with_one_lane_and_tls": 0.0,
+            "edges_with_one_lane_and_no_tls": 0.0,
+            "average_density_v_n_d": 0.01138818277512826,
+            "average_density_v_d": 0.013961402790472756,
+            "max_density_v_n_d": 0.02625810317836684
+        }
+    },
+    {
+        "result (4, 1)": {
+            "distance": 1038.1206838885034,
+            "cars": 4,
+            "vehicles": [
+                0.3352601156069364,
+                0.5086705202312138,
+                0.15606936416184972
+            ],
+            "edges": [
+                "238324883#0",
+                "1382321715#0",
+                "1409649738#0",
+                "295124095#0",
+                "526213093#0",
+                "1409649739#0",
+                "31029328#0",
+                "238866887#0"
+            ],
+            "total_time_for_no_vehicles": 57.0,
+            "total_time_for_vehicles_and_no_device": 132.0,
+            "total_time_for_vehicles_and_device": 66.0,
+            "diference_from_ideal": 9.0,
+            "total_diference_from_real": 66.0,
+            "increase_in_ideal_percent": 15.789473684210526,
+            "decrease_in_real_percent": 50.0,
+            "edges_with_more_than_one_lane_and_tls": 87.5,
+            "edges_with_more_than_one_lane_and_no_tls": 12.5,
+            "edges_with_one_lane_and_tls": 0.0,
+            "edges_with_one_lane_and_no_tls": 0.0,
+            "average_density_v_n_d": 0.018885384937829708,
+            "average_density_v_d": 0.011204330578989518,
+            "max_density_v_n_d": 0.028480328057298075
+        }
+    },
+    {
+        "result (4, 2)": {
+            "distance": 1038.1206838885034,
+            "cars": 4,
+            "vehicles": [
+                0.3288590604026846,
+                0.5503355704697986,
+                0.12080536912751678
+            ],
+            "edges": [
+                "238324883#0",
+                "1382321715#0",
+                "1409649738#0",
+                "295124095#0",
+                "526213093#0",
+                "1409649739#0",
+                "31029328#0",
+                "238866887#0"
+            ],
+            "total_time_for_no_vehicles": 57.0,
+            "total_time_for_vehicles_and_no_device": 84.0,
+            "total_time_for_vehicles_and_device": 75.0,
+            "diference_from_ideal": 18.0,
+            "total_diference_from_real": 9.0,
+            "increase_in_ideal_percent": 31.57894736842105,
+            "decrease_in_real_percent": 10.714285714285714,
+            "edges_with_more_than_one_lane_and_tls": 87.5,
+            "edges_with_more_than_one_lane_and_no_tls": 12.5,
+            "edges_with_one_lane_and_tls": 0.0,
+            "edges_with_one_lane_and_no_tls": 0.0,
+            "average_density_v_n_d": 0.011287737094453656,
+            "average_density_v_d": 0.012704372002733255,
+            "max_density_v_n_d": 0.02418746067251867
+        }
+    },
+    {
+        "result (4, 3)": {
+            "distance": 1038.1206838885034,
+            "cars": 4,
+            "vehicles": [
+                0.23357664233576642,
+                0.6058394160583942,
+                0.16058394160583941
+            ],
+            "edges": [
+                "238324883#0",
+                "1382321715#0",
+                "1409649738#0",
+                "295124095#0",
+                "526213093#0",
+                "1409649739#0",
+                "31029328#0",
+                "238866887#0"
+            ],
+            "total_time_for_no_vehicles": 57.0,
+            "total_time_for_vehicles_and_no_device": 68.0,
+            "total_time_for_vehicles_and_device": 69.0,
+            "diference_from_ideal": 12.0,
+            "total_diference_from_real": -1.0,
+            "increase_in_ideal_percent": 21.052631578947366,
+            "decrease_in_real_percent": -1.4705882352941175,
+            "edges_with_more_than_one_lane_and_tls": 87.5,
+            "edges_with_more_than_one_lane_and_no_tls": 12.5,
+            "edges_with_one_lane_and_tls": 0.0,
+            "edges_with_one_lane_and_no_tls": 0.0,
+            "average_density_v_n_d": 0.008652160178158926,
+            "average_density_v_d": 0.010848634388660117,
+            "max_density_v_n_d": 0.011115968479272894
+        }
+    },
+    {
+        "result (4, 4)": {
+            "distance": 1038.1206838885034,
+            "cars": 4,
+            "vehicles": [
+                0.36645962732919257,
+                0.5031055900621118,
+                0.13043478260869565
+            ],
+            "edges": [
+                "238324883#0",
+                "1382321715#0",
+                "1409649738#0",
+                "295124095#0",
+                "526213093#0",
+                "1409649739#0",
+                "31029328#0",
+                "238866887#0"
+            ],
+            "total_time_for_no_vehicles": 57.0,
+            "total_time_for_vehicles_and_no_device": 99.0,
+            "total_time_for_vehicles_and_device": 67.0,
+            "diference_from_ideal": 10.0,
+            "total_diference_from_real": 32.0,
+            "increase_in_ideal_percent": 17.543859649122805,
+            "decrease_in_real_percent": 32.323232323232325,
+            "edges_with_more_than_one_lane_and_tls": 87.5,
+            "edges_with_more_than_one_lane_and_no_tls": 12.5,
+            "edges_with_one_lane_and_tls": 0.0,
+            "edges_with_one_lane_and_no_tls": 0.0,
+            "average_density_v_n_d": 0.015465325160337566,
+            "average_density_v_d": 0.011958898668631882,
+            "max_density_v_n_d": 0.0248347212506776
+        }
+    },
+    {
+        "result (5, 0)": {
+            "distance": 1038.1206838885034,
+            "cars": 5,
+            "vehicles": [
+                0.3978494623655914,
+                0.46774193548387094,
+                0.13440860215053763
+            ],
+            "edges": [
+                "238324883#0",
+                "1382321715#0",
+                "1409649738#0",
+                "295124095#0",
+                "526213093#0",
+                "1409649739#0",
+                "31029328#0",
+                "238866887#0"
+            ],
+            "total_time_for_no_vehicles": 57.0,
+            "total_time_for_vehicles_and_no_device": 87.0,
+            "total_time_for_vehicles_and_device": 67.0,
+            "diference_from_ideal": 10.0,
+            "total_diference_from_real": 20.0,
+            "increase_in_ideal_percent": 17.543859649122805,
+            "decrease_in_real_percent": 22.988505747126435,
+            "edges_with_more_than_one_lane_and_tls": 87.5,
+            "edges_with_more_than_one_lane_and_no_tls": 12.5,
+            "edges_with_one_lane_and_tls": 0.0,
+            "edges_with_one_lane_and_no_tls": 0.0,
+            "average_density_v_n_d": 0.01477401447990595,
+            "average_density_v_d": 0.016690928206888025,
+            "max_density_v_n_d": 0.029230849469356134
+        }
+    },
+    {
+        "result (5, 1)": {
+            "distance": 1038.1206838885034,
+            "cars": 5,
+            "vehicles": [
+                0.34549878345498786,
+                0.49391727493917276,
+                0.16058394160583941
+            ],
+            "edges": [
+                "238324883#0",
+                "1382321715#0",
+                "1409649738#0",
+                "295124095#0",
+                "526213093#0",
+                "1409649739#0",
+                "31029328#0",
+                "238866887#0"
+            ],
+            "total_time_for_no_vehicles": 57.0,
+            "total_time_for_vehicles_and_no_device": 384.0,
+            "total_time_for_vehicles_and_device": 77.0,
+            "diference_from_ideal": 20.0,
+            "total_diference_from_real": 307.0,
+            "increase_in_ideal_percent": 35.08771929824561,
+            "decrease_in_real_percent": 79.94791666666666,
+            "edges_with_more_than_one_lane_and_tls": 87.5,
+            "edges_with_more_than_one_lane_and_no_tls": 12.5,
+            "edges_with_one_lane_and_tls": 0.0,
+            "edges_with_one_lane_and_no_tls": 0.0,
+            "average_density_v_n_d": 0.020983623301392813,
+            "average_density_v_d": 0.014284062349279439,
+            "max_density_v_n_d": 0.08600393941899603
+        }
+    },
+    {
+        "result (5, 2)": {
+            "distance": 1038.1206838885034,
+            "cars": 5,
+            "vehicles": [
+                0.3064516129032258,
+                0.5,
+                0.1935483870967742
+            ],
+            "edges": [
+                "238324883#0",
+                "1382321715#0",
+                "1409649738#0",
+                "295124095#0",
+                "526213093#0",
+                "1409649739#0",
+                "31029328#0",
+                "238866887#0"
+            ],
+            "total_time_for_no_vehicles": 57.0,
+            "total_time_for_vehicles_and_no_device": 78.0,
+            "total_time_for_vehicles_and_device": 69.0,
+            "diference_from_ideal": 12.0,
+            "total_diference_from_real": 9.0,
+            "increase_in_ideal_percent": 21.052631578947366,
+            "decrease_in_real_percent": 11.538461538461538,
+            "edges_with_more_than_one_lane_and_tls": 87.5,
+            "edges_with_more_than_one_lane_and_no_tls": 12.5,
+            "edges_with_one_lane_and_tls": 0.0,
+            "edges_with_one_lane_and_no_tls": 0.0,
+            "average_density_v_n_d": 0.012027402953291775,
+            "average_density_v_d": 0.013002218334014244,
+            "max_density_v_n_d": 0.023025728209925038
+        }
+    },
+    {
+        "result (5, 3)": {
+            "distance": 1038.1206838885034,
+            "cars": 5,
+            "vehicles": [
+                0.35323383084577115,
+                0.4925373134328358,
+                0.15422885572139303
+            ],
+            "edges": [
+                "238324883#0",
+                "1382321715#0",
+                "1409649738#0",
+                "295124095#0",
+                "526213093#0",
+                "1409649739#0",
+                "31029328#0",
+                "238866887#0"
+            ],
+            "total_time_for_no_vehicles": 57.0,
+            "total_time_for_vehicles_and_no_device": 101.0,
+            "total_time_for_vehicles_and_device": 70.0,
+            "diference_from_ideal": 13.0,
+            "total_diference_from_real": 31.0,
+            "increase_in_ideal_percent": 22.807017543859647,
+            "decrease_in_real_percent": 30.693069306930692,
+            "edges_with_more_than_one_lane_and_tls": 87.5,
+            "edges_with_more_than_one_lane_and_no_tls": 12.5,
+            "edges_with_one_lane_and_tls": 0.0,
+            "edges_with_one_lane_and_no_tls": 0.0,
+            "average_density_v_n_d": 0.012653053883647779,
+            "average_density_v_d": 0.016854891103616227,
+            "max_density_v_n_d": 0.025471216341285623
+        }
+    },
+    {
+        "result (5, 4)": {
+            "distance": 1038.1206838885034,
+            "cars": 5,
+            "vehicles": [
+                0.24193548387096775,
+                0.6021505376344086,
+                0.15591397849462366
+            ],
+            "edges": [
+                "238324883#0",
+                "1382321715#0",
+                "1409649738#0",
+                "295124095#0",
+                "526213093#0",
+                "1409649739#0",
+                "31029328#0",
+                "238866887#0"
+            ],
+            "total_time_for_no_vehicles": 57.0,
+            "total_time_for_vehicles_and_no_device": 85.0,
+            "total_time_for_vehicles_and_device": 67.0,
+            "diference_from_ideal": 10.0,
+            "total_diference_from_real": 18.0,
+            "increase_in_ideal_percent": 17.543859649122805,
+            "decrease_in_real_percent": 21.176470588235293,
+            "edges_with_more_than_one_lane_and_tls": 87.5,
+            "edges_with_more_than_one_lane_and_no_tls": 12.5,
+            "edges_with_one_lane_and_tls": 0.0,
+            "edges_with_one_lane_and_no_tls": 0.0,
+            "average_density_v_n_d": 0.013323468515377579,
+            "average_density_v_d": 0.01623812470489525,
+            "max_density_v_n_d": 0.026603384157772164
+        }
+    },
+    {
+        "result (6, 0)": {
+            "distance": 1038.1206838885034,
+            "cars": 6,
+            "vehicles": [
+                0.31390134529147984,
+                0.5381165919282511,
+                0.14798206278026907
+            ],
+            "edges": [
+                "238324883#0",
+                "1382321715#0",
+                "1409649738#0",
+                "295124095#0",
+                "526213093#0",
+                "1409649739#0",
+                "31029328#0",
+                "238866887#0"
+            ],
+            "total_time_for_no_vehicles": 57.0,
+            "total_time_for_vehicles_and_no_device": 97.0,
+            "total_time_for_vehicles_and_device": 67.0,
+            "diference_from_ideal": 10.0,
+            "total_diference_from_real": 30.0,
+            "increase_in_ideal_percent": 17.543859649122805,
+            "decrease_in_real_percent": 30.927835051546392,
+            "edges_with_more_than_one_lane_and_tls": 87.5,
+            "edges_with_more_than_one_lane_and_no_tls": 12.5,
+            "edges_with_one_lane_and_tls": 0.0,
+            "edges_with_one_lane_and_no_tls": 0.0,
+            "average_density_v_n_d": 0.01815488764439536,
+            "average_density_v_d": 0.014869787262378262,
+            "max_density_v_n_d": 0.031126354688380653
+        }
+    },
+    {
+        "result (6, 1)": {
+            "distance": 1038.1206838885034,
+            "cars": 6,
+            "vehicles": [
+                0.38565022421524664,
+                0.4798206278026906,
+                0.13452914798206278
+            ],
+            "edges": [
+                "238324883#0",
+                "1382321715#0",
+                "1409649738#0",
+                "295124095#0",
+                "526213093#0",
+                "1409649739#0",
+                "31029328#0",
+                "238866887#0"
+            ],
+            "total_time_for_no_vehicles": 57.0,
+            "total_time_for_vehicles_and_no_device": 87.0,
+            "total_time_for_vehicles_and_device": 69.0,
+            "diference_from_ideal": 12.0,
+            "total_diference_from_real": 18.0,
+            "increase_in_ideal_percent": 21.052631578947366,
+            "decrease_in_real_percent": 20.689655172413794,
+            "edges_with_more_than_one_lane_and_tls": 87.5,
+            "edges_with_more_than_one_lane_and_no_tls": 12.5,
+            "edges_with_one_lane_and_tls": 0.0,
+            "edges_with_one_lane_and_no_tls": 0.0,
+            "average_density_v_n_d": 0.016982831223362173,
+            "average_density_v_d": 0.017956562932029973,
+            "max_density_v_n_d": 0.03099727500885139
+        }
+    },
+    {
+        "result (6, 2)": {
+            "distance": 1038.1206838885034,
+            "cars": 6,
+            "vehicles": [
+                0.2987551867219917,
+                0.5477178423236515,
+                0.15352697095435686
+            ],
+            "edges": [
+                "238324883#0",
+                "1382321715#0",
+                "1409649738#0",
+                "295124095#0",
+                "526213093#0",
+                "1409649739#0",
+                "31029328#0",
+                "238866887#0"
+            ],
+            "total_time_for_no_vehicles": 57.0,
+            "total_time_for_vehicles_and_no_device": 102.0,
+            "total_time_for_vehicles_and_device": 69.0,
+            "diference_from_ideal": 12.0,
+            "total_diference_from_real": 33.0,
+            "increase_in_ideal_percent": 21.052631578947366,
+            "decrease_in_real_percent": 32.35294117647059,
+            "edges_with_more_than_one_lane_and_tls": 87.5,
+            "edges_with_more_than_one_lane_and_no_tls": 12.5,
+            "edges_with_one_lane_and_tls": 0.0,
+            "edges_with_one_lane_and_no_tls": 0.0,
+            "average_density_v_n_d": 0.01670911212638686,
+            "average_density_v_d": 0.013675909691450881,
+            "max_density_v_n_d": 0.03038894462791592
+        }
+    },
+    {
+        "result (6, 3)": {
+            "distance": 1038.1206838885034,
+            "cars": 6,
+            "vehicles": [
+                0.2987551867219917,
+                0.5269709543568465,
+                0.17427385892116182
+            ],
+            "edges": [
+                "238324883#0",
+                "1382321715#0",
+                "1409649738#0",
+                "295124095#0",
+                "526213093#0",
+                "1409649739#0",
+                "31029328#0",
+                "238866887#0"
+            ],
+            "total_time_for_no_vehicles": 57.0,
+            "total_time_for_vehicles_and_no_device": 102.0,
+            "total_time_for_vehicles_and_device": 70.0,
+            "diference_from_ideal": 13.0,
+            "total_diference_from_real": 32.0,
+            "increase_in_ideal_percent": 22.807017543859647,
+            "decrease_in_real_percent": 31.372549019607842,
+            "edges_with_more_than_one_lane_and_tls": 87.5,
+            "edges_with_more_than_one_lane_and_no_tls": 12.5,
+            "edges_with_one_lane_and_tls": 0.0,
+            "edges_with_one_lane_and_no_tls": 0.0,
+            "average_density_v_n_d": 0.019232214554292634,
+            "average_density_v_d": 0.01770999134527303,
+            "max_density_v_n_d": 0.035480360968510906
+        }
+    },
+    {
+        "result (6, 4)": {
+            "distance": 1038.1206838885034,
+            "cars": 6,
+            "vehicles": [
+                0.38565022421524664,
+                0.47533632286995514,
+                0.13901345291479822
+            ],
+            "edges": [
+                "238324883#0",
+                "1382321715#0",
+                "1409649738#0",
+                "295124095#0",
+                "526213093#0",
+                "1409649739#0",
+                "31029328#0",
+                "238866887#0"
+            ],
+            "total_time_for_no_vehicles": 57.0,
+            "total_time_for_vehicles_and_no_device": 90.0,
+            "total_time_for_vehicles_and_device": 82.0,
+            "diference_from_ideal": 25.0,
+            "total_diference_from_real": 8.0,
+            "increase_in_ideal_percent": 43.859649122807014,
+            "decrease_in_real_percent": 8.88888888888889,
+            "edges_with_more_than_one_lane_and_tls": 87.5,
+            "edges_with_more_than_one_lane_and_no_tls": 12.5,
+            "edges_with_one_lane_and_tls": 0.0,
+            "edges_with_one_lane_and_no_tls": 0.0,
+            "average_density_v_n_d": 0.023642671118175956,
+            "average_density_v_d": 0.02081570767837544,
+            "max_density_v_n_d": 0.04821556453843044
+        }
+    },
+    {
+        "result (7, 0)": {
+            "distance": 1038.1206838885034,
+            "cars": 7,
+            "vehicles": [
+                0.35384615384615387,
+                0.4846153846153846,
+                0.16153846153846155
+            ],
+            "edges": [
+                "238324883#0",
+                "1382321715#0",
+                "1409649738#0",
+                "295124095#0",
+                "526213093#0",
+                "1409649739#0",
+                "31029328#0",
+                "238866887#0"
+            ],
+            "total_time_for_no_vehicles": 57.0,
+            "total_time_for_vehicles_and_no_device": 81.0,
+            "total_time_for_vehicles_and_device": 64.0,
+            "diference_from_ideal": 7.0,
+            "total_diference_from_real": 17.0,
+            "increase_in_ideal_percent": 12.280701754385964,
+            "decrease_in_real_percent": 20.98765432098765,
+            "edges_with_more_than_one_lane_and_tls": 87.5,
+            "edges_with_more_than_one_lane_and_no_tls": 12.5,
+            "edges_with_one_lane_and_tls": 0.0,
+            "edges_with_one_lane_and_no_tls": 0.0,
+            "average_density_v_n_d": 0.01909613831142262,
+            "average_density_v_d": 0.01740826891697033,
+            "max_density_v_n_d": 0.036172882088477326
+        }
+    },
+    {
+        "result (7, 1)": {
+            "distance": 1038.1206838885034,
+            "cars": 7,
+            "vehicles": [
+                0.3269230769230769,
+                0.5269230769230769,
+                0.14615384615384616
+            ],
+            "edges": [
+                "238324883#0",
+                "1382321715#0",
+                "1409649738#0",
+                "295124095#0",
+                "526213093#0",
+                "1409649739#0",
+                "31029328#0",
+                "238866887#0"
+            ],
+            "total_time_for_no_vehicles": 57.0,
+            "total_time_for_vehicles_and_no_device": 88.0,
+            "total_time_for_vehicles_and_device": 70.0,
+            "diference_from_ideal": 13.0,
+            "total_diference_from_real": 18.0,
+            "increase_in_ideal_percent": 22.807017543859647,
+            "decrease_in_real_percent": 20.454545454545457,
+            "edges_with_more_than_one_lane_and_tls": 87.5,
+            "edges_with_more_than_one_lane_and_no_tls": 12.5,
+            "edges_with_one_lane_and_tls": 0.0,
+            "edges_with_one_lane_and_no_tls": 0.0,
+            "average_density_v_n_d": 0.020708522347699636,
+            "average_density_v_d": 0.0228265838227479,
+            "max_density_v_n_d": 0.03260568974443685
+        }
+    },
+    {
+        "result (7, 2)": {
+            "distance": 1038.1206838885034,
+            "cars": 7,
+            "vehicles": [
+                0.3269230769230769,
+                0.48846153846153845,
+                0.18461538461538463
+            ],
+            "edges": [
+                "238324883#0",
+                "1382321715#0",
+                "1409649738#0",
+                "295124095#0",
+                "526213093#0",
+                "1409649739#0",
+                "31029328#0",
+                "238866887#0"
+            ],
+            "total_time_for_no_vehicles": 57.0,
+            "total_time_for_vehicles_and_no_device": 89.0,
+            "total_time_for_vehicles_and_device": 61.0,
+            "diference_from_ideal": 4.0,
+            "total_diference_from_real": 28.0,
+            "increase_in_ideal_percent": 7.017543859649122,
+            "decrease_in_real_percent": 31.46067415730337,
+            "edges_with_more_than_one_lane_and_tls": 87.5,
+            "edges_with_more_than_one_lane_and_no_tls": 12.5,
+            "edges_with_one_lane_and_tls": 0.0,
+            "edges_with_one_lane_and_no_tls": 0.0,
+            "average_density_v_n_d": 0.020633302385619695,
+            "average_density_v_d": 0.020137114093662558,
+            "max_density_v_n_d": 0.033913148862599725
+        }
+    },
+    {
+        "result (7, 3)": {
+            "distance": 1038.1206838885034,
+            "cars": 7,
+            "vehicles": [
+                0.3167259786476868,
+                0.5160142348754448,
+                0.16725978647686832
+            ],
+            "edges": [
+                "238324883#0",
+                "1382321715#0",
+                "1409649738#0",
+                "295124095#0",
+                "526213093#0",
+                "1409649739#0",
+                "31029328#0",
+                "238866887#0"
+            ],
+            "total_time_for_no_vehicles": 57.0,
+            "total_time_for_vehicles_and_no_device": 113.0,
+            "total_time_for_vehicles_and_device": 69.0,
+            "diference_from_ideal": 12.0,
+            "total_diference_from_real": 44.0,
+            "increase_in_ideal_percent": 21.052631578947366,
+            "decrease_in_real_percent": 38.93805309734513,
+            "edges_with_more_than_one_lane_and_tls": 87.5,
+            "edges_with_more_than_one_lane_and_no_tls": 12.5,
+            "edges_with_one_lane_and_tls": 0.0,
+            "edges_with_one_lane_and_no_tls": 0.0,
+            "average_density_v_n_d": 0.02091417675972265,
+            "average_density_v_d": 0.017837711333972387,
+            "max_density_v_n_d": 0.038474417315279875
+        }
+    },
+    {
+        "result (7, 4)": {
+            "distance": 1038.1206838885034,
+            "cars": 7,
+            "vehicles": [
+                0.3514644351464435,
+                0.5397489539748954,
+                0.1087866108786611
+            ],
+            "edges": [
+                "238324883#0",
+                "1382321715#0",
+                "1409649738#0",
+                "295124095#0",
+                "526213093#0",
+                "1409649739#0",
+                "31029328#0",
+                "238866887#0"
+            ],
+            "total_time_for_no_vehicles": 57.0,
+            "total_time_for_vehicles_and_no_device": 69.0,
+            "total_time_for_vehicles_and_device": 73.0,
+            "diference_from_ideal": 16.0,
+            "total_diference_from_real": -4.0,
+            "increase_in_ideal_percent": 28.07017543859649,
+            "decrease_in_real_percent": -5.797101449275362,
+            "edges_with_more_than_one_lane_and_tls": 87.5,
+            "edges_with_more_than_one_lane_and_no_tls": 12.5,
+            "edges_with_one_lane_and_tls": 0.0,
+            "edges_with_one_lane_and_no_tls": 0.0,
+            "average_density_v_n_d": 0.013942949131249627,
+            "average_density_v_d": 0.020508131352732252,
+            "max_density_v_n_d": 0.02017458544238048
+        }
+    },
+    {
+        "result (8, 0)": {
+            "distance": 1038.1206838885034,
+            "cars": 8,
+            "vehicles": [
+                0.2897196261682243,
+                0.5825545171339563,
+                0.1277258566978193
+            ],
+            "edges": [
+                "238324883#0",
+                "1382321715#0",
+                "1409649738#0",
+                "295124095#0",
+                "526213093#0",
+                "1409649739#0",
+                "31029328#0",
+                "238866887#0"
+            ],
+            "total_time_for_no_vehicles": 57.0,
+            "total_time_for_vehicles_and_no_device": 109.0,
+            "total_time_for_vehicles_and_device": 76.0,
+            "diference_from_ideal": 19.0,
+            "total_diference_from_real": 33.0,
+            "increase_in_ideal_percent": 33.33333333333333,
+            "decrease_in_real_percent": 30.275229357798167,
+            "edges_with_more_than_one_lane_and_tls": 87.5,
+            "edges_with_more_than_one_lane_and_no_tls": 12.5,
+            "edges_with_one_lane_and_tls": 0.0,
+            "edges_with_one_lane_and_no_tls": 0.0,
+            "average_density_v_n_d": 0.020934768946301335,
+            "average_density_v_d": 0.027692925561932185,
+            "max_density_v_n_d": 0.04159688965169543
+        }
+    },
+    {
+        "result (8, 1)": {
+            "distance": 1038.1206838885034,
+            "cars": 8,
+            "vehicles": [
+                0.29292929292929293,
+                0.5420875420875421,
+                0.16498316498316498
+            ],
+            "edges": [
+                "238324883#0",
+                "1382321715#0",
+                "1409649738#0",
+                "295124095#0",
+                "526213093#0",
+                "1409649739#0",
+                "31029328#0",
+                "238866887#0"
+            ],
+            "total_time_for_no_vehicles": 57.0,
+            "total_time_for_vehicles_and_no_device": 96.0,
+            "total_time_for_vehicles_and_device": 71.0,
+            "diference_from_ideal": 14.0,
+            "total_diference_from_real": 25.0,
+            "increase_in_ideal_percent": 24.561403508771928,
+            "decrease_in_real_percent": 26.041666666666668,
+            "edges_with_more_than_one_lane_and_tls": 87.5,
+            "edges_with_more_than_one_lane_and_no_tls": 12.5,
+            "edges_with_one_lane_and_tls": 0.0,
+            "edges_with_one_lane_and_no_tls": 0.0,
+            "average_density_v_n_d": 0.02041701488904021,
+            "average_density_v_d": 0.025383443257578187,
+            "max_density_v_n_d": 0.04074440565260333
+        }
+    },
+    {
+        "result (8, 2)": {
+            "distance": 1038.1206838885034,
+            "cars": 8,
+            "vehicles": [
+                0.3367003367003367,
+                0.48148148148148145,
+                0.18181818181818182
+            ],
+            "edges": [
+                "238324883#0",
+                "1382321715#0",
+                "1409649738#0",
+                "295124095#0",
+                "526213093#0",
+                "1409649739#0",
+                "31029328#0",
+                "238866887#0"
+            ],
+            "total_time_for_no_vehicles": 57.0,
+            "total_time_for_vehicles_and_no_device": 85.0,
+            "total_time_for_vehicles_and_device": 70.0,
+            "diference_from_ideal": 13.0,
+            "total_diference_from_real": 15.0,
+            "increase_in_ideal_percent": 22.807017543859647,
+            "decrease_in_real_percent": 17.647058823529413,
+            "edges_with_more_than_one_lane_and_tls": 87.5,
+            "edges_with_more_than_one_lane_and_no_tls": 12.5,
+            "edges_with_one_lane_and_tls": 0.0,
+            "edges_with_one_lane_and_no_tls": 0.0,
+            "average_density_v_n_d": 0.023277036612678003,
+            "average_density_v_d": 0.02115974858161402,
+            "max_density_v_n_d": 0.038533996970698085
+        }
+    },
+    {
+        "result (8, 3)": {
+            "distance": 1038.1206838885034,
+            "cars": 8,
+            "vehicles": [
+                0.32463768115942027,
+                0.5449275362318841,
+                0.13043478260869565
+            ],
+            "edges": [
+                "238324883#0",
+                "1382321715#0",
+                "1409649738#0",
+                "295124095#0",
+                "526213093#0",
+                "1409649739#0",
+                "31029328#0",
+                "238866887#0"
+            ],
+            "total_time_for_no_vehicles": 57.0,
+            "total_time_for_vehicles_and_no_device": 130.0,
+            "total_time_for_vehicles_and_device": 74.0,
+            "diference_from_ideal": 17.0,
+            "total_diference_from_real": 56.0,
+            "increase_in_ideal_percent": 29.82456140350877,
+            "decrease_in_real_percent": 43.07692307692308,
+            "edges_with_more_than_one_lane_and_tls": 87.5,
+            "edges_with_more_than_one_lane_and_no_tls": 12.5,
+            "edges_with_one_lane_and_tls": 0.0,
+            "edges_with_one_lane_and_no_tls": 0.0,
+            "average_density_v_n_d": 0.020707927523332382,
+            "average_density_v_d": 0.023144932498610587,
+            "max_density_v_n_d": 0.049853357167251186
+        }
+    },
+    {
+        "result (8, 4)": {
+            "distance": 1038.1206838885034,
+            "cars": 8,
+            "vehicles": [
+                0.25925925925925924,
+                0.5353535353535354,
+                0.2053872053872054
+            ],
+            "edges": [
+                "238324883#0",
+                "1382321715#0",
+                "1409649738#0",
+                "295124095#0",
+                "526213093#0",
+                "1409649739#0",
+                "31029328#0",
+                "238866887#0"
+            ],
+            "total_time_for_no_vehicles": 57.0,
+            "total_time_for_vehicles_and_no_device": 84.0,
+            "total_time_for_vehicles_and_device": 67.0,
+            "diference_from_ideal": 10.0,
+            "total_diference_from_real": 17.0,
+            "increase_in_ideal_percent": 17.543859649122805,
+            "decrease_in_real_percent": 20.238095238095237,
+            "edges_with_more_than_one_lane_and_tls": 87.5,
+            "edges_with_more_than_one_lane_and_no_tls": 12.5,
+            "edges_with_one_lane_and_tls": 0.0,
+            "edges_with_one_lane_and_no_tls": 0.0,
+            "average_density_v_n_d": 0.01730838412475742,
+            "average_density_v_d": 0.017915244898935524,
+            "max_density_v_n_d": 0.04504776076693848
+        }
+    }
+]

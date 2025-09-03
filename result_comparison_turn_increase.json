@@ -1,0 +1,3470 @@
+[
+    {
+        "result (4, 0)": {
+            "distance": 605.3495375014844,
+            "cars": 4,
+            "vehicles": [
+                0.3527272727272727,
+                0.4763636363636364,
+                0.1709090909090909
+            ],
+            "edges": [
+                "526213091#0",
+                "449991627#0",
+                "1409649738#0",
+                "295124095#0",
+                "526213091#0"
+            ],
+            "total_time_for_no_vehicles": 45.0,
+            "total_time_for_vehicles_and_no_device": 0,
+            "total_time_for_vehicles_and_device": 49.0,
+            "diference_from_ideal": 4.0,
+            "total_diference_from_real": 0,
+            "increase_in_ideal_percent": 8.88888888888889,
+            "decrease_in_real_percent": 0,
+            "edges_with_more_than_one_lane_and_tls": 100.0,
+            "edges_with_more_than_one_lane_and_no_tls": 0.0,
+            "edges_with_one_lane_and_tls": 0.0,
+            "edges_with_one_lane_and_no_tls": 0.0,
+            "average_density_v_n_d": 0,
+            "average_density_v_d": 0.031423208030827196
+        }
+    },
+    {
+        "result (4, 1)": {
+            "distance": 605.3495375014844,
+            "cars": 4,
+            "vehicles": [
+                0.3018181818181818,
+                0.5381818181818182,
+                0.16
+            ],
+            "edges": [
+                "526213091#0",
+                "449991627#0",
+                "1409649738#0",
+                "295124095#0",
+                "526213091#0"
+            ],
+            "total_time_for_no_vehicles": 45.0,
+            "total_time_for_vehicles_and_no_device": 0,
+            "total_time_for_vehicles_and_device": 50.0,
+            "diference_from_ideal": 5.0,
+            "total_diference_from_real": 0,
+            "increase_in_ideal_percent": 11.11111111111111,
+            "decrease_in_real_percent": 0,
+            "edges_with_more_than_one_lane_and_tls": 100.0,
+            "edges_with_more_than_one_lane_and_no_tls": 0.0,
+            "edges_with_one_lane_and_tls": 0.0,
+            "edges_with_one_lane_and_no_tls": 0.0,
+            "average_density_v_n_d": 0,
+            "average_density_v_d": 0.028397569374646207
+        }
+    },
+    {
+        "result (4, 2)": {
+            "distance": 605.3495375014844,
+            "cars": 4,
+            "vehicles": [
+                0.29818181818181816,
+                0.5454545454545454,
+                0.15636363636363637
+            ],
+            "edges": [
+                "526213091#0",
+                "449991627#0",
+                "1409649738#0",
+                "295124095#0",
+                "526213091#0"
+            ],
+            "total_time_for_no_vehicles": 45.0,
+            "total_time_for_vehicles_and_no_device": 0,
+            "total_time_for_vehicles_and_device": 46.0,
+            "diference_from_ideal": 1.0,
+            "total_diference_from_real": 0,
+            "increase_in_ideal_percent": 2.2222222222222223,
+            "decrease_in_real_percent": 0,
+            "edges_with_more_than_one_lane_and_tls": 100.0,
+            "edges_with_more_than_one_lane_and_no_tls": 0.0,
+            "edges_with_one_lane_and_tls": 0.0,
+            "edges_with_one_lane_and_no_tls": 0.0,
+            "average_density_v_n_d": 0,
+            "average_density_v_d": 0.027479966486532555
+        }
+    },
+    {
+        "result (4, 3)": {
+            "distance": 605.3495375014844,
+            "cars": 4,
+            "vehicles": [
+                0.33090909090909093,
+                0.49818181818181817,
+                0.1709090909090909
+            ],
+            "edges": [
+                "526213091#0",
+                "449991627#0",
+                "1409649738#0",
+                "295124095#0",
+                "526213091#0"
+            ],
+            "total_time_for_no_vehicles": 45.0,
+            "total_time_for_vehicles_and_no_device": 0,
+            "total_time_for_vehicles_and_device": 49.0,
+            "diference_from_ideal": 4.0,
+            "total_diference_from_real": 0,
+            "increase_in_ideal_percent": 8.88888888888889,
+            "decrease_in_real_percent": 0,
+            "edges_with_more_than_one_lane_and_tls": 100.0,
+            "edges_with_more_than_one_lane_and_no_tls": 0.0,
+            "edges_with_one_lane_and_tls": 0.0,
+            "edges_with_one_lane_and_no_tls": 0.0,
+            "average_density_v_n_d": 0,
+            "average_density_v_d": 0.028944334298985675
+        }
+    },
+    {
+        "result (4, 4)": {
+            "distance": 605.3495375014844,
+            "cars": 4,
+            "vehicles": [
+                0.3018181818181818,
+                0.5636363636363636,
+                0.13454545454545455
+            ],
+            "edges": [
+                "526213091#0",
+                "449991627#0",
+                "1409649738#0",
+                "295124095#0",
+                "526213091#0"
+            ],
+            "total_time_for_no_vehicles": 45.0,
+            "total_time_for_vehicles_and_no_device": 0,
+            "total_time_for_vehicles_and_device": 43.0,
+            "diference_from_ideal": -2.0,
+            "total_diference_from_real": 0,
+            "increase_in_ideal_percent": -4.444444444444445,
+            "decrease_in_real_percent": 0,
+            "edges_with_more_than_one_lane_and_tls": 100.0,
+            "edges_with_more_than_one_lane_and_no_tls": 0.0,
+            "edges_with_one_lane_and_tls": 0.0,
+            "edges_with_one_lane_and_no_tls": 0.0,
+            "average_density_v_n_d": 0,
+            "average_density_v_d": 0.02806894901948084
+        }
+    },
+    {
+        "result (5, 0)": {
+            "distance": 731.9471670059047,
+            "cars": 5,
+            "vehicles": [
+                0.31785714285714284,
+                0.49642857142857144,
+                0.18571428571428572
+            ],
+            "edges": [
+                "526213091#0",
+                "449991627#0",
+                "1409649738#0",
+                "295124095#0",
+                "526213091#0",
+                "449991627#0"
+            ],
+            "total_time_for_no_vehicles": 54.0,
+            "total_time_for_vehicles_and_no_device": 0,
+            "total_time_for_vehicles_and_device": 55.0,
+            "diference_from_ideal": 1.0,
+            "total_diference_from_real": 0,
+            "increase_in_ideal_percent": 1.8518518518518516,
+            "decrease_in_real_percent": 0,
+            "edges_with_more_than_one_lane_and_tls": 100.0,
+            "edges_with_more_than_one_lane_and_no_tls": 0.0,
+            "edges_with_one_lane_and_tls": 0.0,
+            "edges_with_one_lane_and_no_tls": 0.0,
+            "average_density_v_n_d": 0,
+            "average_density_v_d": 0.029529364071291885
+        }
+    },
+    {
+        "result (5, 1)": {
+            "distance": 731.9471670059047,
+            "cars": 5,
+            "vehicles": [
+                0.325,
+                0.525,
+                0.15
+            ],
+            "edges": [
+                "526213091#0",
+                "449991627#0",
+                "1409649738#0",
+                "295124095#0",
+                "526213091#0",
+                "449991627#0"
+            ],
+            "total_time_for_no_vehicles": 54.0,
+            "total_time_for_vehicles_and_no_device": 0,
+            "total_time_for_vehicles_and_device": 52.0,
+            "diference_from_ideal": -2.0,
+            "total_diference_from_real": 0,
+            "increase_in_ideal_percent": -3.7037037037037033,
+            "decrease_in_real_percent": 0,
+            "edges_with_more_than_one_lane_and_tls": 100.0,
+            "edges_with_more_than_one_lane_and_no_tls": 0.0,
+            "edges_with_one_lane_and_tls": 0.0,
+            "edges_with_one_lane_and_no_tls": 0.0,
+            "average_density_v_n_d": 0,
+            "average_density_v_d": 0.023631704085343413
+        }
+    },
+    {
+        "result (5, 2)": {
+            "distance": 731.9471670059047,
+            "cars": 5,
+            "vehicles": [
+                0.2892857142857143,
+                0.5392857142857143,
+                0.17142857142857143
+            ],
+            "edges": [
+                "526213091#0",
+                "449991627#0",
+                "1409649738#0",
+                "295124095#0",
+                "526213091#0",
+                "449991627#0"
+            ],
+            "total_time_for_no_vehicles": 54.0,
+            "total_time_for_vehicles_and_no_device": 0,
+            "total_time_for_vehicles_and_device": 53.0,
+            "diference_from_ideal": -1.0,
+            "total_diference_from_real": 0,
+            "increase_in_ideal_percent": -1.8518518518518516,
+            "decrease_in_real_percent": 0,
+            "edges_with_more_than_one_lane_and_tls": 100.0,
+            "edges_with_more_than_one_lane_and_no_tls": 0.0,
+            "edges_with_one_lane_and_tls": 0.0,
+            "edges_with_one_lane_and_no_tls": 0.0,
+            "average_density_v_n_d": 0,
+            "average_density_v_d": 0.026791556475788854
+        }
+    },
+    {
+        "result (5, 3)": {
+            "distance": 731.9471670059047,
+            "cars": 5,
+            "vehicles": [
+                0.29285714285714287,
+                0.48928571428571427,
+                0.21785714285714286
+            ],
+            "edges": [
+                "526213091#0",
+                "449991627#0",
+                "1409649738#0",
+                "295124095#0",
+                "526213091#0",
+                "449991627#0"
+            ],
+            "total_time_for_no_vehicles": 54.0,
+            "total_time_for_vehicles_and_no_device": 0,
+            "total_time_for_vehicles_and_device": 52.0,
+            "diference_from_ideal": -2.0,
+            "total_diference_from_real": 0,
+            "increase_in_ideal_percent": -3.7037037037037033,
+            "decrease_in_real_percent": 0,
+            "edges_with_more_than_one_lane_and_tls": 100.0,
+            "edges_with_more_than_one_lane_and_no_tls": 0.0,
+            "edges_with_one_lane_and_tls": 0.0,
+            "edges_with_one_lane_and_no_tls": 0.0,
+            "average_density_v_n_d": 0,
+            "average_density_v_d": 0.027270926604519168
+        }
+    },
+    {
+        "result (5, 4)": {
+            "distance": 731.9471670059047,
+            "cars": 5,
+            "vehicles": [
+                0.3,
+                0.5321428571428571,
+                0.16785714285714284
+            ],
+            "edges": [
+                "526213091#0",
+                "449991627#0",
+                "1409649738#0",
+                "295124095#0",
+                "526213091#0",
+                "449991627#0"
+            ],
+            "total_time_for_no_vehicles": 54.0,
+            "total_time_for_vehicles_and_no_device": 0,
+            "total_time_for_vehicles_and_device": 57.0,
+            "diference_from_ideal": 3.0,
+            "total_diference_from_real": 0,
+            "increase_in_ideal_percent": 5.555555555555555,
+            "decrease_in_real_percent": 0,
+            "edges_with_more_than_one_lane_and_tls": 100.0,
+            "edges_with_more_than_one_lane_and_no_tls": 0.0,
+            "edges_with_one_lane_and_tls": 0.0,
+            "edges_with_one_lane_and_no_tls": 0.0,
+            "average_density_v_n_d": 0,
+            "average_density_v_d": 0.029917716112203008
+        }
+    },
+    {
+        "result (6, 0)": {
+            "distance": 849.9673278488731,
+            "cars": 6,
+            "vehicles": [
+                0.31666666666666665,
+                0.5366666666666666,
+                0.14666666666666667
+            ],
+            "edges": [
+                "526213091#0",
+                "449991627#0",
+                "1409649738#0",
+                "295124095#0",
+                "526213091#0",
+                "449991627#0",
+                "1409649738#0"
+            ],
+            "total_time_for_no_vehicles": 62.0,
+            "total_time_for_vehicles_and_no_device": 0,
+            "total_time_for_vehicles_and_device": 67.0,
+            "diference_from_ideal": 5.0,
+            "total_diference_from_real": 0,
+            "increase_in_ideal_percent": 8.064516129032258,
+            "decrease_in_real_percent": 0,
+            "edges_with_more_than_one_lane_and_tls": 100.0,
+            "edges_with_more_than_one_lane_and_no_tls": 0.0,
+            "edges_with_one_lane_and_tls": 0.0,
+            "edges_with_one_lane_and_no_tls": 0.0,
+            "average_density_v_n_d": 0,
+            "average_density_v_d": 0.03555208420954902
+        }
+    },
+    {
+        "result (6, 1)": {
+            "distance": 849.9673278488731,
+            "cars": 6,
+            "vehicles": [
+                0.32666666666666666,
+                0.47333333333333333,
+                0.2
+            ],
+            "edges": [
+                "526213091#0",
+                "449991627#0",
+                "1409649738#0",
+                "295124095#0",
+                "526213091#0",
+                "449991627#0",
+                "1409649738#0"
+            ],
+            "total_time_for_no_vehicles": 62.0,
+            "total_time_for_vehicles_and_no_device": 0,
+            "total_time_for_vehicles_and_device": 74.0,
+            "diference_from_ideal": 12.0,
+            "total_diference_from_real": 0,
+            "increase_in_ideal_percent": 19.35483870967742,
+            "decrease_in_real_percent": 0,
+            "edges_with_more_than_one_lane_and_tls": 100.0,
+            "edges_with_more_than_one_lane_and_no_tls": 0.0,
+            "edges_with_one_lane_and_tls": 0.0,
+            "edges_with_one_lane_and_no_tls": 0.0,
+            "average_density_v_n_d": 0,
+            "average_density_v_d": 0.0316795034641561
+        }
+    },
+    {
+        "result (6, 2)": {
+            "distance": 849.9673278488731,
+            "cars": 6,
+            "vehicles": [
+                0.32,
+                0.5266666666666666,
+                0.15333333333333332
+            ],
+            "edges": [
+                "526213091#0",
+                "449991627#0",
+                "1409649738#0",
+                "295124095#0",
+                "526213091#0",
+                "449991627#0",
+                "1409649738#0"
+            ],
+            "total_time_for_no_vehicles": 62.0,
+            "total_time_for_vehicles_and_no_device": 0,
+            "total_time_for_vehicles_and_device": 60.0,
+            "diference_from_ideal": -2.0,
+            "total_diference_from_real": 0,
+            "increase_in_ideal_percent": -3.225806451612903,
+            "decrease_in_real_percent": 0,
+            "edges_with_more_than_one_lane_and_tls": 100.0,
+            "edges_with_more_than_one_lane_and_no_tls": 0.0,
+            "edges_with_one_lane_and_tls": 0.0,
+            "edges_with_one_lane_and_no_tls": 0.0,
+            "average_density_v_n_d": 0,
+            "average_density_v_d": 0.03315448153069051
+        }
+    },
+    {
+        "result (6, 3)": {
+            "distance": 849.9673278488731,
+            "cars": 6,
+            "vehicles": [
+                0.34285714285714286,
+                0.49523809523809526,
+                0.1619047619047619
+            ],
+            "edges": [
+                "526213091#0",
+                "449991627#0",
+                "1409649738#0",
+                "295124095#0",
+                "526213091#0",
+                "449991627#0",
+                "1409649738#0"
+            ],
+            "total_time_for_no_vehicles": 62.0,
+            "total_time_for_vehicles_and_no_device": 0,
+            "total_time_for_vehicles_and_device": 83.0,
+            "diference_from_ideal": 21.0,
+            "total_diference_from_real": 0,
+            "increase_in_ideal_percent": 33.87096774193548,
+            "decrease_in_real_percent": 0,
+            "edges_with_more_than_one_lane_and_tls": 100.0,
+            "edges_with_more_than_one_lane_and_no_tls": 0.0,
+            "edges_with_one_lane_and_tls": 0.0,
+            "edges_with_one_lane_and_no_tls": 0.0,
+            "average_density_v_n_d": 0,
+            "average_density_v_d": 0.037619450432402717
+        }
+    },
+    {
+        "result (6, 4)": {
+            "distance": 849.9673278488731,
+            "cars": 6,
+            "vehicles": [
+                0.32,
+                0.5266666666666666,
+                0.15333333333333332
+            ],
+            "edges": [
+                "526213091#0",
+                "449991627#0",
+                "1409649738#0",
+                "295124095#0",
+                "526213091#0",
+                "449991627#0",
+                "1409649738#0"
+            ],
+            "total_time_for_no_vehicles": 62.0,
+            "total_time_for_vehicles_and_no_device": 0,
+            "total_time_for_vehicles_and_device": 63.0,
+            "diference_from_ideal": 1.0,
+            "total_diference_from_real": 0,
+            "increase_in_ideal_percent": 1.6129032258064515,
+            "decrease_in_real_percent": 0,
+            "edges_with_more_than_one_lane_and_tls": 100.0,
+            "edges_with_more_than_one_lane_and_no_tls": 0.0,
+            "edges_with_one_lane_and_tls": 0.0,
+            "edges_with_one_lane_and_no_tls": 0.0,
+            "average_density_v_n_d": 0,
+            "average_density_v_d": 0.03202624977430622
+        }
+    },
+    {
+        "result (7, 0)": {
+            "distance": 975.0087050473644,
+            "cars": 7,
+            "vehicles": [
+                0.309375,
+                0.55,
+                0.140625
+            ],
+            "edges": [
+                "526213091#0",
+                "449991627#0",
+                "1409649738#0",
+                "295124095#0",
+                "526213091#0",
+                "449991627#0",
+                "1409649738#0",
+                "295124095#0"
+            ],
+            "total_time_for_no_vehicles": 72.0,
+            "total_time_for_vehicles_and_no_device": 0,
+            "total_time_for_vehicles_and_device": 90.0,
+            "diference_from_ideal": 18.0,
+            "total_diference_from_real": 0,
+            "increase_in_ideal_percent": 25.0,
+            "decrease_in_real_percent": 0,
+            "edges_with_more_than_one_lane_and_tls": 100.0,
+            "edges_with_more_than_one_lane_and_no_tls": 0.0,
+            "edges_with_one_lane_and_tls": 0.0,
+            "edges_with_one_lane_and_no_tls": 0.0,
+            "average_density_v_n_d": 0,
+            "average_density_v_d": 0.032110161668989425
+        }
+    },
+    {
+        "result (7, 0)": {
+            "distance": 1098.4616063799867,
+            "cars": 7,
+            "vehicles": [
+                0.33125,
+                0.546875,
+                0.121875
+            ],
+            "edges": [
+                "526213091#0",
+                "449991627#0",
+                "1409649738#0",
+                "295124095#0",
+                "526213091#0",
+                "449991627#0",
+                "1409649738#0",
+                "295124095#0",
+                "526213091#0"
+            ],
+            "total_time_for_no_vehicles": 81.0,
+            "total_time_for_vehicles_and_no_device": 0,
+            "total_time_for_vehicles_and_device": 78.0,
+            "diference_from_ideal": -3.0,
+            "total_diference_from_real": 0,
+            "increase_in_ideal_percent": -3.7037037037037033,
+            "decrease_in_real_percent": 0,
+            "edges_with_more_than_one_lane_and_tls": 100.0,
+            "edges_with_more_than_one_lane_and_no_tls": 0.0,
+            "edges_with_one_lane_and_tls": 0.0,
+            "edges_with_one_lane_and_no_tls": 0.0,
+            "average_density_v_n_d": 0,
+            "average_density_v_d": 0.029597960947406347
+        }
+    },
+    {
+        "result (7, 1)": {
+            "distance": 1098.4616063799867,
+            "cars": 7,
+            "vehicles": [
+                0.340625,
+                0.48125,
+                0.178125
+            ],
+            "edges": [
+                "526213091#0",
+                "449991627#0",
+                "1409649738#0",
+                "295124095#0",
+                "526213091#0",
+                "449991627#0",
+                "1409649738#0",
+                "295124095#0",
+                "526213091#0"
+            ],
+            "total_time_for_no_vehicles": 81.0,
+            "total_time_for_vehicles_and_no_device": 0,
+            "total_time_for_vehicles_and_device": 84.0,
+            "diference_from_ideal": 3.0,
+            "total_diference_from_real": 0,
+            "increase_in_ideal_percent": 3.7037037037037033,
+            "decrease_in_real_percent": 0,
+            "edges_with_more_than_one_lane_and_tls": 100.0,
+            "edges_with_more_than_one_lane_and_no_tls": 0.0,
+            "edges_with_one_lane_and_tls": 0.0,
+            "edges_with_one_lane_and_no_tls": 0.0,
+            "average_density_v_n_d": 0,
+            "average_density_v_d": 0.02968553909753265
+        }
+    },
+    {
+        "result (7, 2)": {
+            "distance": 1098.4616063799867,
+            "cars": 7,
+            "vehicles": [
+                0.321875,
+                0.509375,
+                0.16875
+            ],
+            "edges": [
+                "526213091#0",
+                "449991627#0",
+                "1409649738#0",
+                "295124095#0",
+                "526213091#0",
+                "449991627#0",
+                "1409649738#0",
+                "295124095#0",
+                "526213091#0"
+            ],
+            "total_time_for_no_vehicles": 81.0,
+            "total_time_for_vehicles_and_no_device": 0,
+            "total_time_for_vehicles_and_device": 78.0,
+            "diference_from_ideal": -3.0,
+            "total_diference_from_real": 0,
+            "increase_in_ideal_percent": -3.7037037037037033,
+            "decrease_in_real_percent": 0,
+            "edges_with_more_than_one_lane_and_tls": 100.0,
+            "edges_with_more_than_one_lane_and_no_tls": 0.0,
+            "edges_with_one_lane_and_tls": 0.0,
+            "edges_with_one_lane_and_no_tls": 0.0,
+            "average_density_v_n_d": 0,
+            "average_density_v_d": 0.030530250140210435
+        }
+    },
+    {
+        "result (7, 3)": {
+            "distance": 1098.4616063799867,
+            "cars": 7,
+            "vehicles": [
+                0.34285714285714286,
+                0.5228571428571429,
+                0.13428571428571429
+            ],
+            "edges": [
+                "526213091#0",
+                "449991627#0",
+                "1409649738#0",
+                "295124095#0",
+                "526213091#0",
+                "449991627#0",
+                "1409649738#0",
+                "295124095#0",
+                "526213091#0"
+            ],
+            "total_time_for_no_vehicles": 81.0,
+            "total_time_for_vehicles_and_no_device": 0,
+            "total_time_for_vehicles_and_device": 129.0,
+            "diference_from_ideal": 48.0,
+            "total_diference_from_real": 0,
+            "increase_in_ideal_percent": 59.25925925925925,
+            "decrease_in_real_percent": 0,
+            "edges_with_more_than_one_lane_and_tls": 100.0,
+            "edges_with_more_than_one_lane_and_no_tls": 0.0,
+            "edges_with_one_lane_and_tls": 0.0,
+            "edges_with_one_lane_and_no_tls": 0.0,
+            "average_density_v_n_d": 0,
+            "average_density_v_d": 0.032553765986672104
+        }
+    },
+    {
+        "result (7, 4)": {
+            "distance": 1098.4616063799867,
+            "cars": 7,
+            "vehicles": [
+                0.365625,
+                0.45,
+                0.184375
+            ],
+            "edges": [
+                "526213091#0",
+                "449991627#0",
+                "1409649738#0",
+                "295124095#0",
+                "526213091#0",
+                "449991627#0",
+                "1409649738#0",
+                "295124095#0",
+                "526213091#0"
+            ],
+            "total_time_for_no_vehicles": 81.0,
+            "total_time_for_vehicles_and_no_device": 0,
+            "total_time_for_vehicles_and_device": 81.0,
+            "diference_from_ideal": 0.0,
+            "total_diference_from_real": 0,
+            "increase_in_ideal_percent": 0.0,
+            "decrease_in_real_percent": 0,
+            "edges_with_more_than_one_lane_and_tls": 100.0,
+            "edges_with_more_than_one_lane_and_no_tls": 0.0,
+            "edges_with_one_lane_and_tls": 0.0,
+            "edges_with_one_lane_and_no_tls": 0.0,
+            "average_density_v_n_d": 0,
+            "average_density_v_d": 0.028169837295151122
+        }
+    },
+    {
+        "result (8, 0)": {
+            "distance": 1213.847852356141,
+            "cars": 8,
+            "vehicles": [
+                0.3415384615384615,
+                0.4646153846153846,
+                0.19384615384615383
+            ],
+            "edges": [
+                "526213091#0",
+                "449991627#0",
+                "1409649738#0",
+                "295124095#0",
+                "526213091#0",
+                "449991627#0",
+                "1409649738#0",
+                "295124095#0",
+                "526213091#0",
+                "449991627#0"
+            ],
+            "total_time_for_no_vehicles": 90.0,
+            "total_time_for_vehicles_and_no_device": 0,
+            "total_time_for_vehicles_and_device": 88.0,
+            "diference_from_ideal": -2.0,
+            "total_diference_from_real": 0,
+            "increase_in_ideal_percent": -2.2222222222222223,
+            "decrease_in_real_percent": 0,
+            "edges_with_more_than_one_lane_and_tls": 100.0,
+            "edges_with_more_than_one_lane_and_no_tls": 0.0,
+            "edges_with_one_lane_and_tls": 0.0,
+            "edges_with_one_lane_and_no_tls": 0.0,
+            "average_density_v_n_d": 0,
+            "average_density_v_d": 0.028032687036431914
+        }
+    },
+    {
+        "result (8, 1)": {
+            "distance": 1213.847852356141,
+            "cars": 8,
+            "vehicles": [
+                0.34411764705882353,
+                0.49117647058823527,
+                0.16470588235294117
+            ],
+            "edges": [
+                "526213091#0",
+                "449991627#0",
+                "1409649738#0",
+                "295124095#0",
+                "526213091#0",
+                "449991627#0",
+                "1409649738#0",
+                "295124095#0",
+                "526213091#0",
+                "449991627#0"
+            ],
+            "total_time_for_no_vehicles": 90.0,
+            "total_time_for_vehicles_and_no_device": 0,
+            "total_time_for_vehicles_and_device": 107.0,
+            "diference_from_ideal": 17.0,
+            "total_diference_from_real": 0,
+            "increase_in_ideal_percent": 18.88888888888889,
+            "decrease_in_real_percent": 0,
+            "edges_with_more_than_one_lane_and_tls": 100.0,
+            "edges_with_more_than_one_lane_and_no_tls": 0.0,
+            "edges_with_one_lane_and_tls": 0.0,
+            "edges_with_one_lane_and_no_tls": 0.0,
+            "average_density_v_n_d": 0,
+            "average_density_v_d": 0.02909628540586488
+        }
+    },
+    {
+        "result (8, 2)": {
+            "distance": 1213.847852356141,
+            "cars": 8,
+            "vehicles": [
+                0.3476923076923077,
+                0.5323076923076923,
+                0.12
+            ],
+            "edges": [
+                "526213091#0",
+                "449991627#0",
+                "1409649738#0",
+                "295124095#0",
+                "526213091#0",
+                "449991627#0",
+                "1409649738#0",
+                "295124095#0",
+                "526213091#0",
+                "449991627#0"
+            ],
+            "total_time_for_no_vehicles": 90.0,
+            "total_time_for_vehicles_and_no_device": 0,
+            "total_time_for_vehicles_and_device": 89.0,
+            "diference_from_ideal": -1.0,
+            "total_diference_from_real": 0,
+            "increase_in_ideal_percent": -1.1111111111111112,
+            "decrease_in_real_percent": 0,
+            "edges_with_more_than_one_lane_and_tls": 100.0,
+            "edges_with_more_than_one_lane_and_no_tls": 0.0,
+            "edges_with_one_lane_and_tls": 0.0,
+            "edges_with_one_lane_and_no_tls": 0.0,
+            "average_density_v_n_d": 0,
+            "average_density_v_d": 0.027067872236513264
+        }
+    },
+    {
+        "result (8, 3)": {
+            "distance": 1213.847852356141,
+            "cars": 8,
+            "vehicles": [
+                0.3415384615384615,
+                0.48615384615384616,
+                0.1723076923076923
+            ],
+            "edges": [
+                "526213091#0",
+                "449991627#0",
+                "1409649738#0",
+                "295124095#0",
+                "526213091#0",
+                "449991627#0",
+                "1409649738#0",
+                "295124095#0",
+                "526213091#0",
+                "449991627#0"
+            ],
+            "total_time_for_no_vehicles": 90.0,
+            "total_time_for_vehicles_and_no_device": 0,
+            "total_time_for_vehicles_and_device": 90.0,
+            "diference_from_ideal": 0.0,
+            "total_diference_from_real": 0,
+            "increase_in_ideal_percent": 0.0,
+            "decrease_in_real_percent": 0,
+            "edges_with_more_than_one_lane_and_tls": 100.0,
+            "edges_with_more_than_one_lane_and_no_tls": 0.0,
+            "edges_with_one_lane_and_tls": 0.0,
+            "edges_with_one_lane_and_no_tls": 0.0,
+            "average_density_v_n_d": 0,
+            "average_density_v_d": 0.0273765177823653
+        }
+    },
+    {
+        "result (8, 4)": {
+            "distance": 1213.847852356141,
+            "cars": 8,
+            "vehicles": [
+                0.35384615384615387,
+                0.4646153846153846,
+                0.18153846153846154
+            ],
+            "edges": [
+                "526213091#0",
+                "449991627#0",
+                "1409649738#0",
+                "295124095#0",
+                "526213091#0",
+                "449991627#0",
+                "1409649738#0",
+                "295124095#0",
+                "526213091#0",
+                "449991627#0"
+            ],
+            "total_time_for_no_vehicles": 90.0,
+            "total_time_for_vehicles_and_no_device": 0,
+            "total_time_for_vehicles_and_device": 86.0,
+            "diference_from_ideal": -4.0,
+            "total_diference_from_real": 0,
+            "increase_in_ideal_percent": -4.444444444444445,
+            "decrease_in_real_percent": 0,
+            "edges_with_more_than_one_lane_and_tls": 100.0,
+            "edges_with_more_than_one_lane_and_no_tls": 0.0,
+            "edges_with_one_lane_and_tls": 0.0,
+            "edges_with_one_lane_and_no_tls": 0.0,
+            "average_density_v_n_d": 0,
+            "average_density_v_d": 0.028280635846311426
+        }
+    },
+    {
+        "result (9, 0)": {
+            "distance": 1349.5110829262567,
+            "cars": 9,
+            "vehicles": [
+                0.3333333333333333,
+                0.5043478260869565,
+                0.16231884057971013
+            ],
+            "edges": [
+                "526213091#0",
+                "449991627#0",
+                "1409649738#0",
+                "295124095#0",
+                "526213091#0",
+                "449991627#0",
+                "1409649738#0",
+                "295124095#0",
+                "526213091#0",
+                "449991627#0",
+                "1409649738#0"
+            ],
+            "total_time_for_no_vehicles": 99.0,
+            "total_time_for_vehicles_and_no_device": 0,
+            "total_time_for_vehicles_and_device": 100.0,
+            "diference_from_ideal": 1.0,
+            "total_diference_from_real": 0,
+            "increase_in_ideal_percent": 1.0101010101010102,
+            "decrease_in_real_percent": 0,
+            "edges_with_more_than_one_lane_and_tls": 100.0,
+            "edges_with_more_than_one_lane_and_no_tls": 0.0,
+            "edges_with_one_lane_and_tls": 0.0,
+            "edges_with_one_lane_and_no_tls": 0.0,
+            "average_density_v_n_d": 0,
+            "average_density_v_d": 0.030866508799009318
+        }
+    },
+    {
+        "result (9, 1)": {
+            "distance": 1349.5110829262567,
+            "cars": 9,
+            "vehicles": [
+                0.32463768115942027,
+                0.518840579710145,
+                0.1565217391304348
+            ],
+            "edges": [
+                "526213091#0",
+                "449991627#0",
+                "1409649738#0",
+                "295124095#0",
+                "526213091#0",
+                "449991627#0",
+                "1409649738#0",
+                "295124095#0",
+                "526213091#0",
+                "449991627#0",
+                "1409649738#0"
+            ],
+            "total_time_for_no_vehicles": 99.0,
+            "total_time_for_vehicles_and_no_device": 0,
+            "total_time_for_vehicles_and_device": 112.0,
+            "diference_from_ideal": 13.0,
+            "total_diference_from_real": 0,
+            "increase_in_ideal_percent": 13.131313131313133,
+            "decrease_in_real_percent": 0,
+            "edges_with_more_than_one_lane_and_tls": 100.0,
+            "edges_with_more_than_one_lane_and_no_tls": 0.0,
+            "edges_with_one_lane_and_tls": 0.0,
+            "edges_with_one_lane_and_no_tls": 0.0,
+            "average_density_v_n_d": 0,
+            "average_density_v_d": 0.03385538058559419
+        }
+    },
+    {
+        "result (9, 2)": {
+            "distance": 1349.5110829262567,
+            "cars": 9,
+            "vehicles": [
+                0.3391304347826087,
+                0.5014492753623189,
+                0.15942028985507245
+            ],
+            "edges": [
+                "526213091#0",
+                "449991627#0",
+                "1409649738#0",
+                "295124095#0",
+                "526213091#0",
+                "449991627#0",
+                "1409649738#0",
+                "295124095#0",
+                "526213091#0",
+                "449991627#0",
+                "1409649738#0"
+            ],
+            "total_time_for_no_vehicles": 99.0,
+            "total_time_for_vehicles_and_no_device": 0,
+            "total_time_for_vehicles_and_device": 100.0,
+            "diference_from_ideal": 1.0,
+            "total_diference_from_real": 0,
+            "increase_in_ideal_percent": 1.0101010101010102,
+            "decrease_in_real_percent": 0,
+            "edges_with_more_than_one_lane_and_tls": 100.0,
+            "edges_with_more_than_one_lane_and_no_tls": 0.0,
+            "edges_with_one_lane_and_tls": 0.0,
+            "edges_with_one_lane_and_no_tls": 0.0,
+            "average_density_v_n_d": 0,
+            "average_density_v_d": 0.03428870338550801
+        }
+    },
+    {
+        "result (9, 3)": {
+            "distance": 1349.5110829262567,
+            "cars": 9,
+            "vehicles": [
+                0.3391304347826087,
+                0.5043478260869565,
+                0.1565217391304348
+            ],
+            "edges": [
+                "526213091#0",
+                "449991627#0",
+                "1409649738#0",
+                "295124095#0",
+                "526213091#0",
+                "449991627#0",
+                "1409649738#0",
+                "295124095#0",
+                "526213091#0",
+                "449991627#0",
+                "1409649738#0"
+            ],
+            "total_time_for_no_vehicles": 99.0,
+            "total_time_for_vehicles_and_no_device": 0,
+            "total_time_for_vehicles_and_device": 101.0,
+            "diference_from_ideal": 2.0,
+            "total_diference_from_real": 0,
+            "increase_in_ideal_percent": 2.0202020202020203,
+            "decrease_in_real_percent": 0,
+            "edges_with_more_than_one_lane_and_tls": 100.0,
+            "edges_with_more_than_one_lane_and_no_tls": 0.0,
+            "edges_with_one_lane_and_tls": 0.0,
+            "edges_with_one_lane_and_no_tls": 0.0,
+            "average_density_v_n_d": 0,
+            "average_density_v_d": 0.031495967877712874
+        }
+    },
+    {
+        "result (9, 4)": {
+            "distance": 1349.5110829262567,
+            "cars": 9,
+            "vehicles": [
+                0.35128205128205126,
+                0.5,
+                0.14871794871794872
+            ],
+            "edges": [
+                "526213091#0",
+                "449991627#0",
+                "1409649738#0",
+                "295124095#0",
+                "526213091#0",
+                "449991627#0",
+                "1409649738#0",
+                "295124095#0",
+                "526213091#0",
+                "449991627#0",
+                "1409649738#0"
+            ],
+            "total_time_for_no_vehicles": 99.0,
+            "total_time_for_vehicles_and_no_device": 0,
+            "total_time_for_vehicles_and_device": 165.0,
+            "diference_from_ideal": 66.0,
+            "total_diference_from_real": 0,
+            "increase_in_ideal_percent": 66.66666666666666,
+            "decrease_in_real_percent": 0,
+            "edges_with_more_than_one_lane_and_tls": 100.0,
+            "edges_with_more_than_one_lane_and_no_tls": 0.0,
+            "edges_with_one_lane_and_tls": 0.0,
+            "edges_with_one_lane_and_no_tls": 0.0,
+            "average_density_v_n_d": 0,
+            "average_density_v_d": 0.031162773796184755
+        }
+    },
+    {
+        "result (10, 0)": {
+            "distance": 1473.7395911612718,
+            "cars": 10,
+            "vehicles": [
+                0.3314285714285714,
+                0.4942857142857143,
+                0.1742857142857143
+            ],
+            "edges": [
+                "526213091#0",
+                "449991627#0",
+                "1409649738#0",
+                "295124095#0",
+                "526213091#0",
+                "449991627#0",
+                "1409649738#0",
+                "295124095#0",
+                "526213091#0",
+                "449991627#0",
+                "1409649738#0",
+                "295124095#0"
+            ],
+            "total_time_for_no_vehicles": 108.0,
+            "total_time_for_vehicles_and_no_device": 0,
+            "total_time_for_vehicles_and_device": 105.0,
+            "diference_from_ideal": -3.0,
+            "total_diference_from_real": 0,
+            "increase_in_ideal_percent": -2.7777777777777777,
+            "decrease_in_real_percent": 0,
+            "edges_with_more_than_one_lane_and_tls": 100.0,
+            "edges_with_more_than_one_lane_and_no_tls": 0.0,
+            "edges_with_one_lane_and_tls": 0.0,
+            "edges_with_one_lane_and_no_tls": 0.0,
+            "average_density_v_n_d": 0,
+            "average_density_v_d": 0.030143187005570064
+        }
+    },
+    {
+        "result (10, 1)": {
+            "distance": 1473.7395911612718,
+            "cars": 10,
+            "vehicles": [
+                0.3342857142857143,
+                0.5228571428571429,
+                0.14285714285714285
+            ],
+            "edges": [
+                "526213091#0",
+                "449991627#0",
+                "1409649738#0",
+                "295124095#0",
+                "526213091#0",
+                "449991627#0",
+                "1409649738#0",
+                "295124095#0",
+                "526213091#0",
+                "449991627#0",
+                "1409649738#0",
+                "295124095#0"
+            ],
+            "total_time_for_no_vehicles": 108.0,
+            "total_time_for_vehicles_and_no_device": 0,
+            "total_time_for_vehicles_and_device": 104.0,
+            "diference_from_ideal": -4.0,
+            "total_diference_from_real": 0,
+            "increase_in_ideal_percent": -3.7037037037037033,
+            "decrease_in_real_percent": 0,
+            "edges_with_more_than_one_lane_and_tls": 100.0,
+            "edges_with_more_than_one_lane_and_no_tls": 0.0,
+            "edges_with_one_lane_and_tls": 0.0,
+            "edges_with_one_lane_and_no_tls": 0.0,
+            "average_density_v_n_d": 0,
+            "average_density_v_d": 0.030720901117991785
+        }
+    },
+    {
+        "result (10, 2)": {
+            "distance": 1473.7395911612718,
+            "cars": 10,
+            "vehicles": [
+                0.32857142857142857,
+                0.5485714285714286,
+                0.12285714285714286
+            ],
+            "edges": [
+                "526213091#0",
+                "449991627#0",
+                "1409649738#0",
+                "295124095#0",
+                "526213091#0",
+                "449991627#0",
+                "1409649738#0",
+                "295124095#0",
+                "526213091#0",
+                "449991627#0",
+                "1409649738#0",
+                "295124095#0"
+            ],
+            "total_time_for_no_vehicles": 108.0,
+            "total_time_for_vehicles_and_no_device": 0,
+            "total_time_for_vehicles_and_device": 107.0,
+            "diference_from_ideal": -1.0,
+            "total_diference_from_real": 0,
+            "increase_in_ideal_percent": -0.9259259259259258,
+            "decrease_in_real_percent": 0,
+            "edges_with_more_than_one_lane_and_tls": 100.0,
+            "edges_with_more_than_one_lane_and_no_tls": 0.0,
+            "edges_with_one_lane_and_tls": 0.0,
+            "edges_with_one_lane_and_no_tls": 0.0,
+            "average_density_v_n_d": 0,
+            "average_density_v_d": 0.030862197991807602
+        }
+    },
+    {
+        "result (10, 3)": {
+            "distance": 1473.7395911612718,
+            "cars": 10,
+            "vehicles": [
+                0.2742857142857143,
+                0.5142857142857142,
+                0.21142857142857144
+            ],
+            "edges": [
+                "526213091#0",
+                "449991627#0",
+                "1409649738#0",
+                "295124095#0",
+                "526213091#0",
+                "449991627#0",
+                "1409649738#0",
+                "295124095#0",
+                "526213091#0",
+                "449991627#0",
+                "1409649738#0",
+                "295124095#0"
+            ],
+            "total_time_for_no_vehicles": 108.0,
+            "total_time_for_vehicles_and_no_device": 0,
+            "total_time_for_vehicles_and_device": 112.0,
+            "diference_from_ideal": 4.0,
+            "total_diference_from_real": 0,
+            "increase_in_ideal_percent": 3.7037037037037033,
+            "decrease_in_real_percent": 0,
+            "edges_with_more_than_one_lane_and_tls": 100.0,
+            "edges_with_more_than_one_lane_and_no_tls": 0.0,
+            "edges_with_one_lane_and_tls": 0.0,
+            "edges_with_one_lane_and_no_tls": 0.0,
+            "average_density_v_n_d": 0,
+            "average_density_v_d": 0.03292467666387486
+        }
+    },
+    {
+        "result (10, 4)": {
+            "distance": 1473.7395911612718,
+            "cars": 10,
+            "vehicles": [
+                0.31142857142857144,
+                0.5,
+                0.18857142857142858
+            ],
+            "edges": [
+                "526213091#0",
+                "449991627#0",
+                "1409649738#0",
+                "295124095#0",
+                "526213091#0",
+                "449991627#0",
+                "1409649738#0",
+                "295124095#0",
+                "526213091#0",
+                "449991627#0",
+                "1409649738#0",
+                "295124095#0"
+            ],
+            "total_time_for_no_vehicles": 108.0,
+            "total_time_for_vehicles_and_no_device": 0,
+            "total_time_for_vehicles_and_device": 104.0,
+            "diference_from_ideal": -4.0,
+            "total_diference_from_real": 0,
+            "increase_in_ideal_percent": -3.7037037037037033,
+            "decrease_in_real_percent": 0,
+            "edges_with_more_than_one_lane_and_tls": 100.0,
+            "edges_with_more_than_one_lane_and_no_tls": 0.0,
+            "edges_with_one_lane_and_tls": 0.0,
+            "edges_with_one_lane_and_no_tls": 0.0,
+            "average_density_v_n_d": 0,
+            "average_density_v_d": 0.029235227859549996
+        }
+    },
+    {
+        "result (11, 0)": {
+            "distance": 1585.4403998756607,
+            "cars": 11,
+            "vehicles": [
+                0.3436619718309859,
+                0.49859154929577465,
+                0.15774647887323945
+            ],
+            "edges": [
+                "526213091#0",
+                "449991627#0",
+                "1409649738#0",
+                "295124095#0",
+                "526213091#0",
+                "449991627#0",
+                "1409649738#0",
+                "295124095#0",
+                "526213091#0",
+                "449991627#0",
+                "1409649738#0",
+                "295124095#0",
+                "526213091#0"
+            ],
+            "total_time_for_no_vehicles": 115.0,
+            "total_time_for_vehicles_and_no_device": 0,
+            "total_time_for_vehicles_and_device": 112.0,
+            "diference_from_ideal": -3.0,
+            "total_diference_from_real": 0,
+            "increase_in_ideal_percent": -2.608695652173913,
+            "decrease_in_real_percent": 0,
+            "edges_with_more_than_one_lane_and_tls": 100.0,
+            "edges_with_more_than_one_lane_and_no_tls": 0.0,
+            "edges_with_one_lane_and_tls": 0.0,
+            "edges_with_one_lane_and_no_tls": 0.0,
+            "average_density_v_n_d": 0,
+            "average_density_v_d": 0.027186558409744373
+        }
+    },
+    {
+        "result (11, 1)": {
+            "distance": 1585.4403998756607,
+            "cars": 11,
+            "vehicles": [
+                0.27837837837837837,
+                0.5243243243243243,
+                0.1972972972972973
+            ],
+            "edges": [
+                "526213091#0",
+                "449991627#0",
+                "1409649738#0",
+                "295124095#0",
+                "526213091#0",
+                "449991627#0",
+                "1409649738#0",
+                "295124095#0",
+                "526213091#0",
+                "449991627#0",
+                "1409649738#0",
+                "295124095#0",
+                "526213091#0"
+            ],
+            "total_time_for_no_vehicles": 115.0,
+            "total_time_for_vehicles_and_no_device": 0,
+            "total_time_for_vehicles_and_device": 122.0,
+            "diference_from_ideal": 7.0,
+            "total_diference_from_real": 0,
+            "increase_in_ideal_percent": 6.086956521739131,
+            "decrease_in_real_percent": 0,
+            "edges_with_more_than_one_lane_and_tls": 100.0,
+            "edges_with_more_than_one_lane_and_no_tls": 0.0,
+            "edges_with_one_lane_and_tls": 0.0,
+            "edges_with_one_lane_and_no_tls": 0.0,
+            "average_density_v_n_d": 0,
+            "average_density_v_d": 0.02843603091858163
+        }
+    },
+    {
+        "result (11, 2)": {
+            "distance": 1585.4403998756607,
+            "cars": 11,
+            "vehicles": [
+                0.3295774647887324,
+                0.49577464788732395,
+                0.17464788732394365
+            ],
+            "edges": [
+                "526213091#0",
+                "449991627#0",
+                "1409649738#0",
+                "295124095#0",
+                "526213091#0",
+                "449991627#0",
+                "1409649738#0",
+                "295124095#0",
+                "526213091#0",
+                "449991627#0",
+                "1409649738#0",
+                "295124095#0",
+                "526213091#0"
+            ],
+            "total_time_for_no_vehicles": 115.0,
+            "total_time_for_vehicles_and_no_device": 0,
+            "total_time_for_vehicles_and_device": 114.0,
+            "diference_from_ideal": -1.0,
+            "total_diference_from_real": 0,
+            "increase_in_ideal_percent": -0.8695652173913043,
+            "decrease_in_real_percent": 0,
+            "edges_with_more_than_one_lane_and_tls": 100.0,
+            "edges_with_more_than_one_lane_and_no_tls": 0.0,
+            "edges_with_one_lane_and_tls": 0.0,
+            "edges_with_one_lane_and_no_tls": 0.0,
+            "average_density_v_n_d": 0,
+            "average_density_v_d": 0.030984214818367325
+        }
+    },
+    {
+        "result (11, 3)": {
+            "distance": 1585.4403998756607,
+            "cars": 11,
+            "vehicles": [
+                0.3295774647887324,
+                0.49859154929577465,
+                0.17183098591549295
+            ],
+            "edges": [
+                "526213091#0",
+                "449991627#0",
+                "1409649738#0",
+                "295124095#0",
+                "526213091#0",
+                "449991627#0",
+                "1409649738#0",
+                "295124095#0",
+                "526213091#0",
+                "449991627#0",
+                "1409649738#0",
+                "295124095#0",
+                "526213091#0"
+            ],
+            "total_time_for_no_vehicles": 115.0,
+            "total_time_for_vehicles_and_no_device": 0,
+            "total_time_for_vehicles_and_device": 117.0,
+            "diference_from_ideal": 2.0,
+            "total_diference_from_real": 0,
+            "increase_in_ideal_percent": 1.7391304347826086,
+            "decrease_in_real_percent": 0,
+            "edges_with_more_than_one_lane_and_tls": 100.0,
+            "edges_with_more_than_one_lane_and_no_tls": 0.0,
+            "edges_with_one_lane_and_tls": 0.0,
+            "edges_with_one_lane_and_no_tls": 0.0,
+            "average_density_v_n_d": 0,
+            "average_density_v_d": 0.029849587118004645
+        }
+    },
+    {
+        "result (11, 4)": {
+            "distance": 1585.4403998756607,
+            "cars": 11,
+            "vehicles": [
+                0.28378378378378377,
+                0.5459459459459459,
+                0.17027027027027028
+            ],
+            "edges": [
+                "526213091#0",
+                "449991627#0",
+                "1409649738#0",
+                "295124095#0",
+                "526213091#0",
+                "449991627#0",
+                "1409649738#0",
+                "295124095#0",
+                "526213091#0",
+                "449991627#0",
+                "1409649738#0",
+                "295124095#0",
+                "526213091#0"
+            ],
+            "total_time_for_no_vehicles": 115.0,
+            "total_time_for_vehicles_and_no_device": 0,
+            "total_time_for_vehicles_and_device": 128.0,
+            "diference_from_ideal": 13.0,
+            "total_diference_from_real": 0,
+            "increase_in_ideal_percent": 11.304347826086957,
+            "decrease_in_real_percent": 0,
+            "edges_with_more_than_one_lane_and_tls": 100.0,
+            "edges_with_more_than_one_lane_and_no_tls": 0.0,
+            "edges_with_one_lane_and_tls": 0.0,
+            "edges_with_one_lane_and_no_tls": 0.0,
+            "average_density_v_n_d": 0,
+            "average_density_v_d": 0.028739434963605162
+        }
+    },
+    {
+        "result (12, 0)": {
+            "distance": 1712.6931635799172,
+            "cars": 12,
+            "vehicles": [
+                0.36533333333333334,
+                0.5093333333333333,
+                0.12533333333333332
+            ],
+            "edges": [
+                "526213091#0",
+                "449991627#0",
+                "1409649738#0",
+                "295124095#0",
+                "526213091#0",
+                "449991627#0",
+                "1409649738#0",
+                "295124095#0",
+                "526213091#0",
+                "449991627#0",
+                "1409649738#0",
+                "295124095#0",
+                "526213091#0",
+                "449991627#0"
+            ],
+            "total_time_for_no_vehicles": 124.0,
+            "total_time_for_vehicles_and_no_device": 0,
+            "total_time_for_vehicles_and_device": 125.0,
+            "diference_from_ideal": 1.0,
+            "total_diference_from_real": 0,
+            "increase_in_ideal_percent": 0.8064516129032258,
+            "decrease_in_real_percent": 0,
+            "edges_with_more_than_one_lane_and_tls": 100.0,
+            "edges_with_more_than_one_lane_and_no_tls": 0.0,
+            "edges_with_one_lane_and_tls": 0.0,
+            "edges_with_one_lane_and_no_tls": 0.0,
+            "average_density_v_n_d": 0,
+            "average_density_v_d": 0.028907395766797277
+        }
+    },
+    {
+        "result (12, 1)": {
+            "distance": 1712.6931635799172,
+            "cars": 12,
+            "vehicles": [
+                0.336,
+                0.5146666666666667,
+                0.14933333333333335
+            ],
+            "edges": [
+                "526213091#0",
+                "449991627#0",
+                "1409649738#0",
+                "295124095#0",
+                "526213091#0",
+                "449991627#0",
+                "1409649738#0",
+                "295124095#0",
+                "526213091#0",
+                "449991627#0",
+                "1409649738#0",
+                "295124095#0",
+                "526213091#0",
+                "449991627#0"
+            ],
+            "total_time_for_no_vehicles": 124.0,
+            "total_time_for_vehicles_and_no_device": 0,
+            "total_time_for_vehicles_and_device": 125.0,
+            "diference_from_ideal": 1.0,
+            "total_diference_from_real": 0,
+            "increase_in_ideal_percent": 0.8064516129032258,
+            "decrease_in_real_percent": 0,
+            "edges_with_more_than_one_lane_and_tls": 100.0,
+            "edges_with_more_than_one_lane_and_no_tls": 0.0,
+            "edges_with_one_lane_and_tls": 0.0,
+            "edges_with_one_lane_and_no_tls": 0.0,
+            "average_density_v_n_d": 0,
+            "average_density_v_d": 0.029015976510183186
+        }
+    },
+    {
+        "result (12, 2)": {
+            "distance": 1712.6931635799172,
+            "cars": 12,
+            "vehicles": [
+                0.344,
+                0.496,
+                0.16
+            ],
+            "edges": [
+                "526213091#0",
+                "449991627#0",
+                "1409649738#0",
+                "295124095#0",
+                "526213091#0",
+                "449991627#0",
+                "1409649738#0",
+                "295124095#0",
+                "526213091#0",
+                "449991627#0",
+                "1409649738#0",
+                "295124095#0",
+                "526213091#0",
+                "449991627#0"
+            ],
+            "total_time_for_no_vehicles": 124.0,
+            "total_time_for_vehicles_and_no_device": 0,
+            "total_time_for_vehicles_and_device": 130.0,
+            "diference_from_ideal": 6.0,
+            "total_diference_from_real": 0,
+            "increase_in_ideal_percent": 4.838709677419355,
+            "decrease_in_real_percent": 0,
+            "edges_with_more_than_one_lane_and_tls": 100.0,
+            "edges_with_more_than_one_lane_and_no_tls": 0.0,
+            "edges_with_one_lane_and_tls": 0.0,
+            "edges_with_one_lane_and_no_tls": 0.0,
+            "average_density_v_n_d": 0,
+            "average_density_v_d": 0.03007907227217011
+        }
+    },
+    {
+        "result (12, 3)": {
+            "distance": 1712.6931635799172,
+            "cars": 12,
+            "vehicles": [
+                0.31733333333333336,
+                0.5146666666666667,
+                0.168
+            ],
+            "edges": [
+                "526213091#0",
+                "449991627#0",
+                "1409649738#0",
+                "295124095#0",
+                "526213091#0",
+                "449991627#0",
+                "1409649738#0",
+                "295124095#0",
+                "526213091#0",
+                "449991627#0",
+                "1409649738#0",
+                "295124095#0",
+                "526213091#0",
+                "449991627#0"
+            ],
+            "total_time_for_no_vehicles": 124.0,
+            "total_time_for_vehicles_and_no_device": 0,
+            "total_time_for_vehicles_and_device": 124.0,
+            "diference_from_ideal": 0.0,
+            "total_diference_from_real": 0,
+            "increase_in_ideal_percent": 0.0,
+            "decrease_in_real_percent": 0,
+            "edges_with_more_than_one_lane_and_tls": 100.0,
+            "edges_with_more_than_one_lane_and_no_tls": 0.0,
+            "edges_with_one_lane_and_tls": 0.0,
+            "edges_with_one_lane_and_no_tls": 0.0,
+            "average_density_v_n_d": 0,
+            "average_density_v_d": 0.027035565661260922
+        }
+    },
+    {
+        "result (12, 4)": {
+            "distance": 1712.6931635799172,
+            "cars": 12,
+            "vehicles": [
+                0.32266666666666666,
+                0.528,
+                0.14933333333333335
+            ],
+            "edges": [
+                "526213091#0",
+                "449991627#0",
+                "1409649738#0",
+                "295124095#0",
+                "526213091#0",
+                "449991627#0",
+                "1409649738#0",
+                "295124095#0",
+                "526213091#0",
+                "449991627#0",
+                "1409649738#0",
+                "295124095#0",
+                "526213091#0",
+                "449991627#0"
+            ],
+            "total_time_for_no_vehicles": 124.0,
+            "total_time_for_vehicles_and_no_device": 0,
+            "total_time_for_vehicles_and_device": 121.0,
+            "diference_from_ideal": -3.0,
+            "total_diference_from_real": 0,
+            "increase_in_ideal_percent": -2.4193548387096775,
+            "decrease_in_real_percent": 0,
+            "edges_with_more_than_one_lane_and_tls": 100.0,
+            "edges_with_more_than_one_lane_and_no_tls": 0.0,
+            "edges_with_one_lane_and_tls": 0.0,
+            "edges_with_one_lane_and_no_tls": 0.0,
+            "average_density_v_n_d": 0,
+            "average_density_v_d": 0.02623049186103236
+        }
+    },
+    {
+        "result (13, 0)": {
+            "distance": 1839.8557960002456,
+            "cars": 13,
+            "vehicles": [
+                0.3236842105263158,
+                0.5105263157894737,
+                0.16578947368421051
+            ],
+            "edges": [
+                "526213091#0",
+                "449991627#0",
+                "1409649738#0",
+                "295124095#0",
+                "526213091#0",
+                "449991627#0",
+                "1409649738#0",
+                "295124095#0",
+                "526213091#0",
+                "449991627#0",
+                "1409649738#0",
+                "295124095#0",
+                "526213091#0",
+                "449991627#0",
+                "1409649738#0"
+            ],
+            "total_time_for_no_vehicles": 133.0,
+            "total_time_for_vehicles_and_no_device": 0,
+            "total_time_for_vehicles_and_device": 131.0,
+            "diference_from_ideal": -2.0,
+            "total_diference_from_real": 0,
+            "increase_in_ideal_percent": -1.5037593984962405,
+            "decrease_in_real_percent": 0,
+            "edges_with_more_than_one_lane_and_tls": 100.0,
+            "edges_with_more_than_one_lane_and_no_tls": 0.0,
+            "edges_with_one_lane_and_tls": 0.0,
+            "edges_with_one_lane_and_no_tls": 0.0,
+            "average_density_v_n_d": 0,
+            "average_density_v_d": 0.029641924649131186
+        }
+    },
+    {
+        "result (13, 1)": {
+            "distance": 1839.8557960002456,
+            "cars": 13,
+            "vehicles": [
+                0.32439024390243903,
+                0.5292682926829269,
+                0.14634146341463414
+            ],
+            "edges": [
+                "526213091#0",
+                "449991627#0",
+                "1409649738#0",
+                "295124095#0",
+                "526213091#0",
+                "449991627#0",
+                "1409649738#0",
+                "295124095#0",
+                "526213091#0",
+                "449991627#0",
+                "1409649738#0",
+                "295124095#0",
+                "526213091#0",
+                "449991627#0",
+                "1409649738#0"
+            ],
+            "total_time_for_no_vehicles": 133.0,
+            "total_time_for_vehicles_and_no_device": 0,
+            "total_time_for_vehicles_and_device": 166.0,
+            "diference_from_ideal": 33.0,
+            "total_diference_from_real": 0,
+            "increase_in_ideal_percent": 24.81203007518797,
+            "decrease_in_real_percent": 0,
+            "edges_with_more_than_one_lane_and_tls": 100.0,
+            "edges_with_more_than_one_lane_and_no_tls": 0.0,
+            "edges_with_one_lane_and_tls": 0.0,
+            "edges_with_one_lane_and_no_tls": 0.0,
+            "average_density_v_n_d": 0,
+            "average_density_v_d": 0.03461409590022047
+        }
+    },
+    {
+        "result (13, 2)": {
+            "distance": 1839.8557960002456,
+            "cars": 13,
+            "vehicles": [
+                0.29411764705882354,
+                0.5505882352941176,
+                0.15529411764705883
+            ],
+            "edges": [
+                "526213091#0",
+                "449991627#0",
+                "1409649738#0",
+                "295124095#0",
+                "526213091#0",
+                "449991627#0",
+                "1409649738#0",
+                "295124095#0",
+                "526213091#0",
+                "449991627#0",
+                "1409649738#0",
+                "295124095#0",
+                "526213091#0",
+                "449991627#0",
+                "1409649738#0"
+            ],
+            "total_time_for_no_vehicles": 133.0,
+            "total_time_for_vehicles_and_no_device": 0,
+            "total_time_for_vehicles_and_device": 183.0,
+            "diference_from_ideal": 50.0,
+            "total_diference_from_real": 0,
+            "increase_in_ideal_percent": 37.59398496240601,
+            "decrease_in_real_percent": 0,
+            "edges_with_more_than_one_lane_and_tls": 100.0,
+            "edges_with_more_than_one_lane_and_no_tls": 0.0,
+            "edges_with_one_lane_and_tls": 0.0,
+            "edges_with_one_lane_and_no_tls": 0.0,
+            "average_density_v_n_d": 0,
+            "average_density_v_d": 0.030976622874377063
+        }
+    },
+    {
+        "result (13, 3)": {
+            "distance": 1839.8557960002456,
+            "cars": 13,
+            "vehicles": [
+                0.33164556962025316,
+                0.49873417721518987,
+                0.16962025316455695
+            ],
+            "edges": [
+                "526213091#0",
+                "449991627#0",
+                "1409649738#0",
+                "295124095#0",
+                "526213091#0",
+                "449991627#0",
+                "1409649738#0",
+                "295124095#0",
+                "526213091#0",
+                "449991627#0",
+                "1409649738#0",
+                "295124095#0",
+                "526213091#0",
+                "449991627#0",
+                "1409649738#0"
+            ],
+            "total_time_for_no_vehicles": 133.0,
+            "total_time_for_vehicles_and_no_device": 0,
+            "total_time_for_vehicles_and_device": 139.0,
+            "diference_from_ideal": 6.0,
+            "total_diference_from_real": 0,
+            "increase_in_ideal_percent": 4.511278195488721,
+            "decrease_in_real_percent": 0,
+            "edges_with_more_than_one_lane_and_tls": 100.0,
+            "edges_with_more_than_one_lane_and_no_tls": 0.0,
+            "edges_with_one_lane_and_tls": 0.0,
+            "edges_with_one_lane_and_no_tls": 0.0,
+            "average_density_v_n_d": 0,
+            "average_density_v_d": 0.030118784061447156
+        }
+    },
+    {
+        "result (13, 4)": {
+            "distance": 1839.8557960002456,
+            "cars": 13,
+            "vehicles": [
+                0.31645569620253167,
+                0.5316455696202531,
+                0.1518987341772152
+            ],
+            "edges": [
+                "526213091#0",
+                "449991627#0",
+                "1409649738#0",
+                "295124095#0",
+                "526213091#0",
+                "449991627#0",
+                "1409649738#0",
+                "295124095#0",
+                "526213091#0",
+                "449991627#0",
+                "1409649738#0",
+                "295124095#0",
+                "526213091#0",
+                "449991627#0",
+                "1409649738#0"
+            ],
+            "total_time_for_no_vehicles": 133.0,
+            "total_time_for_vehicles_and_no_device": 0,
+            "total_time_for_vehicles_and_device": 146.0,
+            "diference_from_ideal": 13.0,
+            "total_diference_from_real": 0,
+            "increase_in_ideal_percent": 9.774436090225564,
+            "decrease_in_real_percent": 0,
+            "edges_with_more_than_one_lane_and_tls": 100.0,
+            "edges_with_more_than_one_lane_and_no_tls": 0.0,
+            "edges_with_one_lane_and_tls": 0.0,
+            "edges_with_one_lane_and_no_tls": 0.0,
+            "average_density_v_n_d": 0,
+            "average_density_v_d": 0.030801812174191107
+        }
+    },
+    {
+        "result (14, 0)": {
+            "distance": 1967.2913083118947,
+            "cars": 14,
+            "vehicles": [
+                0.2975,
+                0.5625,
+                0.14
+            ],
+            "edges": [
+                "526213091#0",
+                "449991627#0",
+                "1409649738#0",
+                "295124095#0",
+                "526213091#0",
+                "449991627#0",
+                "1409649738#0",
+                "295124095#0",
+                "526213091#0",
+                "449991627#0",
+                "1409649738#0",
+                "295124095#0",
+                "526213091#0",
+                "449991627#0",
+                "1409649738#0",
+                "295124095#0"
+            ],
+            "total_time_for_no_vehicles": 142.0,
+            "total_time_for_vehicles_and_no_device": 0,
+            "total_time_for_vehicles_and_device": 144.0,
+            "diference_from_ideal": 2.0,
+            "total_diference_from_real": 0,
+            "increase_in_ideal_percent": 1.4084507042253522,
+            "decrease_in_real_percent": 0,
+            "edges_with_more_than_one_lane_and_tls": 100.0,
+            "edges_with_more_than_one_lane_and_no_tls": 0.0,
+            "edges_with_one_lane_and_tls": 0.0,
+            "edges_with_one_lane_and_no_tls": 0.0,
+            "average_density_v_n_d": 0,
+            "average_density_v_d": 0.03137375936908408
+        }
+    },
+    {
+        "result (14, 1)": {
+            "distance": 1967.2913083118947,
+            "cars": 14,
+            "vehicles": [
+                0.3225,
+                0.4925,
+                0.185
+            ],
+            "edges": [
+                "526213091#0",
+                "449991627#0",
+                "1409649738#0",
+                "295124095#0",
+                "526213091#0",
+                "449991627#0",
+                "1409649738#0",
+                "295124095#0",
+                "526213091#0",
+                "449991627#0",
+                "1409649738#0",
+                "295124095#0",
+                "526213091#0",
+                "449991627#0",
+                "1409649738#0",
+                "295124095#0"
+            ],
+            "total_time_for_no_vehicles": 142.0,
+            "total_time_for_vehicles_and_no_device": 0,
+            "total_time_for_vehicles_and_device": 148.0,
+            "diference_from_ideal": 6.0,
+            "total_diference_from_real": 0,
+            "increase_in_ideal_percent": 4.225352112676056,
+            "decrease_in_real_percent": 0,
+            "edges_with_more_than_one_lane_and_tls": 100.0,
+            "edges_with_more_than_one_lane_and_no_tls": 0.0,
+            "edges_with_one_lane_and_tls": 0.0,
+            "edges_with_one_lane_and_no_tls": 0.0,
+            "average_density_v_n_d": 0,
+            "average_density_v_d": 0.030300291074004736
+        }
+    },
+    {
+        "result (14, 2)": {
+            "distance": 1967.2913083118947,
+            "cars": 14,
+            "vehicles": [
+                0.2775,
+                0.55,
+                0.1725
+            ],
+            "edges": [
+                "526213091#0",
+                "449991627#0",
+                "1409649738#0",
+                "295124095#0",
+                "526213091#0",
+                "449991627#0",
+                "1409649738#0",
+                "295124095#0",
+                "526213091#0",
+                "449991627#0",
+                "1409649738#0",
+                "295124095#0",
+                "526213091#0",
+                "449991627#0",
+                "1409649738#0",
+                "295124095#0"
+            ],
+            "total_time_for_no_vehicles": 142.0,
+            "total_time_for_vehicles_and_no_device": 0,
+            "total_time_for_vehicles_and_device": 144.0,
+            "diference_from_ideal": 2.0,
+            "total_diference_from_real": 0,
+            "increase_in_ideal_percent": 1.4084507042253522,
+            "decrease_in_real_percent": 0,
+            "edges_with_more_than_one_lane_and_tls": 100.0,
+            "edges_with_more_than_one_lane_and_no_tls": 0.0,
+            "edges_with_one_lane_and_tls": 0.0,
+            "edges_with_one_lane_and_no_tls": 0.0,
+            "average_density_v_n_d": 0,
+            "average_density_v_d": 0.03128271691272325
+        }
+    },
+    {
+        "result (14, 3)": {
+            "distance": 1967.2913083118947,
+            "cars": 14,
+            "vehicles": [
+                0.335,
+                0.525,
+                0.14
+            ],
+            "edges": [
+                "526213091#0",
+                "449991627#0",
+                "1409649738#0",
+                "295124095#0",
+                "526213091#0",
+                "449991627#0",
+                "1409649738#0",
+                "295124095#0",
+                "526213091#0",
+                "449991627#0",
+                "1409649738#0",
+                "295124095#0",
+                "526213091#0",
+                "449991627#0",
+                "1409649738#0",
+                "295124095#0"
+            ],
+            "total_time_for_no_vehicles": 142.0,
+            "total_time_for_vehicles_and_no_device": 0,
+            "total_time_for_vehicles_and_device": 144.0,
+            "diference_from_ideal": 2.0,
+            "total_diference_from_real": 0,
+            "increase_in_ideal_percent": 1.4084507042253522,
+            "decrease_in_real_percent": 0,
+            "edges_with_more_than_one_lane_and_tls": 100.0,
+            "edges_with_more_than_one_lane_and_no_tls": 0.0,
+            "edges_with_one_lane_and_tls": 0.0,
+            "edges_with_one_lane_and_no_tls": 0.0,
+            "average_density_v_n_d": 0,
+            "average_density_v_d": 0.02976110299416595
+        }
+    },
+    {
+        "result (14, 4)": {
+            "distance": 1967.2913083118947,
+            "cars": 14,
+            "vehicles": [
+                0.32,
+                0.5425,
+                0.1375
+            ],
+            "edges": [
+                "526213091#0",
+                "449991627#0",
+                "1409649738#0",
+                "295124095#0",
+                "526213091#0",
+                "449991627#0",
+                "1409649738#0",
+                "295124095#0",
+                "526213091#0",
+                "449991627#0",
+                "1409649738#0",
+                "295124095#0",
+                "526213091#0",
+                "449991627#0",
+                "1409649738#0",
+                "295124095#0"
+            ],
+            "total_time_for_no_vehicles": 142.0,
+            "total_time_for_vehicles_and_no_device": 0,
+            "total_time_for_vehicles_and_device": 145.0,
+            "diference_from_ideal": 3.0,
+            "total_diference_from_real": 0,
+            "increase_in_ideal_percent": 2.112676056338028,
+            "decrease_in_real_percent": 0,
+            "edges_with_more_than_one_lane_and_tls": 100.0,
+            "edges_with_more_than_one_lane_and_no_tls": 0.0,
+            "edges_with_one_lane_and_tls": 0.0,
+            "edges_with_one_lane_and_no_tls": 0.0,
+            "average_density_v_n_d": 0,
+            "average_density_v_d": 0.029103395281058587
+        }
+    },
+    {
+        "result (15, 0)": {
+            "distance": 2099.1612064980013,
+            "cars": 15,
+            "vehicles": [
+                0.33793103448275863,
+                0.5172413793103449,
+                0.14482758620689656
+            ],
+            "edges": [
+                "526213091#0",
+                "449991627#0",
+                "1409649738#0",
+                "295124095#0",
+                "526213091#0",
+                "449991627#0",
+                "1409649738#0",
+                "295124095#0",
+                "526213091#0",
+                "449991627#0",
+                "1409649738#0",
+                "295124095#0",
+                "526213091#0",
+                "449991627#0",
+                "1409649738#0",
+                "295124095#0",
+                "526213091#0"
+            ],
+            "total_time_for_no_vehicles": 151.0,
+            "total_time_for_vehicles_and_no_device": 0,
+            "total_time_for_vehicles_and_device": 193.0,
+            "diference_from_ideal": 42.0,
+            "total_diference_from_real": 0,
+            "increase_in_ideal_percent": 27.81456953642384,
+            "decrease_in_real_percent": 0,
+            "edges_with_more_than_one_lane_and_tls": 100.0,
+            "edges_with_more_than_one_lane_and_no_tls": 0.0,
+            "edges_with_one_lane_and_tls": 0.0,
+            "edges_with_one_lane_and_no_tls": 0.0,
+            "average_density_v_n_d": 0,
+            "average_density_v_d": 0.03258677524277091
+        }
+    },
+    {
+        "result (15, 1)": {
+            "distance": 2099.1612064980013,
+            "cars": 15,
+            "vehicles": [
+                0.3476190476190476,
+                0.5214285714285715,
+                0.13095238095238096
+            ],
+            "edges": [
+                "526213091#0",
+                "449991627#0",
+                "1409649738#0",
+                "295124095#0",
+                "526213091#0",
+                "449991627#0",
+                "1409649738#0",
+                "295124095#0",
+                "526213091#0",
+                "449991627#0",
+                "1409649738#0",
+                "295124095#0",
+                "526213091#0",
+                "449991627#0",
+                "1409649738#0",
+                "295124095#0",
+                "526213091#0"
+            ],
+            "total_time_for_no_vehicles": 151.0,
+            "total_time_for_vehicles_and_no_device": 0,
+            "total_time_for_vehicles_and_device": 158.0,
+            "diference_from_ideal": 7.0,
+            "total_diference_from_real": 0,
+            "increase_in_ideal_percent": 4.635761589403973,
+            "decrease_in_real_percent": 0,
+            "edges_with_more_than_one_lane_and_tls": 100.0,
+            "edges_with_more_than_one_lane_and_no_tls": 0.0,
+            "edges_with_one_lane_and_tls": 0.0,
+            "edges_with_one_lane_and_no_tls": 0.0,
+            "average_density_v_n_d": 0,
+            "average_density_v_d": 0.02768235071257179
+        }
+    },
+    {
+        "result (15, 2)": {
+            "distance": 2099.1612064980013,
+            "cars": 15,
+            "vehicles": [
+                0.32857142857142857,
+                0.5238095238095238,
+                0.14761904761904762
+            ],
+            "edges": [
+                "526213091#0",
+                "449991627#0",
+                "1409649738#0",
+                "295124095#0",
+                "526213091#0",
+                "449991627#0",
+                "1409649738#0",
+                "295124095#0",
+                "526213091#0",
+                "449991627#0",
+                "1409649738#0",
+                "295124095#0",
+                "526213091#0",
+                "449991627#0",
+                "1409649738#0",
+                "295124095#0",
+                "526213091#0"
+            ],
+            "total_time_for_no_vehicles": 151.0,
+            "total_time_for_vehicles_and_no_device": 0,
+            "total_time_for_vehicles_and_device": 163.0,
+            "diference_from_ideal": 12.0,
+            "total_diference_from_real": 0,
+            "increase_in_ideal_percent": 7.9470198675496695,
+            "decrease_in_real_percent": 0,
+            "edges_with_more_than_one_lane_and_tls": 100.0,
+            "edges_with_more_than_one_lane_and_no_tls": 0.0,
+            "edges_with_one_lane_and_tls": 0.0,
+            "edges_with_one_lane_and_no_tls": 0.0,
+            "average_density_v_n_d": 0,
+            "average_density_v_d": 0.03063306013152353
+        }
+    },
+    {
+        "result (15, 3)": {
+            "distance": 2099.1612064980013,
+            "cars": 15,
+            "vehicles": [
+                0.3358024691358025,
+                0.5111111111111111,
+                0.15308641975308643
+            ],
+            "edges": [
+                "526213091#0",
+                "449991627#0",
+                "1409649738#0",
+                "295124095#0",
+                "526213091#0",
+                "449991627#0",
+                "1409649738#0",
+                "295124095#0",
+                "526213091#0",
+                "449991627#0",
+                "1409649738#0",
+                "295124095#0",
+                "526213091#0",
+                "449991627#0",
+                "1409649738#0",
+                "295124095#0",
+                "526213091#0"
+            ],
+            "total_time_for_no_vehicles": 151.0,
+            "total_time_for_vehicles_and_no_device": 0,
+            "total_time_for_vehicles_and_device": 156.0,
+            "diference_from_ideal": 5.0,
+            "total_diference_from_real": 0,
+            "increase_in_ideal_percent": 3.3112582781456954,
+            "decrease_in_real_percent": 0,
+            "edges_with_more_than_one_lane_and_tls": 100.0,
+            "edges_with_more_than_one_lane_and_no_tls": 0.0,
+            "edges_with_one_lane_and_tls": 0.0,
+            "edges_with_one_lane_and_no_tls": 0.0,
+            "average_density_v_n_d": 0,
+            "average_density_v_d": 0.02929789969566111
+        }
+    },
+    {
+        "result (15, 4)": {
+            "distance": 2099.1612064980013,
+            "cars": 15,
+            "vehicles": [
+                0.3380952380952381,
+                0.47619047619047616,
+                0.18571428571428572
+            ],
+            "edges": [
+                "526213091#0",
+                "449991627#0",
+                "1409649738#0",
+                "295124095#0",
+                "526213091#0",
+                "449991627#0",
+                "1409649738#0",
+                "295124095#0",
+                "526213091#0",
+                "449991627#0",
+                "1409649738#0",
+                "295124095#0",
+                "526213091#0",
+                "449991627#0",
+                "1409649738#0",
+                "295124095#0",
+                "526213091#0"
+            ],
+            "total_time_for_no_vehicles": 151.0,
+            "total_time_for_vehicles_and_no_device": 0,
+            "total_time_for_vehicles_and_device": 164.0,
+            "diference_from_ideal": 13.0,
+            "total_diference_from_real": 0,
+            "increase_in_ideal_percent": 8.609271523178808,
+            "decrease_in_real_percent": 0,
+            "edges_with_more_than_one_lane_and_tls": 100.0,
+            "edges_with_more_than_one_lane_and_no_tls": 0.0,
+            "edges_with_one_lane_and_tls": 0.0,
+            "edges_with_one_lane_and_no_tls": 0.0,
+            "average_density_v_n_d": 0,
+            "average_density_v_d": 0.030098934908972082
+        }
+    },
+    {
+        "result (16, 0)": {
+            "distance": 2208.928012432094,
+            "cars": 16,
+            "vehicles": [
+                0.3247058823529412,
+                0.4752941176470588,
+                0.2
+            ],
+            "edges": [
+                "526213091#0",
+                "449991627#0",
+                "1409649738#0",
+                "295124095#0",
+                "526213091#0",
+                "449991627#0",
+                "1409649738#0",
+                "295124095#0",
+                "526213091#0",
+                "449991627#0",
+                "1409649738#0",
+                "295124095#0",
+                "526213091#0",
+                "449991627#0",
+                "1409649738#0",
+                "295124095#0",
+                "526213091#0",
+                "449991627#0"
+            ],
+            "total_time_for_no_vehicles": 159.0,
+            "total_time_for_vehicles_and_no_device": 0,
+            "total_time_for_vehicles_and_device": 159.0,
+            "diference_from_ideal": 0.0,
+            "total_diference_from_real": 0,
+            "increase_in_ideal_percent": 0.0,
+            "decrease_in_real_percent": 0,
+            "edges_with_more_than_one_lane_and_tls": 100.0,
+            "edges_with_more_than_one_lane_and_no_tls": 0.0,
+            "edges_with_one_lane_and_tls": 0.0,
+            "edges_with_one_lane_and_no_tls": 0.0,
+            "average_density_v_n_d": 0,
+            "average_density_v_d": 0.030164024109823922
+        }
+    },
+    {
+        "result (16, 1)": {
+            "distance": 2208.928012432094,
+            "cars": 16,
+            "vehicles": [
+                0.30823529411764705,
+                0.5411764705882353,
+                0.15058823529411763
+            ],
+            "edges": [
+                "526213091#0",
+                "449991627#0",
+                "1409649738#0",
+                "295124095#0",
+                "526213091#0",
+                "449991627#0",
+                "1409649738#0",
+                "295124095#0",
+                "526213091#0",
+                "449991627#0",
+                "1409649738#0",
+                "295124095#0",
+                "526213091#0",
+                "449991627#0",
+                "1409649738#0",
+                "295124095#0",
+                "526213091#0",
+                "449991627#0"
+            ],
+            "total_time_for_no_vehicles": 159.0,
+            "total_time_for_vehicles_and_no_device": 0,
+            "total_time_for_vehicles_and_device": 159.0,
+            "diference_from_ideal": 0.0,
+            "total_diference_from_real": 0,
+            "increase_in_ideal_percent": 0.0,
+            "decrease_in_real_percent": 0,
+            "edges_with_more_than_one_lane_and_tls": 100.0,
+            "edges_with_more_than_one_lane_and_no_tls": 0.0,
+            "edges_with_one_lane_and_tls": 0.0,
+            "edges_with_one_lane_and_no_tls": 0.0,
+            "average_density_v_n_d": 0,
+            "average_density_v_d": 0.027888136711356353
+        }
+    },
+    {
+        "result (16, 2)": {
+            "distance": 2208.928012432094,
+            "cars": 16,
+            "vehicles": [
+                0.3,
+                0.5406779661016949,
+                0.15932203389830507
+            ],
+            "edges": [
+                "526213091#0",
+                "449991627#0",
+                "1409649738#0",
+                "295124095#0",
+                "526213091#0",
+                "449991627#0",
+                "1409649738#0",
+                "295124095#0",
+                "526213091#0",
+                "449991627#0",
+                "1409649738#0",
+                "295124095#0",
+                "526213091#0",
+                "449991627#0",
+                "1409649738#0",
+                "295124095#0",
+                "526213091#0",
+                "449991627#0"
+            ],
+            "total_time_for_no_vehicles": 159.0,
+            "total_time_for_vehicles_and_no_device": 0,
+            "total_time_for_vehicles_and_device": 387.0,
+            "diference_from_ideal": 228.0,
+            "total_diference_from_real": 0,
+            "increase_in_ideal_percent": 143.39622641509433,
+            "decrease_in_real_percent": 0,
+            "edges_with_more_than_one_lane_and_tls": 100.0,
+            "edges_with_more_than_one_lane_and_no_tls": 0.0,
+            "edges_with_one_lane_and_tls": 0.0,
+            "edges_with_one_lane_and_no_tls": 0.0,
+            "average_density_v_n_d": 0,
+            "average_density_v_d": 0.03713239181415656
+        }
+    },
+    {
+        "result (16, 3)": {
+            "distance": 2208.928012432094,
+            "cars": 16,
+            "vehicles": [
+                0.31058823529411766,
+                0.5152941176470588,
+                0.17411764705882352
+            ],
+            "edges": [
+                "526213091#0",
+                "449991627#0",
+                "1409649738#0",
+                "295124095#0",
+                "526213091#0",
+                "449991627#0",
+                "1409649738#0",
+                "295124095#0",
+                "526213091#0",
+                "449991627#0",
+                "1409649738#0",
+                "295124095#0",
+                "526213091#0",
+                "449991627#0",
+                "1409649738#0",
+                "295124095#0",
+                "526213091#0",
+                "449991627#0"
+            ],
+            "total_time_for_no_vehicles": 159.0,
+            "total_time_for_vehicles_and_no_device": 0,
+            "total_time_for_vehicles_and_device": 166.0,
+            "diference_from_ideal": 7.0,
+            "total_diference_from_real": 0,
+            "increase_in_ideal_percent": 4.40251572327044,
+            "decrease_in_real_percent": 0,
+            "edges_with_more_than_one_lane_and_tls": 100.0,
+            "edges_with_more_than_one_lane_and_no_tls": 0.0,
+            "edges_with_one_lane_and_tls": 0.0,
+            "edges_with_one_lane_and_no_tls": 0.0,
+            "average_density_v_n_d": 0,
+            "average_density_v_d": 0.030180447673501608
+        }
+    },
+    {
+        "result (16, 4)": {
+            "distance": 2208.928012432094,
+            "cars": 16,
+            "vehicles": [
+                0.30117647058823527,
+                0.5364705882352941,
+                0.1623529411764706
+            ],
+            "edges": [
+                "526213091#0",
+                "449991627#0",
+                "1409649738#0",
+                "295124095#0",
+                "526213091#0",
+                "449991627#0",
+                "1409649738#0",
+                "295124095#0",
+                "526213091#0",
+                "449991627#0",
+                "1409649738#0",
+                "295124095#0",
+                "526213091#0",
+                "449991627#0",
+                "1409649738#0",
+                "295124095#0",
+                "526213091#0",
+                "449991627#0"
+            ],
+            "total_time_for_no_vehicles": 159.0,
+            "total_time_for_vehicles_and_no_device": 0,
+            "total_time_for_vehicles_and_device": 165.0,
+            "diference_from_ideal": 6.0,
+            "total_diference_from_real": 0,
+            "increase_in_ideal_percent": 3.7735849056603774,
+            "decrease_in_real_percent": 0,
+            "edges_with_more_than_one_lane_and_tls": 100.0,
+            "edges_with_more_than_one_lane_and_no_tls": 0.0,
+            "edges_with_one_lane_and_tls": 0.0,
+            "edges_with_one_lane_and_no_tls": 0.0,
+            "average_density_v_n_d": 0,
+            "average_density_v_d": 0.030065255355289425
+        }
+    },
+    {
+        "result (17, 0)": {
+            "distance": 2336.7058329733572,
+            "cars": 17,
+            "vehicles": [
+                0.35348837209302325,
+                0.5,
+                0.14651162790697675
+            ],
+            "edges": [
+                "526213091#0",
+                "449991627#0",
+                "1409649738#0",
+                "295124095#0",
+                "526213091#0",
+                "449991627#0",
+                "1409649738#0",
+                "295124095#0",
+                "526213091#0",
+                "449991627#0",
+                "1409649738#0",
+                "295124095#0",
+                "526213091#0",
+                "449991627#0",
+                "1409649738#0",
+                "295124095#0",
+                "526213091#0",
+                "449991627#0",
+                "1409649738#0"
+            ],
+            "total_time_for_no_vehicles": 168.0,
+            "total_time_for_vehicles_and_no_device": 0,
+            "total_time_for_vehicles_and_device": 169.0,
+            "diference_from_ideal": 1.0,
+            "total_diference_from_real": 0,
+            "increase_in_ideal_percent": 0.5952380952380952,
+            "decrease_in_real_percent": 0,
+            "edges_with_more_than_one_lane_and_tls": 100.0,
+            "edges_with_more_than_one_lane_and_no_tls": 0.0,
+            "edges_with_one_lane_and_tls": 0.0,
+            "edges_with_one_lane_and_no_tls": 0.0,
+            "average_density_v_n_d": 0,
+            "average_density_v_d": 0.03099000911148026
+        }
+    },
+    {
+        "result (17, 1)": {
+            "distance": 2336.7058329733572,
+            "cars": 17,
+            "vehicles": [
+                0.3325581395348837,
+                0.49767441860465117,
+                0.1697674418604651
+            ],
+            "edges": [
+                "526213091#0",
+                "449991627#0",
+                "1409649738#0",
+                "295124095#0",
+                "526213091#0",
+                "449991627#0",
+                "1409649738#0",
+                "295124095#0",
+                "526213091#0",
+                "449991627#0",
+                "1409649738#0",
+                "295124095#0",
+                "526213091#0",
+                "449991627#0",
+                "1409649738#0",
+                "295124095#0",
+                "526213091#0",
+                "449991627#0",
+                "1409649738#0"
+            ],
+            "total_time_for_no_vehicles": 168.0,
+            "total_time_for_vehicles_and_no_device": 0,
+            "total_time_for_vehicles_and_device": 177.0,
+            "diference_from_ideal": 9.0,
+            "total_diference_from_real": 0,
+            "increase_in_ideal_percent": 5.357142857142857,
+            "decrease_in_real_percent": 0,
+            "edges_with_more_than_one_lane_and_tls": 100.0,
+            "edges_with_more_than_one_lane_and_no_tls": 0.0,
+            "edges_with_one_lane_and_tls": 0.0,
+            "edges_with_one_lane_and_no_tls": 0.0,
+            "average_density_v_n_d": 0,
+            "average_density_v_d": 0.03257488656384754
+        }
+    },
+    {
+        "result (17, 2)": {
+            "distance": 2336.7058329733572,
+            "cars": 17,
+            "vehicles": [
+                0.3955056179775281,
+                0.4651685393258427,
+                0.1393258426966292
+            ],
+            "edges": [
+                "526213091#0",
+                "449991627#0",
+                "1409649738#0",
+                "295124095#0",
+                "526213091#0",
+                "449991627#0",
+                "1409649738#0",
+                "295124095#0",
+                "526213091#0",
+                "449991627#0",
+                "1409649738#0",
+                "295124095#0",
+                "526213091#0",
+                "449991627#0",
+                "1409649738#0",
+                "295124095#0",
+                "526213091#0",
+                "449991627#0",
+                "1409649738#0"
+            ],
+            "total_time_for_no_vehicles": 168.0,
+            "total_time_for_vehicles_and_no_device": 0,
+            "total_time_for_vehicles_and_device": 185.0,
+            "diference_from_ideal": 17.0,
+            "total_diference_from_real": 0,
+            "increase_in_ideal_percent": 10.119047619047619,
+            "decrease_in_real_percent": 0,
+            "edges_with_more_than_one_lane_and_tls": 100.0,
+            "edges_with_more_than_one_lane_and_no_tls": 0.0,
+            "edges_with_one_lane_and_tls": 0.0,
+            "edges_with_one_lane_and_no_tls": 0.0,
+            "average_density_v_n_d": 0,
+            "average_density_v_d": 0.03539305576064546
+        }
+    },
+    {
+        "result (17, 3)": {
+            "distance": 2336.7058329733572,
+            "cars": 17,
+            "vehicles": [
+                0.32325581395348835,
+                0.5046511627906977,
+                0.17209302325581396
+            ],
+            "edges": [
+                "526213091#0",
+                "449991627#0",
+                "1409649738#0",
+                "295124095#0",
+                "526213091#0",
+                "449991627#0",
+                "1409649738#0",
+                "295124095#0",
+                "526213091#0",
+                "449991627#0",
+                "1409649738#0",
+                "295124095#0",
+                "526213091#0",
+                "449991627#0",
+                "1409649738#0",
+                "295124095#0",
+                "526213091#0",
+                "449991627#0",
+                "1409649738#0"
+            ],
+            "total_time_for_no_vehicles": 168.0,
+            "total_time_for_vehicles_and_no_device": 0,
+            "total_time_for_vehicles_and_device": 166.0,
+            "diference_from_ideal": -2.0,
+            "total_diference_from_real": 0,
+            "increase_in_ideal_percent": -1.1904761904761905,
+            "decrease_in_real_percent": 0,
+            "edges_with_more_than_one_lane_and_tls": 100.0,
+            "edges_with_more_than_one_lane_and_no_tls": 0.0,
+            "edges_with_one_lane_and_tls": 0.0,
+            "edges_with_one_lane_and_no_tls": 0.0,
+            "average_density_v_n_d": 0,
+            "average_density_v_d": 0.03343206685433985
+        }
+    },
+    {
+        "result (17, 4)": {
+            "distance": 2336.7058329733572,
+            "cars": 17,
+            "vehicles": [
+                0.3209302325581395,
+                0.5348837209302325,
+                0.14418604651162792
+            ],
+            "edges": [
+                "526213091#0",
+                "449991627#0",
+                "1409649738#0",
+                "295124095#0",
+                "526213091#0",
+                "449991627#0",
+                "1409649738#0",
+                "295124095#0",
+                "526213091#0",
+                "449991627#0",
+                "1409649738#0",
+                "295124095#0",
+                "526213091#0",
+                "449991627#0",
+                "1409649738#0",
+                "295124095#0",
+                "526213091#0",
+                "449991627#0",
+                "1409649738#0"
+            ],
+            "total_time_for_no_vehicles": 168.0,
+            "total_time_for_vehicles_and_no_device": 0,
+            "total_time_for_vehicles_and_device": 165.0,
+            "diference_from_ideal": -3.0,
+            "total_diference_from_real": 0,
+            "increase_in_ideal_percent": -1.7857142857142856,
+            "decrease_in_real_percent": 0,
+            "edges_with_more_than_one_lane_and_tls": 100.0,
+            "edges_with_more_than_one_lane_and_no_tls": 0.0,
+            "edges_with_one_lane_and_tls": 0.0,
+            "edges_with_one_lane_and_no_tls": 0.0,
+            "average_density_v_n_d": 0,
+            "average_density_v_d": 0.031501782447852206
+        }
+    },
+    {
+        "result (18, 0)": {
+            "distance": 2468.171402881992,
+            "cars": 18,
+            "vehicles": [
+                0.32,
+                0.5,
+                0.18
+            ],
+            "edges": [
+                "526213091#0",
+                "449991627#0",
+                "1409649738#0",
+                "295124095#0",
+                "526213091#0",
+                "449991627#0",
+                "1409649738#0",
+                "295124095#0",
+                "526213091#0",
+                "449991627#0",
+                "1409649738#0",
+                "295124095#0",
+                "526213091#0",
+                "449991627#0",
+                "1409649738#0",
+                "295124095#0",
+                "526213091#0",
+                "449991627#0",
+                "1409649738#0",
+                "295124095#0"
+            ],
+            "total_time_for_no_vehicles": 181.0,
+            "total_time_for_vehicles_and_no_device": 0,
+            "total_time_for_vehicles_and_device": 197.0,
+            "diference_from_ideal": 16.0,
+            "total_diference_from_real": 0,
+            "increase_in_ideal_percent": 8.83977900552486,
+            "decrease_in_real_percent": 0,
+            "edges_with_more_than_one_lane_and_tls": 100.0,
+            "edges_with_more_than_one_lane_and_no_tls": 0.0,
+            "edges_with_one_lane_and_tls": 0.0,
+            "edges_with_one_lane_and_no_tls": 0.0,
+            "average_density_v_n_d": 0,
+            "average_density_v_d": 0.032623091477203665
+        }
+    },
+    {
+        "result (18, 1)": {
+            "distance": 2468.171402881992,
+            "cars": 18,
+            "vehicles": [
+                0.28,
+                0.5511111111111111,
+                0.1688888888888889
+            ],
+            "edges": [
+                "526213091#0",
+                "449991627#0",
+                "1409649738#0",
+                "295124095#0",
+                "526213091#0",
+                "449991627#0",
+                "1409649738#0",
+                "295124095#0",
+                "526213091#0",
+                "449991627#0",
+                "1409649738#0",
+                "295124095#0",
+                "526213091#0",
+                "449991627#0",
+                "1409649738#0",
+                "295124095#0",
+                "526213091#0",
+                "449991627#0",
+                "1409649738#0",
+                "295124095#0"
+            ],
+            "total_time_for_no_vehicles": 181.0,
+            "total_time_for_vehicles_and_no_device": 0,
+            "total_time_for_vehicles_and_device": 181.0,
+            "diference_from_ideal": 0.0,
+            "total_diference_from_real": 0,
+            "increase_in_ideal_percent": 0.0,
+            "decrease_in_real_percent": 0,
+            "edges_with_more_than_one_lane_and_tls": 100.0,
+            "edges_with_more_than_one_lane_and_no_tls": 0.0,
+            "edges_with_one_lane_and_tls": 0.0,
+            "edges_with_one_lane_and_no_tls": 0.0,
+            "average_density_v_n_d": 0,
+            "average_density_v_d": 0.02935247315942666
+        }
+    },
+    {
+        "result (18, 2)": {
+            "distance": 2468.171402881992,
+            "cars": 18,
+            "vehicles": [
+                0.33111111111111113,
+                0.4822222222222222,
+                0.18666666666666668
+            ],
+            "edges": [
+                "526213091#0",
+                "449991627#0",
+                "1409649738#0",
+                "295124095#0",
+                "526213091#0",
+                "449991627#0",
+                "1409649738#0",
+                "295124095#0",
+                "526213091#0",
+                "449991627#0",
+                "1409649738#0",
+                "295124095#0",
+                "526213091#0",
+                "449991627#0",
+                "1409649738#0",
+                "295124095#0",
+                "526213091#0",
+                "449991627#0",
+                "1409649738#0",
+                "295124095#0"
+            ],
+            "total_time_for_no_vehicles": 181.0,
+            "total_time_for_vehicles_and_no_device": 0,
+            "total_time_for_vehicles_and_device": 185.0,
+            "diference_from_ideal": 4.0,
+            "total_diference_from_real": 0,
+            "increase_in_ideal_percent": 2.209944751381215,
+            "decrease_in_real_percent": 0,
+            "edges_with_more_than_one_lane_and_tls": 100.0,
+            "edges_with_more_than_one_lane_and_no_tls": 0.0,
+            "edges_with_one_lane_and_tls": 0.0,
+            "edges_with_one_lane_and_no_tls": 0.0,
+            "average_density_v_n_d": 0,
+            "average_density_v_d": 0.03068629731009475
+        }
+    },
+    {
+        "result (18, 3)": {
+            "distance": 2468.171402881992,
+            "cars": 18,
+            "vehicles": [
+                0.32222222222222224,
+                0.5,
+                0.17777777777777778
+            ],
+            "edges": [
+                "526213091#0",
+                "449991627#0",
+                "1409649738#0",
+                "295124095#0",
+                "526213091#0",
+                "449991627#0",
+                "1409649738#0",
+                "295124095#0",
+                "526213091#0",
+                "449991627#0",
+                "1409649738#0",
+                "295124095#0",
+                "526213091#0",
+                "449991627#0",
+                "1409649738#0",
+                "295124095#0",
+                "526213091#0",
+                "449991627#0",
+                "1409649738#0",
+                "295124095#0"
+            ],
+            "total_time_for_no_vehicles": 181.0,
+            "total_time_for_vehicles_and_no_device": 0,
+            "total_time_for_vehicles_and_device": 189.0,
+            "diference_from_ideal": 8.0,
+            "total_diference_from_real": 0,
+            "increase_in_ideal_percent": 4.41988950276243,
+            "decrease_in_real_percent": 0,
+            "edges_with_more_than_one_lane_and_tls": 100.0,
+            "edges_with_more_than_one_lane_and_no_tls": 0.0,
+            "edges_with_one_lane_and_tls": 0.0,
+            "edges_with_one_lane_and_no_tls": 0.0,
+            "average_density_v_n_d": 0,
+            "average_density_v_d": 0.03092912453247996
+        }
+    },
+    {
+        "result (18, 4)": {
+            "distance": 2468.171402881992,
+            "cars": 18,
+            "vehicles": [
+                0.2827586206896552,
+                0.5448275862068965,
+                0.1724137931034483
+            ],
+            "edges": [
+                "526213091#0",
+                "449991627#0",
+                "1409649738#0",
+                "295124095#0",
+                "526213091#0",
+                "449991627#0",
+                "1409649738#0",
+                "295124095#0",
+                "526213091#0",
+                "449991627#0",
+                "1409649738#0",
+                "295124095#0",
+                "526213091#0",
+                "449991627#0",
+                "1409649738#0",
+                "295124095#0",
+                "526213091#0",
+                "449991627#0",
+                "1409649738#0",
+                "295124095#0"
+            ],
+            "total_time_for_no_vehicles": 181.0,
+            "total_time_for_vehicles_and_no_device": 0,
+            "total_time_for_vehicles_and_device": 176.0,
+            "diference_from_ideal": -5.0,
+            "total_diference_from_real": 0,
+            "increase_in_ideal_percent": -2.7624309392265194,
+            "decrease_in_real_percent": 0,
+            "edges_with_more_than_one_lane_and_tls": 100.0,
+            "edges_with_more_than_one_lane_and_no_tls": 0.0,
+            "edges_with_one_lane_and_tls": 0.0,
+            "edges_with_one_lane_and_no_tls": 0.0,
+            "average_density_v_n_d": 0,
+            "average_density_v_d": 0.032504689302886226
+        }
+    },
+    {
+        "result (19, 0)": {
+            "distance": 2589.011580894214,
+            "cars": 19,
+            "vehicles": [
+                0.2879120879120879,
+                0.5208791208791209,
+                0.1912087912087912
+            ],
+            "edges": [
+                "526213091#0",
+                "449991627#0",
+                "1409649738#0",
+                "295124095#0",
+                "526213091#0",
+                "449991627#0",
+                "1409649738#0",
+                "295124095#0",
+                "526213091#0",
+                "449991627#0",
+                "1409649738#0",
+                "295124095#0",
+                "526213091#0",
+                "449991627#0",
+                "1409649738#0",
+                "295124095#0",
+                "526213091#0",
+                "449991627#0",
+                "1409649738#0",
+                "295124095#0",
+                "526213091#0"
+            ],
+            "total_time_for_no_vehicles": 186.0,
+            "total_time_for_vehicles_and_no_device": 0,
+            "total_time_for_vehicles_and_device": 193.0,
+            "diference_from_ideal": 7.0,
+            "total_diference_from_real": 0,
+            "increase_in_ideal_percent": 3.763440860215054,
+            "decrease_in_real_percent": 0,
+            "edges_with_more_than_one_lane_and_tls": 100.0,
+            "edges_with_more_than_one_lane_and_no_tls": 0.0,
+            "edges_with_one_lane_and_tls": 0.0,
+            "edges_with_one_lane_and_no_tls": 0.0,
+            "average_density_v_n_d": 0,
+            "average_density_v_d": 0.030716497406779408
+        }
+    },
+    {
+        "result (19, 1)": {
+            "distance": 2589.011580894214,
+            "cars": 19,
+            "vehicles": [
+                0.25934065934065936,
+                0.5648351648351648,
+                0.17582417582417584
+            ],
+            "edges": [
+                "526213091#0",
+                "449991627#0",
+                "1409649738#0",
+                "295124095#0",
+                "526213091#0",
+                "449991627#0",
+                "1409649738#0",
+                "295124095#0",
+                "526213091#0",
+                "449991627#0",
+                "1409649738#0",
+                "295124095#0",
+                "526213091#0",
+                "449991627#0",
+                "1409649738#0",
+                "295124095#0",
+                "526213091#0",
+                "449991627#0",
+                "1409649738#0",
+                "295124095#0",
+                "526213091#0"
+            ],
+            "total_time_for_no_vehicles": 186.0,
+            "total_time_for_vehicles_and_no_device": 0,
+            "total_time_for_vehicles_and_device": 186.0,
+            "diference_from_ideal": 0.0,
+            "total_diference_from_real": 0,
+            "increase_in_ideal_percent": 0.0,
+            "decrease_in_real_percent": 0,
+            "edges_with_more_than_one_lane_and_tls": 100.0,
+            "edges_with_more_than_one_lane_and_no_tls": 0.0,
+            "edges_with_one_lane_and_tls": 0.0,
+            "edges_with_one_lane_and_no_tls": 0.0,
+            "average_density_v_n_d": 0,
+            "average_density_v_d": 0.030931998326966675
+        }
+    },
+    {
+        "result (19, 2)": {
+            "distance": 2589.011580894214,
+            "cars": 19,
+            "vehicles": [
+                0.34505494505494505,
+                0.4967032967032967,
+                0.15824175824175823
+            ],
+            "edges": [
+                "526213091#0",
+                "449991627#0",
+                "1409649738#0",
+                "295124095#0",
+                "526213091#0",
+                "449991627#0",
+                "1409649738#0",
+                "295124095#0",
+                "526213091#0",
+                "449991627#0",
+                "1409649738#0",
+                "295124095#0",
+                "526213091#0",
+                "449991627#0",
+                "1409649738#0",
+                "295124095#0",
+                "526213091#0",
+                "449991627#0",
+                "1409649738#0",
+                "295124095#0",
+                "526213091#0"
+            ],
+            "total_time_for_no_vehicles": 186.0,
+            "total_time_for_vehicles_and_no_device": 0,
+            "total_time_for_vehicles_and_device": 190.0,
+            "diference_from_ideal": 4.0,
+            "total_diference_from_real": 0,
+            "increase_in_ideal_percent": 2.1505376344086025,
+            "decrease_in_real_percent": 0,
+            "edges_with_more_than_one_lane_and_tls": 100.0,
+            "edges_with_more_than_one_lane_and_no_tls": 0.0,
+            "edges_with_one_lane_and_tls": 0.0,
+            "edges_with_one_lane_and_no_tls": 0.0,
+            "average_density_v_n_d": 0,
+            "average_density_v_d": 0.03415850317602657
+        }
+    },
+    {
+        "result (19, 3)": {
+            "distance": 2589.011580894214,
+            "cars": 19,
+            "vehicles": [
+                0.3148936170212766,
+                0.5127659574468085,
+                0.1723404255319149
+            ],
+            "edges": [
+                "526213091#0",
+                "449991627#0",
+                "1409649738#0",
+                "295124095#0",
+                "526213091#0",
+                "449991627#0",
+                "1409649738#0",
+                "295124095#0",
+                "526213091#0",
+                "449991627#0",
+                "1409649738#0",
+                "295124095#0",
+                "526213091#0",
+                "449991627#0",
+                "1409649738#0",
+                "295124095#0",
+                "526213091#0",
+                "449991627#0",
+                "1409649738#0",
+                "295124095#0",
+                "526213091#0"
+            ],
+            "total_time_for_no_vehicles": 186.0,
+            "total_time_for_vehicles_and_no_device": 0,
+            "total_time_for_vehicles_and_device": 217.0,
+            "diference_from_ideal": 31.0,
+            "total_diference_from_real": 0,
+            "increase_in_ideal_percent": 16.666666666666664,
+            "decrease_in_real_percent": 0,
+            "edges_with_more_than_one_lane_and_tls": 100.0,
+            "edges_with_more_than_one_lane_and_no_tls": 0.0,
+            "edges_with_one_lane_and_tls": 0.0,
+            "edges_with_one_lane_and_no_tls": 0.0,
+            "average_density_v_n_d": 0,
+            "average_density_v_d": 0.03037166149050366
+        }
+    },
+    {
+        "result (19, 4)": {
+            "distance": 2589.011580894214,
+            "cars": 19,
+            "vehicles": [
+                0.3649484536082474,
+                0.488659793814433,
+                0.1463917525773196
+            ],
+            "edges": [
+                "526213091#0",
+                "449991627#0",
+                "1409649738#0",
+                "295124095#0",
+                "526213091#0",
+                "449991627#0",
+                "1409649738#0",
+                "295124095#0",
+                "526213091#0",
+                "449991627#0",
+                "1409649738#0",
+                "295124095#0",
+                "526213091#0",
+                "449991627#0",
+                "1409649738#0",
+                "295124095#0",
+                "526213091#0",
+                "449991627#0",
+                "1409649738#0",
+                "295124095#0",
+                "526213091#0"
+            ],
+            "total_time_for_no_vehicles": 186.0,
+            "total_time_for_vehicles_and_no_device": 0,
+            "total_time_for_vehicles_and_device": 224.0,
+            "diference_from_ideal": 38.0,
+            "total_diference_from_real": 0,
+            "increase_in_ideal_percent": 20.43010752688172,
+            "decrease_in_real_percent": 0,
+            "edges_with_more_than_one_lane_and_tls": 100.0,
+            "edges_with_more_than_one_lane_and_no_tls": 0.0,
+            "edges_with_one_lane_and_tls": 0.0,
+            "edges_with_one_lane_and_no_tls": 0.0,
+            "average_density_v_n_d": 0,
+            "average_density_v_d": 0.030996136130435364
+        }
+    },
+    {
+        "result (20, 0)": {
+            "distance": 2711.3738940541766,
+            "cars": 20,
+            "vehicles": [
+                0.3157894736842105,
+                0.5094736842105263,
+                0.17473684210526316
+            ],
+            "edges": [
+                "526213091#0",
+                "449991627#0",
+                "1409649738#0",
+                "295124095#0",
+                "526213091#0",
+                "449991627#0",
+                "1409649738#0",
+                "295124095#0",
+                "526213091#0",
+                "449991627#0",
+                "1409649738#0",
+                "295124095#0",
+                "526213091#0",
+                "449991627#0",
+                "1409649738#0",
+                "295124095#0",
+                "526213091#0",
+                "449991627#0",
+                "1409649738#0",
+                "295124095#0",
+                "526213091#0",
+                "449991627#0"
+            ],
+            "total_time_for_no_vehicles": 195.0,
+            "total_time_for_vehicles_and_no_device": 0,
+            "total_time_for_vehicles_and_device": 202.0,
+            "diference_from_ideal": 7.0,
+            "total_diference_from_real": 0,
+            "increase_in_ideal_percent": 3.5897435897435894,
+            "decrease_in_real_percent": 0,
+            "edges_with_more_than_one_lane_and_tls": 100.0,
+            "edges_with_more_than_one_lane_and_no_tls": 0.0,
+            "edges_with_one_lane_and_tls": 0.0,
+            "edges_with_one_lane_and_no_tls": 0.0,
+            "average_density_v_n_d": 0,
+            "average_density_v_d": 0.028837035153858964
+        }
+    },
+    {
+        "result (20, 1)": {
+            "distance": 2711.3738940541766,
+            "cars": 20,
+            "vehicles": [
+                0.35,
+                0.5108695652173914,
+                0.1391304347826087
+            ],
+            "edges": [
+                "526213091#0",
+                "449991627#0",
+                "1409649738#0",
+                "295124095#0",
+                "526213091#0",
+                "449991627#0",
+                "1409649738#0",
+                "295124095#0",
+                "526213091#0",
+                "449991627#0",
+                "1409649738#0",
+                "295124095#0",
+                "526213091#0",
+                "449991627#0",
+                "1409649738#0",
+                "295124095#0",
+                "526213091#0",
+                "449991627#0",
+                "1409649738#0",
+                "295124095#0",
+                "526213091#0",
+                "449991627#0"
+            ],
+            "total_time_for_no_vehicles": 195.0,
+            "total_time_for_vehicles_and_no_device": 0,
+            "total_time_for_vehicles_and_device": 197.0,
+            "diference_from_ideal": 2.0,
+            "total_diference_from_real": 0,
+            "increase_in_ideal_percent": 1.0256410256410255,
+            "decrease_in_real_percent": 0,
+            "edges_with_more_than_one_lane_and_tls": 100.0,
+            "edges_with_more_than_one_lane_and_no_tls": 0.0,
+            "edges_with_one_lane_and_tls": 0.0,
+            "edges_with_one_lane_and_no_tls": 0.0,
+            "average_density_v_n_d": 0,
+            "average_density_v_d": 0.028854734800072872
+        }
+    },
+    {
+        "result (20, 2)": {
+            "distance": 2711.3738940541766,
+            "cars": 20,
+            "vehicles": [
+                0.3368421052631579,
+                0.5052631578947369,
+                0.15789473684210525
+            ],
+            "edges": [
+                "526213091#0",
+                "449991627#0",
+                "1409649738#0",
+                "295124095#0",
+                "526213091#0",
+                "449991627#0",
+                "1409649738#0",
+                "295124095#0",
+                "526213091#0",
+                "449991627#0",
+                "1409649738#0",
+                "295124095#0",
+                "526213091#0",
+                "449991627#0",
+                "1409649738#0",
+                "295124095#0",
+                "526213091#0",
+                "449991627#0",
+                "1409649738#0",
+                "295124095#0",
+                "526213091#0",
+                "449991627#0"
+            ],
+            "total_time_for_no_vehicles": 195.0,
+            "total_time_for_vehicles_and_no_device": 0,
+            "total_time_for_vehicles_and_device": 202.0,
+            "diference_from_ideal": 7.0,
+            "total_diference_from_real": 0,
+            "increase_in_ideal_percent": 3.5897435897435894,
+            "decrease_in_real_percent": 0,
+            "edges_with_more_than_one_lane_and_tls": 100.0,
+            "edges_with_more_than_one_lane_and_no_tls": 0.0,
+            "edges_with_one_lane_and_tls": 0.0,
+            "edges_with_one_lane_and_no_tls": 0.0,
+            "average_density_v_n_d": 0,
+            "average_density_v_d": 0.03279148753986109
+        }
+    },
+    {
+        "result (20, 3)": {
+            "distance": 2711.3738940541766,
+            "cars": 20,
+            "vehicles": [
+                0.3130434782608696,
+                0.5195652173913043,
+                0.1673913043478261
+            ],
+            "edges": [
+                "526213091#0",
+                "449991627#0",
+                "1409649738#0",
+                "295124095#0",
+                "526213091#0",
+                "449991627#0",
+                "1409649738#0",
+                "295124095#0",
+                "526213091#0",
+                "449991627#0",
+                "1409649738#0",
+                "295124095#0",
+                "526213091#0",
+                "449991627#0",
+                "1409649738#0",
+                "295124095#0",
+                "526213091#0",
+                "449991627#0",
+                "1409649738#0",
+                "295124095#0",
+                "526213091#0",
+                "449991627#0"
+            ],
+            "total_time_for_no_vehicles": 195.0,
+            "total_time_for_vehicles_and_no_device": 0,
+            "total_time_for_vehicles_and_device": 193.0,
+            "diference_from_ideal": -2.0,
+            "total_diference_from_real": 0,
+            "increase_in_ideal_percent": -1.0256410256410255,
+            "decrease_in_real_percent": 0,
+            "edges_with_more_than_one_lane_and_tls": 100.0,
+            "edges_with_more_than_one_lane_and_no_tls": 0.0,
+            "edges_with_one_lane_and_tls": 0.0,
+            "edges_with_one_lane_and_no_tls": 0.0,
+            "average_density_v_n_d": 0,
+            "average_density_v_d": 0.030175912870499914
+        }
+    },
+    {
+        "result (20, 4)": {
+            "distance": 2711.3738940541766,
+            "cars": 20,
+            "vehicles": [
+                0.3,
+                0.5434782608695652,
+                0.1565217391304348
+            ],
+            "edges": [
+                "526213091#0",
+                "449991627#0",
+                "1409649738#0",
+                "295124095#0",
+                "526213091#0",
+                "449991627#0",
+                "1409649738#0",
+                "295124095#0",
+                "526213091#0",
+                "449991627#0",
+                "1409649738#0",
+                "295124095#0",
+                "526213091#0",
+                "449991627#0",
+                "1409649738#0",
+                "295124095#0",
+                "526213091#0",
+                "449991627#0",
+                "1409649738#0",
+                "295124095#0",
+                "526213091#0",
+                "449991627#0"
+            ],
+            "total_time_for_no_vehicles": 195.0,
+            "total_time_for_vehicles_and_no_device": 0,
+            "total_time_for_vehicles_and_device": 197.0,
+            "diference_from_ideal": 2.0,
+            "total_diference_from_real": 0,
+            "increase_in_ideal_percent": 1.0256410256410255,
+            "decrease_in_real_percent": 0,
+            "edges_with_more_than_one_lane_and_tls": 100.0,
+            "edges_with_more_than_one_lane_and_no_tls": 0.0,
+            "edges_with_one_lane_and_tls": 0.0,
+            "edges_with_one_lane_and_no_tls": 0.0,
+            "average_density_v_n_d": 0,
+            "average_density_v_d": 0.029812477015689606
+        }
+    },
+    {
+        "result (21, 0)": {
+            "distance": 2825.135242219436,
+            "cars": 21,
+            "vehicles": [
+                0.35,
+                0.48541666666666666,
+                0.16458333333333333
+            ],
+            "edges": [
+                "526213091#0",
+                "449991627#0",
+                "1409649738#0",
+                "295124095#0",
+                "526213091#0",
+                "449991627#0",
+                "1409649738#0",
+                "295124095#0",
+                "526213091#0",
+                "449991627#0",
+                "1409649738#0",
+                "295124095#0",
+                "526213091#0",
+                "449991627#0",
+                "1409649738#0",
+                "295124095#0",
+                "526213091#0",
+                "449991627#0",
+                "1409649738#0",
+                "295124095#0",
+                "526213091#0",
+                "449991627#0",
+                "1409649738#0"
+            ],
+            "total_time_for_no_vehicles": 203.0,
+            "total_time_for_vehicles_and_no_device": 0,
+            "total_time_for_vehicles_and_device": 210.0,
+            "diference_from_ideal": 7.0,
+            "total_diference_from_real": 0,
+            "increase_in_ideal_percent": 3.4482758620689653,
+            "decrease_in_real_percent": 0,
+            "edges_with_more_than_one_lane_and_tls": 100.0,
+            "edges_with_more_than_one_lane_and_no_tls": 0.0,
+            "edges_with_one_lane_and_tls": 0.0,
+            "edges_with_one_lane_and_no_tls": 0.0,
+            "average_density_v_n_d": 0,
+            "average_density_v_d": 0.03119921609518211
+        }
+    }
+]
