@@ -89,3 +89,71 @@ def run_simulation_with_no_vehicles(edges):
     print(f"Total time for simulation with no vehicles whatsoever is: {total_time} seconds")
 
     return total_time, result, distance
+
+def run_simulation_with_no_vehicles_to_get_coords(edges):
+    sumoBinary = sumolib.checkBinary("sumo")
+    traci.start([sumoBinary, "-c", "osm.sumocfg"])
+    net = sumolib.net.readNet('osm.net.xml')
+
+    # region Ambulance vehicle creation
+    veh_id = "ambulance"
+    route_id = "ambulance_route"
+
+    traci.route.add(route_id, edges)
+    traci.vehicletype.copy("DEFAULT_VEHTYPE", "rescue")
+    traci.vehicletype.setVehicleClass("rescue", "emergency")
+    traci.vehicletype.setShapeClass("rescue", "emergency")
+    traci.vehicletype.setMaxSpeed("rescue", 50)
+    traci.vehicletype.setSpeedFactor("rescue", 1.5)
+    traci.vehicletype.setParameter("rescue", "has.bluelight.device", "true")
+    traci.vehicletype.setParameter("rescue", "latAlignment", "arbitrary")
+    traci.vehicletype.setParameter("rescue", "sigma", "0")
+    traci.vehicletype.setParameter("rescue", "jmIgnoreFoeProb", "1")
+    traci.vehicletype.setParameter("rescue", "jmIgnoreKeepClearTime", "1")
+    traci.vehicletype.setParameter("rescue", "jmDriveRedSpeed", "2.77")
+    traci.vehicletype.setParameter("rescue", "impatience", "1.0")
+    traci.vehicletype.setParameter("rescue", "lcPushy", "1")
+    traci.vehicletype.setParameter("rescue", "lcImpatience", "1")
+    traci.vehicletype.setParameter("rescue", "lcTimeToImpatience", "0")
+    traci.vehicletype.setParameter("rescue", "lcOpposite", "1")
+    traci.vehicletype.setParameter("rescue", "lcOvertakeRight", "1")
+    traci.vehicletype.setParameter("rescue", "lcStrategic", "0")
+    traci.vehicletype.setParameter("rescue", "lcSpeedGain", "1")
+    traci.vehicletype.setParameter("rescue", "lcAssertive", "1")
+    traci.vehicletype.setParameter("rescue", "lcCooperative", "0")
+    traci.vehicletype.setParameter("rescue", "minGapLat", "0.25")
+    traci.vehicletype.setParameter("rescue", "minGap", "0.5")
+    traci.vehicletype.setParameter("rescue", "junction.blocker", "true")
+    traci.vehicletype.setParameter("rescue", "jmIgnoreFoeProb", "1")
+    traci.vehicle.add(
+        vehID=veh_id,
+        routeID=route_id,
+        typeID="rescue",
+        depart=0,
+        departLane="best"
+    )
+    #endregion
+    result = []
+    stop = False
+    current_Edge = None
+    edges_with_coords = []
+    data_for_each_edge = []
+    while not stop:
+        traci.simulationStep()            
+        if veh_id in traci.vehicle.getIDList(): 
+            x,y = traci.vehicle.getPosition(veh_id)
+            lon, lat = net.convertXY2LonLat(x,y)
+            result.append([lon,lat])
+            edge = traci.vehicle.getRoadID(veh_id)
+            if edge in edges and edge != current_Edge:
+                current_Edge = edge
+                edges_with_coords.append([current_Edge, [lon,lat]])
+                length = traci.lane.getLength(current_Edge+"_0")
+                lanes = traci.edge.getLaneNumber(current_Edge)
+                maxSpeed = traci.lane.getMaxSpeed(current_Edge+"_0")
+                data_for_each_edge.append([current_Edge, [length, lanes, maxSpeed]])
+
+        if veh_id in traci.simulation.getArrivedIDList():
+            stop = True
+    traci.close()
+    return result, edges_with_coords, data_for_each_edge

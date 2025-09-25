@@ -17,22 +17,20 @@ from dispositiu import find_if_there_is_emergency_lane, find_if_street_has_traff
 from Route_with_no_vehicles import run_simulation_with_no_vehicles
 from Route_with_vehicles_but_no_device import run_simulation_with_vehicles_and_no_device
 from Route_with_vehicles_and_device_activated_begining import run_simulation_with_vehicles_and_device_and_given_traffic, run_simulation_with_vehicles_and_device_random_traffic
-from Route_with_vehicles_and_device_traffic_lights_activated import run_simulation_with_vehicles_and_traffic_lights_activated_for_given_traffic
+from Route_with_vehicles_and_device_traffic_lights_activated import run_simulation_with_vehicles_and_traffic_lights_activated_for_given_traffic, run_simulation_with_vehicles_and_traffic_lights_activated_for_random_traffic
 from Data_extraction import data_treatment, get_data_by_edge, compare_data, data_treatment_2, data_treatment_with_traffic_light
 import subprocess
 import shutil
 
-specific_route = True
+specific_route = False
 json_defined_route = True
 route = "route_1.json"
-routes = ["route_3.json"]
-filename = "result_comparison_specific_routes_7.json"
+routes = ["route_7.json"]
+filename = "result_comparison_specific_routes_10.json"
 comparisson_of_three_simulations = True
 comparisson_of_two_simulations = False
 if comparisson_of_three_simulations:
     if specific_route:
-        with open(filename, "w") as f:
-            json.dump({}, f)  # empty dictionary
         for r in routes:
             net = sumolib.net.readNet('osm.net.xml')
             sumoBinary = sumolib.checkBinary("sumo")
@@ -43,17 +41,20 @@ if comparisson_of_three_simulations:
             edges, edges_with_Coords =convertir_coordenades_a_edges(downsampled_coords, net)
             traci.close()
             final_data = []
-            j = 5
+            j = 7
             while j < 9:
                 total_time_for_no_vehicles, result_for_no_vehicles, distance = run_simulation_with_no_vehicles(edges)
-                simulated_coords, simulated_time = mapa_generator_for_SUMO_data(result_for_no_vehicles,f"result_no_vehicles_map.html")
+                #simulated_coords, simulated_time = mapa_generator_for_SUMO_data(result_for_no_vehicles,f"result_no_vehicles_map.html")
                 data_for_no_vehicles, average_density_n_v, max_density_n_v = get_data_by_edge(result_for_no_vehicles, edges)
                 results = []
                 k = 0
-                for k in range(5):
-                    total_time_for_vehicles_and_no_device, vehicles_added, result_for_vehicles_not_device, type1, type2, type3 = run_simulation_with_vehicles_and_no_device(j*10 + 1, 3*j, edges)
-                    total_time_for_vehicles_and_lights_control, result_for_vehicles_and_light_control = run_simulation_with_vehicles_and_traffic_lights_activated_for_given_traffic(edges, vehicles_added, net)
-                    total_time_for_vehicles_and_device, result_for_vehicles_and_device, edges_with_no_tls_and_one_lane, edges_with_tls_and_one_lane, edges_with_tls_and_more_than_one_lane, edges_with_no_tls_and_more_than_one_lane = run_simulation_with_vehicles_and_device_and_given_traffic(edges, vehicles_added)
+                for k in range(2):
+                    total_time_for_vehicles_and_no_device, vehicles_added_beginning, vehicles_added_during, result_for_vehicles_not_device, type1, type2, type3 = run_simulation_with_vehicles_and_no_device(j*30 + 1, 2*j, edges)
+                    data_for_vehicles_no_device, average_density_v_n_d, max_density_v_n_d = get_data_by_edge(result_for_vehicles_not_device, edges)
+                    #total_time_for_vehicles_and_lights_control, result_for_vehicles_and_light_control = run_simulation_with_vehicles_and_traffic_lights_activated_for_random_traffic(edges,j*50 + 1, 5*j, net)
+                    #total_time_for_vehicles_and_device, result_for_vehicles_and_device, edges_with_no_tls_and_one_lane, edges_with_tls_and_one_lane, edges_with_tls_and_more_than_one_lane, edges_with_no_tls_and_more_than_one_lane = run_simulation_with_vehicles_and_device_random_traffic(edges,j*50 + 1, 5*j)
+                    total_time_for_vehicles_and_lights_control, result_for_vehicles_and_light_control = run_simulation_with_vehicles_and_traffic_lights_activated_for_given_traffic(edges, vehicles_added_beginning, vehicles_added_during, net)
+                    total_time_for_vehicles_and_device, result_for_vehicles_and_device, edges_with_no_tls_and_one_lane, edges_with_tls_and_one_lane, edges_with_tls_and_more_than_one_lane, edges_with_no_tls_and_more_than_one_lane = run_simulation_with_vehicles_and_device_and_given_traffic(edges, vehicles_added_beginning, vehicles_added_during)
                     print(f"total time for vehcile alone is: {total_time_for_no_vehicles}")
                     print(f"total time for vehicle and no device: {total_time_for_vehicles_and_no_device}")
                     print(f"total time for vehicle and lights control: {total_time_for_vehicles_and_lights_control}")
@@ -77,8 +78,8 @@ if comparisson_of_three_simulations:
                     data_treatment_with_traffic_light(filename, distance,j, edges, k, type1/(type1+type2+type3), type2/(type1+type2+type3), type3/(type1+type2+type3), total_time_for_no_vehicles, total_time_for_vehicles_and_no_device, total_time_for_vehicles_and_device, total_time_for_vehicles_and_lights_control,  diference_from_ideal, total_diference_from_real, increase_in_ideal_percent, decrease_in_real_percent, edges_tls_more_one, edges_no_tls_more_one, edges_tls_one, edges_no_tls_one, average_density_v_n_d, average_density_v_d, max_density_v_n_d)
 
                     print(f"\n\n\n\n\n\n\n\n\n\n\n {j, k}")
-                    simulated_coords, simulated_time = mapa_generator_for_SUMO_data(result_for_vehicles_not_device,f"result_no_device_map_{j,k}.html")
-                    simulated_coords, simulated_time = mapa_generator_for_SUMO_data(result_for_vehicles_and_device,f"result_device_map{j,k}.html")
+                    #simulated_coords, simulated_time = mapa_generator_for_SUMO_data(result_for_vehicles_not_device,f"result_no_device_map_{j,k}.html")
+                    #simulated_coords, simulated_time = mapa_generator_for_SUMO_data(result_for_vehicles_and_device,f"result_device_map{j,k}.html")
                     k += 1
                 j += 1
                 print(f"\n\n\n\n\n\n\n\n Data \n\n\n\n\n\n\n")
@@ -108,8 +109,6 @@ if comparisson_of_three_simulations:
                 print(f"The average decrease from real time is: {total7/len(final_data)}")
     else:
         j = 1
-        with open(filename, "w") as f:
-            json.dump({}, f)
         while j < 20:
             net = sumolib.net.readNet('osm.net.xml')
             sumoBinary = sumolib.checkBinary("sumo")
@@ -122,11 +121,11 @@ if comparisson_of_three_simulations:
             total_time_for_no_vehicles, result_for_no_vehicles, distance = run_simulation_with_no_vehicles(edges)
             data_for_no_vehicles, average_density_n_v, max_density_n_v = get_data_by_edge(result_for_no_vehicles, edges)
             results = []
-            k = 4
+            k = 1
             while k < 9:
                 for m in range(3):
-                    total_time_for_vehicles_and_no_device, vehicles_added, result_for_vehicles_not_device, type1, type2, type3 = run_simulation_with_vehicles_and_no_device(k*100 + 1 , k*2, edges)
-                    total_time_for_vehicles_and_device, result_for_vehicles_and_device, edges_with_no_tls_and_one_lane, edges_with_tls_and_one_lane, edges_with_tls_and_more_than_one_lane, edges_with_no_tls_and_more_than_one_lane = run_simulation_with_vehicles_and_device_and_given_traffic(edges, vehicles_added)
+                    total_time_for_vehicles_and_no_device, vehicles_added_beginning, vehicles_added_during, result_for_vehicles_not_device, type1, type2, type3 = run_simulation_with_vehicles_and_no_device(k*100 + 1 , k*2, edges)
+                    total_time_for_vehicles_and_device, result_for_vehicles_and_device, edges_with_no_tls_and_one_lane, edges_with_tls_and_one_lane, edges_with_tls_and_more_than_one_lane, edges_with_no_tls_and_more_than_one_lane = run_simulation_with_vehicles_and_device_and_given_traffic(edges, vehicles_added_beginning, vehicles_added_during)
                     print(f"total time for vehcile alone is: {total_time_for_no_vehicles}")
                     print(f"total time for vehicle and no device: {total_time_for_vehicles_and_no_device}")
                     print(f"total time for vehicle and device: {total_time_for_vehicles_and_device}")
@@ -145,7 +144,8 @@ if comparisson_of_three_simulations:
                     edges_no_tls_one = len(edges_with_no_tls_and_one_lane)/len(edges)*100
                     
                     results.append([type1/(type1+type2+type3), type2/(type1+type2+type3), type3/(type1+type2+type3), data_for_no_vehicles, data_for_vehicles_no_device, data_for_vehicles_and_device, total_time_for_no_vehicles, total_time_for_vehicles_and_no_device, total_time_for_vehicles_and_device, increase_in_ideal_percent, decrease_in_real_percent])                  
-                    data_treatment_2(data_for_no_vehicles, data_for_vehicles_no_device, data_for_vehicles_and_device, filename, distance, j, edges, f"{k}_{m}", type1/(type1+type2+type3), type2/(type1+type2+type3), type3/(type1+type2+type3), total_time_for_no_vehicles, total_time_for_vehicles_and_no_device, total_time_for_vehicles_and_device, diference_from_ideal, total_diference_from_real, increase_in_ideal_percent, decrease_in_real_percent, edges_with_tls_and_more_than_one_lane, edges_with_no_tls_and_more_than_one_lane, edges_with_tls_and_one_lane, edges_with_no_tls_and_one_lane, average_density_v_n_d, average_density_v_d, max_density_v_n_d)
+                    data_treatment(filename, distance,j, edges,  f"{k}_{m}", type1/(type1+type2+type3), type2/(type1+type2+type3), type3/(type1+type2+type3), total_time_for_no_vehicles, total_time_for_vehicles_and_no_device, total_time_for_vehicles_and_device, diference_from_ideal, total_diference_from_real, increase_in_ideal_percent, decrease_in_real_percent, edges_tls_more_one, edges_no_tls_more_one, edges_tls_one, edges_no_tls_one, average_density_v_n_d, average_density_v_d, max_density_v_n_d)
+                    #data_treatment_2(data_for_no_vehicles, data_for_vehicles_no_device, data_for_vehicles_and_device, filename, distance, j, edges, f"{k}_{m}", type1/(type1+type2+type3), type2/(type1+type2+type3), type3/(type1+type2+type3), total_time_for_no_vehicles, total_time_for_vehicles_and_no_device, total_time_for_vehicles_and_device, diference_from_ideal, total_diference_from_real, increase_in_ideal_percent, decrease_in_real_percent, edges_with_tls_and_more_than_one_lane, edges_with_no_tls_and_more_than_one_lane, edges_with_tls_and_one_lane, edges_with_no_tls_and_one_lane, average_density_v_n_d, average_density_v_d, max_density_v_n_d)
                     
                     print(f"\n\n\n\n\n\n\n\n\n\n\n {j, k, m}")
                 k += 1
@@ -260,8 +260,8 @@ elif comparisson_of_two_simulations:
             results = []
             for k in range(10):
                 for m in range(7):
-                    total_time_for_vehicles_and_no_device, vehicles_added, result_for_vehicles_not_device, type1, type2, type3 = run_simulation_with_vehicles_and_no_device(m*100, m*2, edges)
-                    total_time_for_vehicles_and_device, result_for_vehicles_and_device, edges_with_no_tls_and_one_lane, edges_with_tls_and_one_lane, edges_with_tls_and_more_than_one_lane, edges_with_no_tls_and_more_than_one_lane = run_simulation_with_vehicles_and_device_and_given_traffic(edges, vehicles_added)
+                    total_time_for_vehicles_and_no_device, vehicles_added_beginning, vehicles_added_during, result_for_vehicles_not_device, type1, type2, type3 = run_simulation_with_vehicles_and_no_device(m*100, m*2, edges)
+                    total_time_for_vehicles_and_device, result_for_vehicles_and_device, edges_with_no_tls_and_one_lane, edges_with_tls_and_one_lane, edges_with_tls_and_more_than_one_lane, edges_with_no_tls_and_more_than_one_lane = run_simulation_with_vehicles_and_device_and_given_traffic(edges, vehicles_added_beginning, vehicles_added_during)
                     print(f"total time for vehcile alone is: {total_time_for_no_vehicles}")
                     print(f"total time for vehicle and no device: {total_time_for_vehicles_and_no_device}")
                     print(f"total time for vehicle and device: {total_time_for_vehicles_and_device}")

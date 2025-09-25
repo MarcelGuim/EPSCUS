@@ -91,6 +91,7 @@ def change_traffic_light_for_one_lane(tls, new_state, state, idx):
     state_list = list(state)
     state_list[idx] = new_state
     new_lights = "".join(state_list)
+    traci.trafficlight.setProgram(tls, "off")
     traci.trafficlight.setRedYellowGreenState(tls, new_lights)
 
 def change_traffic_lights_for_whole_edge(tls, new_state, state, idx, previous_edge=None, current_edge=None):
@@ -108,6 +109,7 @@ def change_traffic_lights_for_whole_edge(tls, new_state, state, idx, previous_ed
         state_list[idx[i]] = new_state
     lanes = traci.trafficlight.getControlledLinks(tls)
     new_lights = "".join(state_list)
+    traci.trafficlight.setProgram(tls, "off")
     traci.trafficlight.setRedYellowGreenState(tls, new_lights)
 
 def change_traffic_lights_for_whole_edge_2(tls, new_state, state, idx, edges, previous_edge=None, current_edge=None):
@@ -131,8 +133,9 @@ def change_traffic_lights_for_whole_edge_2(tls, new_state, state, idx, edges, pr
     for i in range (len(idx)):
         state_list[idx[i]] = new_state
     new_lights = "".join(state_list)
-    traci.trafficlight.setRedYellowGreenState(tls, new_lights)
-
+    #traci.trafficlight.setProgram(tls, "off")
+    #traci.trafficlight.setRedYellowGreenState(tls, new_lights)
+    return new_lights
 
 def change_traffic_lights_for_whole_outgoing_edge(tls, new_state, state, idx, edges):
     state_list = list(state)
@@ -155,25 +158,22 @@ def change_traffic_lights_for_whole_outgoing_edge(tls, new_state, state, idx, ed
     for i in range (len(idx)):
         state_list[idx[i]] = new_state
     new_lights = "".join(state_list)
-    traci.trafficlight.setRedYellowGreenState(tls, new_lights)
+    #traci.trafficlight.setProgram(tls, "off")
+    #traci.trafficlight.setRedYellowGreenState(tls, new_lights)
+    return new_lights
 
 def change_lights_for_case_only_lights(tls, new_state, state, idx, net, edges, previous_edge=None, current_edge=None):
-    change_traffic_lights_for_whole_edge_2(tls, new_state, state, idx, edges, previous_edge, current_edge)
-    current_next_light, next_state, next_idx = get_light_state_for_edge(current_edge, tls)
-    print(next_state)
+    new_lights = change_traffic_lights_for_whole_edge_2(tls, new_state, state, idx, edges, previous_edge, current_edge)
     outgoing = net.getEdge(current_edge).getOutgoing()
     tls_s = []
-    tls_s.append(tls)
+    tls_s.append([tls, new_lights])
     for e in outgoing:
         tls = find_if_street_has_traffic_light_for_edge(e.getID())
         if tls:
-            tls_s.append(tls)
             current_next_light, next_state, next_idx = get_light_state_for_edge(e.getID(), tls)
-            print(next_state)        
-            change_traffic_lights_for_whole_outgoing_edge(tls, "G", next_state, next_idx, edges)
-            current_next_light, next_state, next_idx = get_light_state_for_edge(e.getID(), tls)
-            print(next_state)
-            nwef = 2  
+            lights = change_traffic_lights_for_whole_outgoing_edge(tls, "G", next_state, next_idx, edges)
+            tls_s.append([tls, lights])
+    return [current_edge, tls_s]
     try:
         next_next_edge = get_next_valid_edge(current_edge, edges)
         if next_next_edge is not None:

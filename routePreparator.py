@@ -104,8 +104,8 @@ def interpolar_coords(lon1, lat1, lon2, lat2, fraccio):
     return (lon, lat)
 
 def generate_congestion(coordinates, minSpeed, maxSpeed, measureTime):
-    #currentSpeed = random.uniform(minSpeed,maxSpeed)
-    currentSpeed = 5
+    currentSpeed = random.uniform(minSpeed,maxSpeed)
+    #currentSpeed = 30
     #Per simular molta congestió inicial, podem establir un valor aqui
     result = []
     currentTime = datetime.now(timezone.utc)
@@ -474,10 +474,19 @@ def get_data_for_congestion_IA(edges, veh_id, real_data, net):
     opposite_next_edge = "-" +next_edge if not next_edge.startswith("-") else next_edge[1:]
     if opposite_next_edge in traci.edge.getIDList():
         boolean_next_edge_counter_direction = True
+    veh_id_waiting_to_enter = traci.simulation.getLoadedIDList()
+    waiting_for_next_edge = 0
+    if len(veh_id_waiting_to_enter) != 0:
+        for w in veh_id_waiting_to_enter:
+            if w == "simulation.findRoute":
+                continue
+            route = traci.vehicle.getRoute(w)
+            if route and next_edge != None and route[0] == next_edge:
+                waiting_for_next_edge += 1
     #result = [distance_to_next_edge, [current_lane, lane_ocupation], current_edge_ocupation(by_lanes), maximum_current_edge_speed,
     #time_for_next_edge, speed_for_next_edge, distance_of_next_edge, maximum_next_edge_speed, next_edge_occupancy, nº_of_lanes_in_next_edge,
-    #opposite_direction]
-    result = [veh_distance_to_end, [current_lane, current_lane_ocupation], current_ocupation, current_edge_maximum_speed, time_for_next_edge, speed_for_next_edge, length_next_edge, next_edge_maximum_speed, next_lanes_ocupation, len(next_lanes_ocupation), boolean_next_edge_counter_direction]
+    #opposite_direction, waiting_for_next_edge]
+    result = [veh_distance_to_end, [current_lane, current_lane_ocupation], current_ocupation, current_edge_maximum_speed, time_for_next_edge, speed_for_next_edge, length_next_edge, next_edge_maximum_speed, next_lanes_ocupation, len(next_lanes_ocupation), boolean_next_edge_counter_direction, waiting_for_next_edge]
     return result
 
 def find_data_from_ambulance_route(edges):

@@ -420,6 +420,191 @@ def results_x_value_vs_value_time_increase_ideal(path, x_axis, y_axis):
     plt.grid(True)
     plt.show(block = True)
 
+def results_times_vs_traffic_density(path, x_axis, y_axis_1, y_axis_2, y_axis_3, y_axis_4):
+    data = None
+    if os.path.exists(path) and os.path.getsize(path) > 0:
+        with open(path, "r") as f:
+            data = json.load(f)
+        if isinstance(data, dict):
+            data = [data]
+    results = []
+    for d in data:
+        if not d:
+            continue
+        values = list(d.values())[0]
+        key = list(d.keys())[0]
+        traffic = int(key.split("(")[1].split(",")[0])
+        if float(values['decrease_in_real_percent']) <= 0:
+            continue
+        results.append([values[x_axis], values[y_axis_1], values[y_axis_2], values[y_axis_3], values[y_axis_4]])
+    
+    x = [point[0] for point in results]
+    y = [point[1] for point in results]
+    w = [point[2] for point in results]
+    z = [point[3] for point in results]
+    k = [point[4] for point in results]
+
+    plt.scatter(x, y, marker="o", color="blue", label=y_axis_1)
+    #plt.scatter(x, w, marker="o", color="red", label=y_axis_2)
+    plt.scatter(x, z, marker="o", color="green", label=y_axis_3)
+    plt.scatter(x, k, marker="o", color="red", label=y_axis_4)
+    plt.xlabel(x_axis)
+    plt.ylabel("Time")
+    plt.ylim(0, 300)
+    plt.title(f"{x_axis} vs Times")
+    plt.grid(True)
+    plt.legend()
+    plt.legend(loc="upper left")
+    plt.show(block = True)
+
+def results_relations_vs_traffic_density(path, x_axis, y_axis_1, y_axis_2, y_axis_3, y_axis_4):
+    data = None
+    if os.path.exists(path) and os.path.getsize(path) > 0:
+        with open(path, "r") as f:
+            data = json.load(f)
+        if isinstance(data, dict):
+            data = [data]
+    results = []
+    for d in data:
+        if not d:
+            continue
+        values = list(d.values())[0]
+        key = list(d.keys())[0]
+        traffic = int(key.split("(")[1].split(",")[0])
+        if float(values['decrease_in_real_percent']) <= 0:
+            continue
+        results.append([values[x_axis], values[y_axis_1], values[y_axis_2], values[y_axis_3], values[y_axis_4]])
+    results_sorted = sorted(results, key=lambda x: x[0])
+    final_data = []
+    for p in results_sorted:
+        result_1 = (p[3]-p[1])/p[1]*100
+        result_2 = (p[4]-p[1])/p[1]*100
+        final_data.append([p[0], result_1, result_2])
+    i = 0
+    presented_data = []
+    while i < len(final_data) - 3:
+        av_density = (final_data[i][0] + final_data[i+1][0] + final_data[i+2][0])/3
+        av_y_value_1 = (final_data[i][1] + final_data[i+1][1] + final_data[i+2][1])/3
+        av_y_value_2 = (final_data[i][2] + final_data[i+1][2] + final_data[i+2][2])/3
+        diference = av_y_value_2 - av_y_value_1
+        presented_data.append([av_density, av_y_value_1, av_y_value_2, diference])
+        i += 3
+    x = [point[0] for point in presented_data]
+    y = [point[1] for point in presented_data]
+    w = [point[2] for point in presented_data]
+    z = [point[3] for point in presented_data]
+
+    plt.scatter(x, y, marker="o", color="blue", label="increase with device")
+    plt.scatter(x, w, marker="o", color="red", label="increase with traffic control")
+    plt.scatter(x, z, marker="o", color="green", label="difference between increases") 
+    plt.xlabel(x_axis)
+    plt.ylabel("Time")
+    plt.ylim(0, 1000)
+    plt.title(f"{x_axis} vs Times")
+    plt.grid(True)
+    plt.legend()
+    plt.legend(loc="upper right")
+    plt.show(block = True)
+
+def results_increases_vs_traffic_density(path, x_axis, y_axis_1, y_axis_2, y_axis_3, y_axis_4):
+    data = None
+    if os.path.exists(path) and os.path.getsize(path) > 0:
+        with open(path, "r") as f:
+            data = json.load(f)
+        if isinstance(data, dict):
+            data = [data]
+    results = []
+    for d in data:
+        if not d:
+            continue
+        values = list(d.values())[0]
+        key = list(d.keys())[0]
+        traffic = int(key.split("(")[1].split(",")[0])
+        if float(values['decrease_in_real_percent']) <= 0:
+            continue
+        results.append([values[x_axis], values[y_axis_1], values[y_axis_2], values[y_axis_3], values[y_axis_4]])
+        relations = []
+        for r in results:
+            increase_device = (r[3]-r[1])/r[1]*100
+            increase_lights = (r[4]-r[1])/r[1]*100
+            increase_lights_with_device = (r[4] - r[3])/r[3]*100
+            relations.append([r[0],increase_device, increase_lights, increase_lights_with_device])
+    x = [point[0] for point in relations]
+    y = [point[1] for point in relations]
+    w = [point[2] for point in relations]
+    z = [point[3] for point in relations]
+
+    plt.scatter(x, y, marker="o", color="blue", label="increase_with_device")
+    plt.scatter(x, w, marker="o", color="red", label="increase_with_traffic_lights")
+    plt.scatter(x, z, marker="o", color="green", label="increase_traffic_lights_with_device")
+    plt.xlabel(x_axis)
+    plt.ylabel("Increase")
+    plt.ylim(0, 100)
+    plt.title(f"{x_axis} vs Increase")
+    plt.grid(True)
+    plt.legend()
+    plt.legend(loc="upper left")
+    plt.show(block = True)
+
+def results_increases_vs_traffic_density_average(path, x_axis, y_axis_1, y_axis_2, y_axis_3, y_axis_4):
+    data = None
+    if os.path.exists(path) and os.path.getsize(path) > 0:
+        with open(path, "r") as f:
+            data = json.load(f)
+        if isinstance(data, dict):
+            data = [data]
+    results = []
+    for d in data:
+        if not d:
+            continue
+        values = list(d.values())[0]
+        key = list(d.keys())[0]
+        traffic = int(key.split("(")[1].split(",")[0])
+        if float(values['decrease_in_real_percent']) <= 0:
+            continue
+        results.append([values[x_axis], values[y_axis_1], values[y_axis_2], values[y_axis_3], values[y_axis_4]])
+        relations = []
+        for r in results:
+            increase_device = (r[3]-r[1])/r[1]*100
+            increase_lights = (r[4]-r[1])/r[1]*100
+            increase_lights_with_device = (r[4] - r[3])/r[3]*100
+            relations.append([r[0],increase_device, increase_lights, increase_lights_with_device])
+    results_sorted = sorted(relations, key=lambda x: x[0])
+    presented_data = []
+    i = 0
+    while i < len(results_sorted) - 3:
+        av_density = (results_sorted[i][0] + results_sorted[i+1][0] + results_sorted[i+2][0])/3
+        av_y_value_1 = (results_sorted[i][1] + results_sorted[i+1][1] + results_sorted[i+2][1])/3
+        av_y_value_2 = (results_sorted[i][2] + results_sorted[i+1][2] + results_sorted[i+2][2])/3
+        av_y_value_3 = (results_sorted[i][3] + results_sorted[i+1][3] + results_sorted[i+2][3])/3
+        presented_data.append([av_density, av_y_value_1, av_y_value_2, av_y_value_3])
+        i += 3
+    x = [point[0] for point in presented_data]
+    y = [point[1] for point in presented_data]
+    w = [point[2] for point in presented_data]
+    z = [point[3] for point in presented_data]
+    """
+    x = [point[0] for point in relations]
+    y = [point[1] for point in relations]
+    w = [point[2] for point in relations]
+    z = [point[3] for point in relations]
+    """
+    plt.scatter(x, y, marker="o", color="blue", label="increase_with_device")
+    plt.scatter(x, w, marker="o", color="red", label="increase_with_traffic_lights")
+    plt.scatter(x, z, marker="o", color="green", label="increase_traffic_lights_with_device")
+    plt.xlabel(x_axis)
+    plt.ylabel("Increase")
+    plt.ylim(0, 250)
+    plt.title(f"{x_axis} vs Increase")
+    plt.grid(True)
+    plt.legend()
+    plt.legend(loc="upper left")
+    plt.show(block = True)
+
+#results_relations_vs_traffic_density("result_comparison_specific_routes_9.json", "average_density_v_n_d", "total_time_for_no_vehicles","total_time_for_vehicles_and_no_device", "total_time_for_vehicles_and_device", "total_time_for_vehicles_and_lights_control")
+#results_times_vs_traffic_density("result_comparison_specific_routes_9.json", "average_density_v_n_d", "total_time_for_no_vehicles","total_time_for_vehicles_and_no_device", "total_time_for_vehicles_and_device", "total_time_for_vehicles_and_lights_control")
+#results_increases_vs_traffic_density("result_comparison_specific_routes_9.json", "average_density_v_n_d", "total_time_for_no_vehicles","total_time_for_vehicles_and_no_device", "total_time_for_vehicles_and_device", "total_time_for_vehicles_and_lights_control")
+results_increases_vs_traffic_density_average("result_comparison_specific_routes_9.json", "average_density_v_n_d", "total_time_for_no_vehicles","total_time_for_vehicles_and_no_device", "total_time_for_vehicles_and_device", "total_time_for_vehicles_and_lights_control")
 #results_vs_distance("result_comparison_turn_increase.json", "distance", "increase_in_ideal_percent")
 #results_vs_traffic("result_comparison_1.json", "traffic", "decrease_in_real_percent")
 #results_vs_traffic_density("result_comparison_specific_routes_5.json", "average_density_v_n_d", "decrease_in_real_percent")

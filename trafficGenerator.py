@@ -77,8 +77,11 @@ def generate_random_route_starting_at_specific_edge(current_edge, ambulance_edge
     result = []
     possible_origin = net.getEdge(current_edge).getIncoming()
     options = []
+    tries = 0
     for p in possible_origin:
         options.append(p.getID())
+    if len(options) == 0:
+        options.append(current_edge)
     found = False
     while not found:
         origin = random.choice(options)
@@ -93,8 +96,55 @@ def generate_random_route_starting_at_specific_edge(current_edge, ambulance_edge
                 continue
             if net.getEdge(destination_edge).getType() == "highway.primary" or net.getEdge(destination_edge).getType() == "highway.secondary" or net.getEdge(destination_edge).getType() == "highway.tertiary" or net.getEdge(destination_edge).getType() == "highway.living_street" or  net.getEdge(destination_edge).getType() ==  "highway.primary_link":
                 correct = True
-        route = traci.simulation.findRoute(origin, destination_edge)
-        result = route.edges
+
+        try:
+            route = traci.simulation.findRoute(origin, destination_edge)
+            result = route.edges
+            if len(result) == 0:
+                tries += 1
+                if tries == 5:
+                    found = False
+                    while not found:
+                        origin = random.choice(options)
+                        if net.getEdge(origin).getType() == "highway.residential" or net.getEdge(origin).getType() == "highway.secondary_link" or net.getEdge(origin).getType() == "highway.primary" or net.getEdge(origin).getType() == "highway.secondary" or net.getEdge(origin).getType() == "highway.tertiary" or net.getEdge(origin).getType() == "highway.living_street" or  net.getEdge(origin).getType() ==  "highway.primary_link":
+                            found = True 
+        except:
+            result = []
+            tries += 1
+            if tries == 5:
+                found = False
+                tries = 0
+                while not found:
+                    origin = random.choice(options)
+                    if net.getEdge(origin).getType() == "highway.residential" or net.getEdge(origin).getType() == "highway.secondary_link" or net.getEdge(origin).getType() == "highway.primary" or net.getEdge(origin).getType() == "highway.secondary" or net.getEdge(origin).getType() == "highway.tertiary" or net.getEdge(origin).getType() == "highway.living_street" or  net.getEdge(origin).getType() ==  "highway.primary_link":
+                        found = True 
+    return result
+
+def generate_random_route_starting_at_specific_edge_next_edge(current_edge, ambulance_edges, total_edges, net):
+    result = []
+    tries = 0
+    while len(result) == 0:
+        destination_edge = random.choice(total_edges)
+        correct = False
+        while not correct:
+            destination_edge = random.choice(total_edges)
+            if "cluster" in destination_edge or destination_edge.startswith(":"):
+                continue
+            if net.getEdge(destination_edge).getType() == "highway.primary" or net.getEdge(destination_edge).getType() == "highway.secondary" or net.getEdge(destination_edge).getType() == "highway.tertiary" or net.getEdge(destination_edge).getType() == "highway.living_street" or  net.getEdge(destination_edge).getType() ==  "highway.primary_link":
+                if 'private' in traci.lane.getAllowed(destination_edge+"_0") or 'passenger' in traci.lane.getAllowed(destination_edge+"_0") or  'custom1' in traci.lane.getAllowed(destination_edge+"_0") or 'custom2' in traci.lane.getAllowed(destination_edge+"_0"):
+                    correct = True
+                else:
+                    tries += 1
+                    if tries == 10:
+                        return None
+        try:
+            route = traci.simulation.findRoute(current_edge, destination_edge)
+            result = route.edges
+        except:
+            result = []
+            tries += 1
+            if tries == 10:
+                return -1
     return result
 
 def get_AmbulanceEdges(net):
@@ -285,6 +335,8 @@ def get_congestion_for_each_edge(simulated_coords_with_time, real_coords_with_ti
 
 def get_difference_in_time_for_each_edge(simulates_edges_congestion, real_edges_congestion):
     if len(simulates_edges_congestion) != len(real_edges_congestion):
+        print(len(simulates_edges_congestion))
+        print(len(real_edges_congestion))
         print("ERROR, wrong entry in vector sizes")
         return
     i = 0
@@ -302,12 +354,13 @@ def congestion_analyzer(real_coords, real_time, simulated_coords, simulated_time
     #Aquesta funció de get_difference_in_time_for_each_edge el que retorna es la diferencia entre el retard simulat i el real.
     #Així és pot utilitzar per veure la diferencia entre la congestió que s'ha definit, vs la que realment hauria d'haver definit.
     #Es pot utilitzar per entrenar un model de IA que implementi manualment la congestió
-    print(get_difference_in_time_for_each_edge(simulates_edges_congestion, real_edges_congestion))
-    print(f"simulated time was: {simulated_time}")
+
+    print(f"simulated time was: {simulated_time} min")
     print(f"real time was: {real_time}")
     real_coords_treated, simulated_coords_treated = get_ordered_data(real_coords, simulated_coords)
     mapa_generator_for_data_analysis(real_coords_treated, "real_coords_treated_map.html")
     mapa_generator_for_data_analysis(simulated_coords_treated, "simulated_coords_treated_map.html")
+    return get_difference_in_time_for_each_edge(simulates_edges_congestion, real_edges_congestion)
 
 def generate_random_traffic_with_TRACI_for_begining(edges, amount, net):
     # region Random vehicle types generation
@@ -403,6 +456,7 @@ def generate_random_traffic_with_TRACI_for_begining(edges, amount, net):
             type3 += 1
         traci.route.add("test"+str(i), edge_list)
         #Per fer proves de com afecta l'actitud dels conductors.
+        #traci.vehicle.add("test"+str(i), routeID="test"+str(i), departLane="allowed", typeID=typeId, depart=0)
         traci.vehicle.add("test"+str(i), routeID="test"+str(i), departLane="allowed", typeID=typeId, depart=round(i/50))
         vehicles_added.append(["test"+str(i), edge_list, typeId, round(i/50)])
 
@@ -412,7 +466,118 @@ def generate_random_traffic_with_TRACI_for_begining(edges, amount, net):
     
     return vehicles_added, type1, type2, type3
 
-def generate_random_traffic_with_TRACI_for_during(next_edge, next_next_edge, edges, amount, net, num):
+def generate_random_traffic_with_TRACI_for_begining_for_AI(edges, amount, net):
+    # region Random vehicle types generation
+    traci.vehicletype.copy("DEFAULT_VEHTYPE", "Compliance_0")
+    traci.vehicletype.setParameter("Compliance_0", "device.bluelight.device", "true")
+    traci.vehicletype.setParameter("Compliance_0", "device.bluelight.compliance", "1")
+    traci.vehicletype.setParameter("Compliance_0", "device.bluelight.visibility", "150")
+    traci.vehicletype.setParameter("Compliance_0", "device.bluelight.responseTime", "0.5")
+    traci.vehicletype.setParameter("Compliance_0", "device.bluelight.reaction-prob-near", "1")
+    traci.vehicletype.setParameter("Compliance_0", "device.bluelight.reaction-prob-far", "1")
+    traci.vehicletype.setParameter("Compliance_0", "device.bluelight.minGap", "3")
+    traci.vehicletype.setParameter("Compliance_0", "device.bluelight.mingapfactor", "0")
+    traci.vehicletype.setParameter("Compliance_0", "lcStrategic", "0")
+    traci.vehicletype.setParameter("Compliance_0", "lcSublane", "0")
+    traci.vehicletype.setParameter("Compliance_0", "laneChangeModel.lcCooperative", "1")
+    traci.vehicletype.setParameter("Compliance_0", "laneChangeModel.lcAssertive", "1")
+    traci.vehicletype.setParameter("Compliance_0", "laneChangeModel.lcImpatience", "1")
+
+    traci.vehicletype.copy("DEFAULT_VEHTYPE", "Compliance_1")
+    traci.vehicletype.setParameter("Compliance_1", "device.bluelight.device", "true")
+    traci.vehicletype.setParameter("Compliance_1", "device.bluelight.compliance", "1")
+    traci.vehicletype.setParameter("Compliance_1", "device.bluelight.visibility", "150")
+    traci.vehicletype.setParameter("Compliance_1", "device.bluelight.responseTime", "0.5")
+    traci.vehicletype.setParameter("Compliance_1", "device.bluelight.reaction-prob-near", "0.9")
+    traci.vehicletype.setParameter("Compliance_1", "device.bluelight.reaction-prob-far", "0.35")
+    traci.vehicletype.setParameter("Compliance_1", "device.bluelight.minGap", "1.5")
+    traci.vehicletype.setParameter("Compliance_1", "device.bluelight.mingapfactor", "2")
+    traci.vehicletype.setParameter("Compliance_1", "lcStrategic", "0")
+    traci.vehicletype.setParameter("Compliance_1", "lcSublane", "0")
+    traci.vehicletype.setParameter("Compliance_1", "laneChangeModel.lcCooperative", "0.95")
+    traci.vehicletype.setParameter("Compliance_1", "laneChangeModel.lcAssertive", "0.95")
+    traci.vehicletype.setParameter("Compliance_1", "laneChangeModel.lcImpatience", "0.95")
+
+    traci.vehicletype.copy("DEFAULT_VEHTYPE", "Compliance_2")
+    traci.vehicletype.setParameter("Compliance_2", "device.bluelight.device", "true")
+    traci.vehicletype.setParameter("Compliance_2", "device.bluelight.compliance", "0.8")
+    traci.vehicletype.setParameter("Compliance_2", "device.bluelight.visibility", "125")
+    traci.vehicletype.setParameter("Compliance_2", "device.bluelight.responseTime", "1.5")
+    traci.vehicletype.setParameter("Compliance_2", "device.bluelight.reaction-prob-near", "0.8")
+    traci.vehicletype.setParameter("Compliance_2", "device.bluelight.reaction-prob-far", "0.3")
+    traci.vehicletype.setParameter("Compliance_2", "device.bluelight.minGap", "2")
+    traci.vehicletype.setParameter("Compliance_2", "device.bluelight.mingapfactor", "2")
+    traci.vehicletype.setParameter("Compliance_2", "lcStrategic", "0")
+    traci.vehicletype.setParameter("Compliance_2", "lcSublane", "0")
+    traci.vehicletype.setParameter("Compliance_2", "laneChangeModel.lcCooperative", "0.85")
+    traci.vehicletype.setParameter("Compliance_2", "laneChangeModel.lcAssertive", "0.85")
+    traci.vehicletype.setParameter("Compliance_2", "laneChangeModel.lcImpatience", "0.85")
+
+    traci.vehicletype.copy("DEFAULT_VEHTYPE", "Compliance_3")
+    traci.vehicletype.setParameter("Compliance_3", "device.bluelight.device", "true")
+    traci.vehicletype.setParameter("Compliance_3", "device.bluelight.compliance", "0.6")
+    traci.vehicletype.setParameter("Compliance_3", "device.bluelight.visibility", "75")
+    traci.vehicletype.setParameter("Compliance_3", "device.bluelight.responseTime", "3.5")
+    traci.vehicletype.setParameter("Compliance_3", "device.bluelight.reaction-prob-near", "0.65")
+    traci.vehicletype.setParameter("Compliance_3", "device.bluelight.reaction-prob-far", "0.15")
+    traci.vehicletype.setParameter("Compliance_3", "device.bluelight.minGap", "2")
+    traci.vehicletype.setParameter("Compliance_3", "device.bluelight.mingapfactor", "1")
+    traci.vehicletype.setParameter("Compliance_3", "lcStrategic", "0")
+    traci.vehicletype.setParameter("Compliance_3", "lcSublane", "0")
+    traci.vehicletype.setParameter("Compliance_3", "laneChangeModel.lcCooperative", "0.75")
+    traci.vehicletype.setParameter("Compliance_3", "laneChangeModel.lcAssertive", "0.75")
+    traci.vehicletype.setParameter("Compliance_3", "laneChangeModel.lcImpatience", "0.75")
+    # endregion
+
+    vehicles_added = []
+    i = 0
+    type1 = 0
+    type2 = 0
+    type3 = 0
+    last_num = 0
+    tries = 0
+    while i < amount:
+        correct = False
+        origin = None
+        while not correct:
+            origin = random.choice(edges)
+            if "cluster" in origin or origin.startswith(":"):
+                continue
+            if net.getEdge(origin).getType() == "highway.primary" or net.getEdge(origin).getType() == "highway.secondary" or net.getEdge(origin).getType() == "highway.tertiary" or net.getEdge(origin).getType() == "highway.living_street" or  net.getEdge(origin).getType() ==  "highway.primary_link":
+                if 'private' in traci.lane.getAllowed(origin+"_0") or 'passenger' in traci.lane.getAllowed(origin+"_0") or  'custom1' in traci.lane.getAllowed(origin+"_0") or 'custom2' in traci.lane.getAllowed(origin+"_0"):
+                    correct = True
+                else:
+                    tries += 1
+                    if tries == 10:
+                        return None
+        edge_list = generate_random_route_starting_at_specific_edge_next_edge(origin, edges, traci.edge.getIDList(), net)
+        while edge_list is None:
+            edge_list = generate_random_route_starting_at_specific_edge_next_edge(origin, edges, traci.edge.getIDList(), net)
+        k = 1
+        type = valor_proper(k,1, 3)
+        typeId = None
+        if round(type) == 1:
+            typeId = "Compliance_1"
+            type1 += 1
+        elif round(type) == 2:
+            typeId = "Compliance_2"
+            type2 += 1
+        elif round(type) == 3:
+            typeId = "Compliance_3"
+            type3 += 1
+        traci.route.add("test"+str(i), edge_list)
+        #Per fer proves de com afecta l'actitud dels conductors.
+        #traci.vehicle.add("test"+str(i), routeID="test"+str(i), departLane="allowed", typeID=typeId, depart=0)
+        traci.vehicle.add("test"+str(i), routeID="test"+str(i), departLane="allowed", typeID=typeId, depart=round(i/50))
+        vehicles_added.append(["test"+str(i), edge_list, typeId, round(i/50)])
+        last_num = i
+        #traci.vehicle.add("test"+str(i), routeID="test"+str(i), departLane="best", typeID="Compliance_0")
+        #vehicles_added.append(["test"+str(i), edge_list, "Compliance_0"])
+        i += 1
+    
+    return vehicles_added, type1, type2, type3, last_num
+
+def generate_random_traffic_with_TRACI_for_during(next_edge, next_next_edge, edges, amount, net, num, veh_id):
     vehicles_added = []
     i = 0
     type1 = 0
@@ -420,6 +585,11 @@ def generate_random_traffic_with_TRACI_for_during(next_edge, next_next_edge, edg
     type3 = 0
     amount_1 = amount // 2
     amount_2 = amount - amount_1
+    lat = 0
+    lon = 0
+    if veh_id in traci.vehicle.getIDList():
+        x,y = traci.vehicle.getPosition(veh_id)
+        lon, lat = net.convertXY2LonLat(x,y)
     #In this part I'm generating vehicles with routes that are on the next edge or not, depending on whether there is a next edge or not
     if next_edge == None and next_next_edge == None:
         while i < amount:
@@ -449,7 +619,7 @@ def generate_random_traffic_with_TRACI_for_during(next_edge, next_next_edge, edg
             traci.route.add("test"+str(num + i), edge_list)
             #Per fer proves de com afecta l'actitud dels conductors.
             traci.vehicle.add("test"+str(num + i), routeID="test"+str(num + i), departLane="allowed", typeID=typeId)
-            vehicles_added.append(["test"+str(num + i), edge_list, typeId, traci.simulation.getTime()])
+            vehicles_added.append(["test"+str(num + i), edge_list, typeId, traci.simulation.getTime(), lat, lon])
 
             #traci.vehicle.add("test"+str(i), routeID="test"+str(i), departLane="best", typeID="Compliance_0")
             #vehicles_added.append(["test"+str(i), edge_list, "Compliance_0"])
@@ -476,10 +646,11 @@ def generate_random_traffic_with_TRACI_for_during(next_edge, next_next_edge, edg
             traci.route.add("test"+str(num + i), edge_list)
             #Per fer proves de com afecta l'actitud dels conductors.
             traci.vehicle.add("test"+str(num + i), routeID="test"+str(num + i), departLane="allowed", typeID=typeId)
-            vehicles_added.append(["test"+str(num + i), edge_list, typeId, traci.simulation.getTime()])
+            vehicles_added.append(["test"+str(num + i), edge_list, typeId, traci.simulation.getTime(), lat, lon])
+
 
             #traci.vehicle.add("test"+str(i), routeID="test"+str(i), departLane="best", typeID="Compliance_0")
-            #vehicles_added.append(["test"+str(i), edge_list, "Compliance_0"])
+            #vehicles_added.append(["test"+str(num + i), edge_list, typeId, traci.simulation.getTime(), lat, lon])
             i += 1
     elif next_edge != None and next_next_edge != None:
         while i < amount_1:
@@ -503,10 +674,10 @@ def generate_random_traffic_with_TRACI_for_during(next_edge, next_next_edge, edg
             traci.route.add("test"+str(num + i), edge_list)
             #Per fer proves de com afecta l'actitud dels conductors.
             traci.vehicle.add("test"+str(num + i), routeID="test"+str(num + i), departLane="allowed", typeID=typeId)
-            vehicles_added.append(["test"+str(num + i), edge_list, typeId, traci.simulation.getTime()])
+            vehicles_added.append(["test"+str(num + i), edge_list, typeId, traci.simulation.getTime(), lat, lon])
 
             #traci.vehicle.add("test"+str(i), routeID="test"+str(i), departLane="best", typeID="Compliance_0")
-            #vehicles_added.append(["test"+str(i), edge_list, "Compliance_0"])
+            #vehicles_added.append(["test"+str(num + i), edge_list, typeId, traci.simulation.getTime(), lat, lon])
             i += 1
         l = 0
         while l < amount_2:
@@ -530,13 +701,479 @@ def generate_random_traffic_with_TRACI_for_during(next_edge, next_next_edge, edg
             traci.route.add("test"+str(num + i), edge_list)
             #Per fer proves de com afecta l'actitud dels conductors.
             traci.vehicle.add("test"+str(num + i), routeID="test"+str(num + i), departLane="allowed", typeID=typeId)
-            vehicles_added.append(["test"+str(num + i), edge_list, typeId, traci.simulation.getTime()])
+            vehicles_added.append(["test"+str(num + i), edge_list, typeId, traci.simulation.getTime(), lat, lon])
 
             #traci.vehicle.add("test"+str(i), routeID="test"+str(i), departLane="best", typeID="Compliance_0")
-            #vehicles_added.append(["test"+str(i), edge_list, "Compliance_0"])
+            #vehicles_added.append(["test"+str(num + i), edge_list, typeId, traci.simulation.getTime(), lat, lon])
             i += 1
             l += 1
         
     return vehicles_added, type1, type2, type3
 
+def generate_random_traffic_with_TRACI_for_during_in_next_edge(next_edge, next_next_edge, edges, amount_next_edge, amount_next_next_edge, net, num, veh_id):
+    vehicles_added = []
+    i = 0
+    type1 = 0
+    type2 = 0
+    type3 = 0
+    lat = 0
+    lon = 0
+    last_num = 0
+    tries = 0
+    if veh_id in traci.vehicle.getIDList():
+        x,y = traci.vehicle.getPosition(veh_id)
+        lon, lat = net.convertXY2LonLat(x,y)
+    #In this part I'm generating vehicles with routes that are on the next edge or not, depending on whether there is a next edge or not
+    if next_edge == None and next_next_edge == None:
+        while i < amount_next_edge:
+            correct = False
+            origin = None
+            while not correct:
+                origin = random.choice(edges)
+                if "cluster" in origin or origin.startswith(":"):
+                    continue
+                if net.getEdge(origin).getType() == "highway.primary" or net.getEdge(origin).getType() == "highway.secondary" or net.getEdge(origin).getType() == "highway.tertiary" or net.getEdge(origin).getType() == "highway.living_street" or  net.getEdge(origin).getType() ==  "highway.primary_link":
+                    if 'private' in traci.lane.getAllowed(origin+"_0") or 'passenger' in traci.lane.getAllowed(origin+"_0") or  'custom1' in traci.lane.getAllowed(origin+"_0") or 'custom2' in traci.lane.getAllowed(origin+"_0"):
+                        correct = True
+                    else:
+                        tries += 1
+                        if tries == 10:
+                            return None
+            edge_list = generate_random_route_starting_at_specific_edge(origin, edges, traci.edge.getIDList(), net)
+            while edge_list is None:
+                edge_list = generate_random_route_starting_at_specific_edge(origin, edges, traci.edge.getIDList(), net)
+            k = 1
+            type = valor_proper(k,1, 3)
+            typeId = None
+            if round(type) == 1:
+                typeId = "Compliance_1"
+                type1 += 1
+            elif round(type) == 2:
+                typeId = "Compliance_2"
+                type2 += 1
+            elif round(type) == 3:
+                typeId = "Compliance_3"
+                type3 += 1
+            traci.route.add("test"+str(num + i), edge_list)
+            #Per fer proves de com afecta l'actitud dels conductors.
+            traci.vehicle.add("test"+str(num + i), routeID="test"+str(num + i), departLane="allowed", typeID=typeId)
+            vehicles_added.append(["test"+str(num + i), edge_list, typeId, traci.simulation.getTime(), lat, lon])
+
+            #traci.vehicle.add("test"+str(i), routeID="test"+str(i), departLane="best", typeID="Compliance_0")
+            #vehicles_added.append(["test"+str(i), edge_list, "Compliance_0"])
+            last_num = num + i
+            i += 1
+    elif next_edge != None and next_next_edge == None:
+        while i < amount_next_edge:
+            correct = False
+            origin = next_edge
+            edge_list = generate_random_route_starting_at_specific_edge_next_edge(origin, edges, traci.edge.getIDList(), net)
+            while edge_list is None:
+                edge_list = generate_random_route_starting_at_specific_edge_next_edge(origin, edges, traci.edge.getIDList(), net)
+            k = 1
+            type = valor_proper(k,1, 3)
+            typeId = None
+            if round(type) == 1:
+                typeId = "Compliance_1"
+                type1 += 1
+            elif round(type) == 2:
+                typeId = "Compliance_2"
+                type2 += 1
+            elif round(type) == 3:
+                typeId = "Compliance_3"
+                type3 += 1
+            traci.route.add("test"+str(num + i), edge_list)
+            #Per fer proves de com afecta l'actitud dels conductors.
+            traci.vehicle.add("test"+str(num + i), routeID="test"+str(num + i), departLane="allowed", typeID=typeId)
+            vehicles_added.append(["test"+str(num + i), edge_list, typeId, traci.simulation.getTime(), lat, lon])
+
+
+            #traci.vehicle.add("test"+str(i), routeID="test"+str(i), departLane="best", typeID="Compliance_0")
+            #vehicles_added.append(["test"+str(num + i), edge_list, typeId, traci.simulation.getTime(), lat, lon])
+            last_num = num + i
+            i += 1
+    elif next_edge != None and next_next_edge != None:
+        while i < amount_next_edge:
+            correct = False
+            origin = next_edge
+            edge_list = generate_random_route_starting_at_specific_edge_next_edge(origin, edges, traci.edge.getIDList(), net)
+            while edge_list is None:
+                edge_list = generate_random_route_starting_at_specific_edge_next_edge(origin, edges, traci.edge.getIDList(), net)
+            if edge_list != -1:
+                k = 1
+                type = valor_proper(k,1, 3)
+                typeId = None
+                if round(type) == 1:
+                    typeId = "Compliance_1"
+                    type1 += 1
+                elif round(type) == 2:
+                    typeId = "Compliance_2"
+                    type2 += 1
+                elif round(type) == 3:
+                    typeId = "Compliance_3"
+                    type3 += 1
+                traci.route.add("test"+str(num + i), edge_list)
+                #Per fer proves de com afecta l'actitud dels conductors.
+                traci.vehicle.add("test"+str(num + i), routeID="test"+str(num + i), departLane="allowed", typeID=typeId)
+                vehicles_added.append(["test"+str(num + i), edge_list, typeId, traci.simulation.getTime(), lat, lon])
+
+                #traci.vehicle.add("test"+str(i), routeID="test"+str(i), departLane="best", typeID="Compliance_0")
+                #vehicles_added.append(["test"+str(num + i), edge_list, typeId, traci.simulation.getTime(), lat, lon])
+                last_num = num + i
+            i += 1
+        l = 0
+        while l < amount_next_next_edge:
+            correct = False
+            origin = next_next_edge
+            edge_list = generate_random_route_starting_at_specific_edge_next_edge(origin, edges, traci.edge.getIDList(), net)
+            while edge_list is None:
+                edge_list = generate_random_route_starting_at_specific_edge_next_edge(origin, edges, traci.edge.getIDList(), net)
+            if edge_list != -1:
+                k = 1
+                type = valor_proper(k,1, 3)
+                typeId = None
+                if round(type) == 1:
+                    typeId = "Compliance_1"
+                    type1 += 1
+                elif round(type) == 2:
+                    typeId = "Compliance_2"
+                    type2 += 1
+                elif round(type) == 3:
+                    typeId = "Compliance_3"
+                    type3 += 1
+                traci.route.add("test"+str(num + i), edge_list)
+                #Per fer proves de com afecta l'actitud dels conductors.
+                traci.vehicle.add("test"+str(num + i), routeID="test"+str(num + i), departLane="allowed", typeID=typeId)
+                vehicles_added.append(["test"+str(num + i), edge_list, typeId, traci.simulation.getTime(), lat, lon])
+
+                #traci.vehicle.add("test"+str(i), routeID="test"+str(i), departLane="best", typeID="Compliance_0")
+                #vehicles_added.append(["test"+str(num + i), edge_list, typeId, traci.simulation.getTime(), lat, lon])
+                last_num = num + i
+            i += 1
+            l += 1
+        
+    return vehicles_added, type1, type2, type3, last_num 
+
+def generate_random_traffic_with_TRACI_for_during_in_random_edge_from_edges(edges, amount, net, num, veh_id):
+    i = 0
+    while i < amount:
+        tries = 0
+        correct = False
+        while not correct:
+            origin = random.choice(edges)
+            if "cluster" in origin or origin.startswith(":"):
+                continue
+            if net.getEdge(origin).getType() == "highway.primary" or net.getEdge(origin).getType() == "highway.secondary" or net.getEdge(origin).getType() == "highway.tertiary" or net.getEdge(origin).getType() == "highway.living_street" or  net.getEdge(origin).getType() ==  "highway.primary_link":
+                if 'private' in traci.lane.getAllowed(origin+"_0") or 'passenger' in traci.lane.getAllowed(origin+"_0") or  'custom1' in traci.lane.getAllowed(origin+"_0") or 'custom2' in traci.lane.getAllowed(origin+"_0"):
+                    correct = True
+                else:
+                    tries += 1
+                    if tries == 10:
+                        return None
+        correct = False
+        destination = random.choice(edges)
+        while not correct and destination != origin:
+            destination = random.choice(edges)
+            if "cluster" in destination or destination.startswith(":"):
+                continue
+            if net.getEdge(destination).getType() == "highway.primary" or net.getEdge(destination).getType() == "highway.secondary" or net.getEdge(destination).getType() == "highway.tertiary" or net.getEdge(destination).getType() == "highway.living_street" or  net.getEdge(destination).getType() ==  "highway.primary_link":
+                if 'private' in traci.lane.getAllowed(destination+"_0") or 'passenger' in traci.lane.getAllowed(destination+"_0") or  'custom1' in traci.lane.getAllowed(destination+"_0") or 'custom2' in traci.lane.getAllowed(destination+"_0"):
+                    correct = True
+                else:
+                    tries += 1
+                    if tries == 10:
+                        return None
+        
+        route = traci.simulation.findRoute(origin, destination)
+        result = route.edges
+        if len(result) > 0:
+            k = 1
+            type = valor_proper(k,1, 3)
+            typeId = None
+            if round(type) == 1:
+                typeId = "Compliance_1"
+            elif round(type) == 2:
+                typeId = "Compliance_2"
+            elif round(type) == 3:
+                typeId = "Compliance_3"
+            traci.route.add("test"+str(num + i), result)
+            traci.vehicle.add("test"+str(num + i), routeID="test"+str(num + i), departLane="allowed", typeID=typeId)
+
+            #traci.vehicle.add("test"+str(i), routeID="test"+str(i), departLane="best", typeID="Compliance_0")
+            #vehicles_added.append(["test"+str(i), edge_list, "Compliance_0"])
+            i += 1
+    return num + i
+    """
+    if next_edge == None and next_next_edge == None:
+        while i < amount_next_edge:
+            correct = False
+            origin = None
+            while not correct:
+                origin = random.choice(edges)
+                if "cluster" in origin or origin.startswith(":"):
+                    continue
+                if net.getEdge(origin).getType() == "highway.primary" or net.getEdge(origin).getType() == "highway.secondary" or net.getEdge(origin).getType() == "highway.tertiary" or net.getEdge(origin).getType() == "highway.living_street" or  net.getEdge(origin).getType() ==  "highway.primary_link":
+                    if 'private' in traci.lane.getAllowed(origin+"_0") or 'passenger' in traci.lane.getAllowed(origin+"_0") or  'custom1' in traci.lane.getAllowed(origin+"_0") or 'custom2' in traci.lane.getAllowed(origin+"_0"):
+                        correct = True
+                    else:
+                        tries += 1
+                        if tries == 10:
+                            return None
+            edge_list = generate_random_route_starting_at_specific_edge(origin, edges, traci.edge.getIDList(), net)
+            while edge_list is None:
+                edge_list = generate_random_route_starting_at_specific_edge(origin, edges, traci.edge.getIDList(), net)
+            k = 1
+            type = valor_proper(k,1, 3)
+            typeId = None
+            if round(type) == 1:
+                typeId = "Compliance_1"
+                type1 += 1
+            elif round(type) == 2:
+                typeId = "Compliance_2"
+                type2 += 1
+            elif round(type) == 3:
+                typeId = "Compliance_3"
+                type3 += 1
+            traci.route.add("test"+str(num + i), edge_list)
+            #Per fer proves de com afecta l'actitud dels conductors.
+            traci.vehicle.add("test"+str(num + i), routeID="test"+str(num + i), departLane="allowed", typeID=typeId)
+            vehicles_added.append(["test"+str(num + i), edge_list, typeId, traci.simulation.getTime(), lat, lon])
+
+            #traci.vehicle.add("test"+str(i), routeID="test"+str(i), departLane="best", typeID="Compliance_0")
+            #vehicles_added.append(["test"+str(i), edge_list, "Compliance_0"])
+            last_num = num + i
+            i += 1
+    elif next_edge != None and next_next_edge == None:
+        while i < amount_next_edge:
+            correct = False
+            origin = next_edge
+            edge_list = generate_random_route_starting_at_specific_edge_next_edge(origin, edges, traci.edge.getIDList(), net)
+            while edge_list is None:
+                edge_list = generate_random_route_starting_at_specific_edge_next_edge(origin, edges, traci.edge.getIDList(), net)
+            k = 1
+            type = valor_proper(k,1, 3)
+            typeId = None
+            if round(type) == 1:
+                typeId = "Compliance_1"
+                type1 += 1
+            elif round(type) == 2:
+                typeId = "Compliance_2"
+                type2 += 1
+            elif round(type) == 3:
+                typeId = "Compliance_3"
+                type3 += 1
+            traci.route.add("test"+str(num + i), edge_list)
+            #Per fer proves de com afecta l'actitud dels conductors.
+            traci.vehicle.add("test"+str(num + i), routeID="test"+str(num + i), departLane="allowed", typeID=typeId)
+            vehicles_added.append(["test"+str(num + i), edge_list, typeId, traci.simulation.getTime(), lat, lon])
+
+
+            #traci.vehicle.add("test"+str(i), routeID="test"+str(i), departLane="best", typeID="Compliance_0")
+            #vehicles_added.append(["test"+str(num + i), edge_list, typeId, traci.simulation.getTime(), lat, lon])
+            last_num = num + i
+            i += 1
+    elif next_edge != None and next_next_edge != None:
+        while i < amount_next_edge:
+            correct = False
+            origin = next_edge
+            edge_list = generate_random_route_starting_at_specific_edge_next_edge(origin, edges, traci.edge.getIDList(), net)
+            while edge_list is None:
+                edge_list = generate_random_route_starting_at_specific_edge_next_edge(origin, edges, traci.edge.getIDList(), net)
+            if edge_list != -1:
+                k = 1
+                type = valor_proper(k,1, 3)
+                typeId = None
+                if round(type) == 1:
+                    typeId = "Compliance_1"
+                    type1 += 1
+                elif round(type) == 2:
+                    typeId = "Compliance_2"
+                    type2 += 1
+                elif round(type) == 3:
+                    typeId = "Compliance_3"
+                    type3 += 1
+                traci.route.add("test"+str(num + i), edge_list)
+                #Per fer proves de com afecta l'actitud dels conductors.
+                traci.vehicle.add("test"+str(num + i), routeID="test"+str(num + i), departLane="allowed", typeID=typeId)
+                vehicles_added.append(["test"+str(num + i), edge_list, typeId, traci.simulation.getTime(), lat, lon])
+
+                #traci.vehicle.add("test"+str(i), routeID="test"+str(i), departLane="best", typeID="Compliance_0")
+                #vehicles_added.append(["test"+str(num + i), edge_list, typeId, traci.simulation.getTime(), lat, lon])
+                last_num = num + i
+            i += 1
+        l = 0
+        while l < amount_next_next_edge:
+            correct = False
+            origin = next_next_edge
+            edge_list = generate_random_route_starting_at_specific_edge_next_edge(origin, edges, traci.edge.getIDList(), net)
+            while edge_list is None:
+                edge_list = generate_random_route_starting_at_specific_edge_next_edge(origin, edges, traci.edge.getIDList(), net)
+            if edge_list != -1:
+                k = 1
+                type = valor_proper(k,1, 3)
+                typeId = None
+                if round(type) == 1:
+                    typeId = "Compliance_1"
+                    type1 += 1
+                elif round(type) == 2:
+                    typeId = "Compliance_2"
+                    type2 += 1
+                elif round(type) == 3:
+                    typeId = "Compliance_3"
+                    type3 += 1
+                traci.route.add("test"+str(num + i), edge_list)
+                #Per fer proves de com afecta l'actitud dels conductors.
+                traci.vehicle.add("test"+str(num + i), routeID="test"+str(num + i), departLane="allowed", typeID=typeId)
+                vehicles_added.append(["test"+str(num + i), edge_list, typeId, traci.simulation.getTime(), lat, lon])
+
+                #traci.vehicle.add("test"+str(i), routeID="test"+str(i), departLane="best", typeID="Compliance_0")
+                #vehicles_added.append(["test"+str(num + i), edge_list, typeId, traci.simulation.getTime(), lat, lon])
+                last_num = num + i
+            i += 1
+            l += 1
+        
+    return vehicles_added, type1, type2, type3, last_num 
+    """
+
+def generate_random_traffic_with_TRACI_for_during_in_next_edge_and_ending_in_ambulance_edge(next_edge, next_next_edge, edges, amount_next_edge, amount_next_next_edge, net, num, veh_id):
+    vehicles_added = []
+    i = 0
+    type1 = 0
+    type2 = 0
+    type3 = 0
+    lat = 0
+    lon = 0
+    last_num = 0
+    tries = 0
+    if veh_id in traci.vehicle.getIDList():
+        x,y = traci.vehicle.getPosition(veh_id)
+        lon, lat = net.convertXY2LonLat(x,y)
+    #In this part I'm generating vehicles with routes that are on the next edge or not, depending on whether there is a next edge or not
+    if next_edge == None and next_next_edge == None:
+        while i < amount_next_edge:
+            correct = False
+            origin = None
+            while not correct:
+                origin = random.choice(edges)
+                if "cluster" in origin or origin.startswith(":"):
+                    continue
+                if net.getEdge(origin).getType() == "highway.primary" or net.getEdge(origin).getType() == "highway.secondary" or net.getEdge(origin).getType() == "highway.tertiary" or net.getEdge(origin).getType() == "highway.living_street" or  net.getEdge(origin).getType() ==  "highway.primary_link":
+                    if 'private' in traci.lane.getAllowed(origin+"_0") or 'passenger' in traci.lane.getAllowed(origin+"_0") or  'custom1' in traci.lane.getAllowed(origin+"_0") or 'custom2' in traci.lane.getAllowed(origin+"_0"):
+                        correct = True
+                    else:
+                        tries += 1
+                        if tries == 10:
+                            return None
+            edge_list = generate_random_route_starting_at_specific_edge(origin, edges, traci.edge.getIDList(), net)
+            while edge_list is None:
+                edge_list = generate_random_route_starting_at_specific_edge(origin, edges, traci.edge.getIDList(), net)
+            k = 1
+            type = valor_proper(k,1, 3)
+            typeId = None
+            if round(type) == 1:
+                typeId = "Compliance_1"
+                type1 += 1
+            elif round(type) == 2:
+                typeId = "Compliance_2"
+                type2 += 1
+            elif round(type) == 3:
+                typeId = "Compliance_3"
+                type3 += 1
+            traci.route.add("test"+str(num + i), edge_list)
+            #Per fer proves de com afecta l'actitud dels conductors.
+            traci.vehicle.add("test"+str(num + i), routeID="test"+str(num + i), departLane="allowed", typeID=typeId)
+            vehicles_added.append(["test"+str(num + i), edge_list, typeId, traci.simulation.getTime(), lat, lon])
+
+            #traci.vehicle.add("test"+str(i), routeID="test"+str(i), departLane="best", typeID="Compliance_0")
+            #vehicles_added.append(["test"+str(i), edge_list, "Compliance_0"])
+            last_num = num + i
+            i += 1
+    elif next_edge != None and next_next_edge == None:
+        while i < amount_next_edge:
+            correct = False
+            origin = next_edge
+            edge_list = generate_random_route_starting_at_specific_edge_next_edge(origin, edges, traci.edge.getIDList(), net)
+            while edge_list is None:
+                edge_list = generate_random_route_starting_at_specific_edge_next_edge(origin, edges, traci.edge.getIDList(), net)
+            k = 1
+            type = valor_proper(k,1, 3)
+            typeId = None
+            if round(type) == 1:
+                typeId = "Compliance_1"
+                type1 += 1
+            elif round(type) == 2:
+                typeId = "Compliance_2"
+                type2 += 1
+            elif round(type) == 3:
+                typeId = "Compliance_3"
+                type3 += 1
+            traci.route.add("test"+str(num + i), edge_list)
+            #Per fer proves de com afecta l'actitud dels conductors.
+            traci.vehicle.add("test"+str(num + i), routeID="test"+str(num + i), departLane="allowed", typeID=typeId)
+            vehicles_added.append(["test"+str(num + i), edge_list, typeId, traci.simulation.getTime(), lat, lon])
+
+
+            #traci.vehicle.add("test"+str(i), routeID="test"+str(i), departLane="best", typeID="Compliance_0")
+            #vehicles_added.append(["test"+str(num + i), edge_list, typeId, traci.simulation.getTime(), lat, lon])
+            last_num = num + i
+            i += 1
+    elif next_edge != None and next_next_edge != None:
+        while i < amount_next_edge:
+            correct = False
+            origin = next_edge
+            edge_list = generate_random_route_starting_at_specific_edge_next_edge(origin, edges, traci.edge.getIDList(), net)
+            while edge_list is None:
+                edge_list = generate_random_route_starting_at_specific_edge_next_edge(origin, edges, traci.edge.getIDList(), net)
+            k = 1
+            type = valor_proper(k,1, 3)
+            typeId = None
+            if round(type) == 1:
+                typeId = "Compliance_1"
+                type1 += 1
+            elif round(type) == 2:
+                typeId = "Compliance_2"
+                type2 += 1
+            elif round(type) == 3:
+                typeId = "Compliance_3"
+                type3 += 1
+            traci.route.add("test"+str(num + i), edge_list)
+            #Per fer proves de com afecta l'actitud dels conductors.
+            traci.vehicle.add("test"+str(num + i), routeID="test"+str(num + i), departLane="allowed", typeID=typeId)
+            vehicles_added.append(["test"+str(num + i), edge_list, typeId, traci.simulation.getTime(), lat, lon])
+
+            #traci.vehicle.add("test"+str(i), routeID="test"+str(i), departLane="best", typeID="Compliance_0")
+            #vehicles_added.append(["test"+str(num + i), edge_list, typeId, traci.simulation.getTime(), lat, lon])
+            last_num = num + i
+            i += 1
+        l = 0
+        while l < amount_next_next_edge:
+            correct = False
+            origin = next_next_edge
+            edge_list = generate_random_route_starting_at_specific_edge_next_edge(origin, edges, traci.edge.getIDList(), net)
+            while edge_list is None:
+                edge_list = generate_random_route_starting_at_specific_edge_next_edge(origin, edges, traci.edge.getIDList(), net)
+            k = 1
+            type = valor_proper(k,1, 3)
+            typeId = None
+            if round(type) == 1:
+                typeId = "Compliance_1"
+                type1 += 1
+            elif round(type) == 2:
+                typeId = "Compliance_2"
+                type2 += 1
+            elif round(type) == 3:
+                typeId = "Compliance_3"
+                type3 += 1
+            traci.route.add("test"+str(num + i), edge_list)
+            #Per fer proves de com afecta l'actitud dels conductors.
+            traci.vehicle.add("test"+str(num + i), routeID="test"+str(num + i), departLane="allowed", typeID=typeId)
+            vehicles_added.append(["test"+str(num + i), edge_list, typeId, traci.simulation.getTime(), lat, lon])
+
+            #traci.vehicle.add("test"+str(i), routeID="test"+str(i), departLane="best", typeID="Compliance_0")
+            #vehicles_added.append(["test"+str(num + i), edge_list, typeId, traci.simulation.getTime(), lat, lon])
+            last_num = num + i
+            i += 1
+            l += 1
+        
+    return vehicles_added, type1, type2, type3, last_num 
 
